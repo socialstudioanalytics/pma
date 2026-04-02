@@ -218,6 +218,42 @@
     .nav-links{display:none;}
     .hero-meta{gap:1rem;}
   }
+  /* ── ACCOUNTS DIRECTORY ── */
+  .accounts-strip {
+    background: var(--navy);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 2.5rem 2rem;
+  }
+  .accounts-inner { max-width: var(--page-max); margin: 0 auto; }
+  .accounts-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: #7ec8f4; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.2rem; }
+  .brand-group { margin-bottom: 1.8rem; }
+  .brand-group:last-child { margin-bottom: 0; }
+  .brand-name {
+    font-family: 'DM Serif Display', serif; font-size: 1rem; color: white;
+    margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.6rem;
+  }
+  .brand-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .brand-dot.c1 { background: #7ec8f4; }
+  .brand-dot.c2 { background: #1d9e75; }
+  .brand-dot.c3 { background: #d97706; }
+  .brand-dot.c4 { background: #c0394b; }
+  .accounts-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .account-pill {
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px; padding: 0.5rem 0.85rem;
+    text-decoration: none; transition: all .18s;
+    color: rgba(255,255,255,0.85); font-size: 0.8rem; font-weight: 500;
+  }
+  .account-pill:hover {
+    background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.25);
+    color: white; transform: translateY(-1px);
+  }
+  .account-pill svg { flex-shrink: 0; }
+  .account-pill .pill-handle { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.45); margin-left: 0.1rem; }
+  .plat-divider { width: 1px; height: 14px; background: rgba(255,255,255,0.15); }
+  .accounts-note { font-size: 0.72rem; color: rgba(255,255,255,0.3); margin-top: 1.5rem; letter-spacing: 0.03em; }
+
 </style>
 </head>
 <body>
@@ -226,6 +262,7 @@
 <nav>
   <div class="nav-brand">Social Studio <span>Analytics</span></div>
   <div class="nav-links">
+    <a href="#accounts">Accounts</a>
     <a href="#summary">Summary</a>
     <a href="#facebook">Facebook</a>
     <a href="#instagram">Instagram</a>
@@ -251,6 +288,123 @@
       <div class="hero-stat"><div class="num">3 yrs</div><div class="lbl">Analysis window</div></div>
     </div>
     <div class="hero-badge"><span class="dot"></span> Prepared by Social Studio Analytics</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- ACCOUNTS DIRECTORY -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="accounts-strip" id="accounts">
+  <div class="accounts-inner">
+    <div class="accounts-eyebrow">PMA Social Media Accounts — Full Portfolio</div>
+
+    <!-- PMA CORE -->
+    <div class="brand-group">
+      <div class="brand-name"><span class="brand-dot c1"></span>PMA Core — سلطة النقد الفلسطينية</div>
+      <div class="accounts-row">
+        <a class="account-pill" href="https://www.facebook.com/pmauthority" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          Facebook
+          <span class="plat-divider"></span>
+          <span class="pill-handle">pmauthority</span>
+        </a>
+        <a class="account-pill" href="https://www.instagram.com/pmauthority/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="url(#ig-grad-1)"><defs><linearGradient id="ig-grad-1" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="25%" style="stop-color:#e6683c"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="75%" style="stop-color:#cc2366"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+          <span class="plat-divider"></span>
+          <span class="pill-handle">@pmauthority</span>
+        </a>
+        <a class="account-pill" href="https://x.com/PMAuthority" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+          <span class="plat-divider"></span>
+          <span class="pill-handle">@PMAuthority</span>
+        </a>
+        <a class="account-pill" href="https://www.linkedin.com/in/pmauthority-pma/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+          <span class="plat-divider"></span>
+          <span class="pill-handle">pmauthority-pma</span>
+        </a>
+        <a class="account-pill" href="https://www.youtube.com/channel/UCbQBgvY3lWGZaqRaLIO4y8g" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          YouTube
+          <span class="plat-divider"></span>
+          <span class="pill-handle">1.15K subscribers</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- BANKING AWARENESS -->
+    <div class="brand-group">
+      <div class="brand-name"><span class="brand-dot c2"></span>Banking Awareness Platform — منصة التوعية المصرفية</div>
+      <div class="accounts-row">
+        <a class="account-pill" href="https://www.facebook.com/bankingawarenessplatformpma" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          Facebook
+          <span class="plat-divider"></span>
+          <span class="pill-handle">bankingawarenessplatformpma</span>
+        </a>
+        <a class="account-pill" href="https://www.instagram.com/bankingawarenessplatform/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="url(#ig-grad-2)"><defs><linearGradient id="ig-grad-2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+          <span class="plat-divider"></span>
+          <span class="pill-handle">@bankingawarenessplatform</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CYBW -->
+    <div class="brand-group">
+      <div class="brand-name"><span class="brand-dot c3"></span>Children & Youth Banking Week — الأسبوع المصرفي للأطفال والشباب</div>
+      <div class="accounts-row">
+        <a class="account-pill" href="https://www.facebook.com/childyouthbankingweekpma" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          Facebook
+          <span class="plat-divider"></span>
+          <span class="pill-handle">childyouthbankingweekpma</span>
+        </a>
+        <a class="account-pill" href="https://www.instagram.com/cybw.ps/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="url(#ig-grad-3)"><defs><linearGradient id="ig-grad-3" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+          <span class="plat-divider"></span>
+          <span class="pill-handle">@cybw.ps</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- MONSHATI -->
+    <div class="brand-group">
+      <div class="brand-name"><span class="brand-dot c4"></span>Monshati — منشأتي</div>
+      <div class="accounts-row">
+        <a class="account-pill" href="https://www.facebook.com/monshatips" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          Facebook
+          <span class="plat-divider"></span>
+          <span class="pill-handle">monshatips</span>
+        </a>
+        <a class="account-pill" href="https://www.instagram.com/monshati.ps/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="url(#ig-grad-4)"><defs><linearGradient id="ig-grad-4" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+          <span class="plat-divider"></span>
+          <span class="pill-handle">@monshati.ps</span>
+        </a>
+        <a class="account-pill" href="https://x.com/MonshatiPs" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+          <span class="plat-divider"></span>
+          <span class="pill-handle">@MonshatiPs</span>
+        </a>
+        <a class="account-pill" href="https://www.linkedin.com/company/monshati-ps/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+          <span class="plat-divider"></span>
+          <span class="pill-handle">monshati-ps</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="accounts-note">11 accounts total · 5 platforms · all links open the live page in a new tab</div>
   </div>
 </div>
 
