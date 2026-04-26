@@ -587,10 +587,10 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
     <h3 class="ct" data-i18n="ct_monthly_vol">Monthly posting volume — social platforms (2023–2026)</h3>
     <p class="cs" data-i18n="cs_monthly_vol">Facebook, Instagram, LinkedIn, X — all accounts combined. Mobile app data is session/install-based, not post-based.</p>
     <div class="legend">
-      <div class="li-item"><div class="li-dot" style="background:#1877f2"></div>Facebook</div>
-      <div class="li-item"><div class="li-dot" style="background:#e1306c"></div>Instagram</div>
-      <div class="li-item"><div class="li-dot" style="background:#0a66c2"></div>LinkedIn</div>
-      <div class="li-item"><div class="li-dot" style="background:#374151"></div>X / Twitter</div>
+      <div class="li-item"><div class="li-dot" style="background:#1877f2"></div><span data-i18n="leg_facebook">Facebook</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#e1306c"></div><span data-i18n="leg_instagram">Instagram</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#0a66c2"></div><span data-i18n="leg_linkedin">LinkedIn</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#374151"></div><span data-i18n="leg_twitter">X / Twitter</span></div>
     </div>
     <div class="chart-wrap" style="height:220px"><canvas id="portfolioVolChart"></canvas></div>
     <div class="ins" data-i18n-html="ins_overview_monthly">Facebook maintains the highest and most consistent volume. LinkedIn volume was deliberately halved in 2024 — driving a <strong>5.6× engagement improvement</strong>. X/Twitter saw significant drop-off after mid-2023. Instagram is the most active platform by post count in the portfolio.</div>
@@ -635,7 +635,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-accounts" class="section">
   <div class="section-label" data-i18n="label_accounts">Account Scorecards</div>
-  <h2 class="section-title">All four brand pages — platform-by-platform</h2>
+  <h2 class="section-title" data-i18n="title_accounts">All four brand pages — platform-by-platform</h2>
   <p class="section-intro" data-i18n="si_accounts">All four brand pages — performance compared across Facebook and Instagram. Select any card to highlight an account.</p>
 
   <div class="account-grid" id="acct-cards"></div>
@@ -678,20 +678,20 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <p class="section-intro" data-i18n="si_facebook">1,341 posts across 4 pages (March 2023–March 2026). PMA Core dominates with 639 posts and 81,336 total engagement. Video posts average 206 engagement — more than double any other format — yet represent just 9.5% of posts.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
-    <div class="kpi-cell"><div class="kv">1,341</div><div class="kl">Total posts (all pages)</div></div>
-    <div class="kpi-cell"><div class="kv g">127</div><div class="kl">PMA Core avg engagement/post</div><div class="kd up">↑ Top page in portfolio</div></div>
-    <div class="kpi-cell"><div class="kv">206</div><div class="kl">Avg engagement — video posts</div><div class="kd up">↑ 2× image posts</div></div>
-    <div class="kpi-cell"><div class="kv r">3.9</div><div class="kl">Avg engagement — shared posts</div><div class="kd dn">↓ Discontinue immediately</div></div>
+    <div class="kpi-cell"><div class="kv">1,341</div><div class="kl" data-i18n="kpi_fb_total_posts">Total posts (all pages)</div></div>
+    <div class="kpi-cell"><div class="kv g">127</div><div class="kl" data-i18n="kpi_fb_core_avg">PMA Core avg engagement/post</div><div class="kd up" data-i18n="kpi_fb_core_top">↑ Top page in portfolio</div></div>
+    <div class="kpi-cell"><div class="kv">206</div><div class="kl" data-i18n="kpi_fb_vid_avg">Avg engagement — video posts</div><div class="kd up" data-i18n="kpi_fb_vid_2x">↑ 2× image posts</div></div>
+    <div class="kpi-cell"><div class="kv r">3.9</div><div class="kl" data-i18n="kpi_fb_shared_avg">Avg engagement — shared posts</div><div class="kd dn" data-i18n="kpi_fb_shared_stop">↓ Discontinue immediately</div></div>
   </div>
 
   <div class="card" style="margin-bottom:1.25rem">
     <h3 class="ct" data-i18n="ct_fb_vol">Monthly posting volume by page — Facebook</h3>
     <p class="cs" data-i18n="cs_fb_vol_date">March 2023 – March 2026</p>
     <div class="legend">
-      <div class="li-item"><div class="li-dot" style="background:#0f2a4a"></div>PMA Core</div>
-      <div class="li-item"><div class="li-dot" style="background:#1d9e75"></div>Banking Awareness</div>
-      <div class="li-item"><div class="li-dot" style="background:#d97706"></div>CYBW</div>
-      <div class="li-item"><div class="li-dot" style="background:#c0394b"></div>Monshati</div>
+      <div class="li-item"><div class="li-dot" style="background:#0f2a4a"></div><span data-i18n="leg_pma_core">PMA Core</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#1d9e75"></div><span data-i18n="leg_banking">Banking Awareness</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#d97706"></div><span data-i18n="leg_cybw">CYBW</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#c0394b"></div><span data-i18n="leg_monshati">Monshati</span></div>
     </div>
     <div class="chart-wrap" style="height:240px"><canvas id="fbVolChart"></canvas></div>
     <div class="ins" data-i18n-html="ins_fb_vol">PMA Core posts every month without exception. <strong>Monshati collapsed after Oct 2023</strong> and has been near-dormant since. CYBW shows characteristic campaign bursts in Apr–May. Banking Awareness recovered strongly from Jan 2025.</div>
@@ -744,20 +744,20 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <p class="section-intro" data-i18n="si_instagram">1,775 posts across 4 pages (Jun 2021–Mar 2026). Banking Awareness outperforms PMA Core on avg engagement (26.6 vs 14.5). Video posts average 65.9 engagement — 6× image posts. The audience is measurably warmer: 40.4% of comments are positive vs Facebook's 8.4%.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
-    <div class="kpi-cell"><div class="kv">1,775</div><div class="kl">Total posts (all pages)</div></div>
-    <div class="kpi-cell"><div class="kv g">26.6</div><div class="kl">Banking Awareness avg eng/post</div><div class="kd up">↑ Outperforms PMA Core on IG</div></div>
-    <div class="kpi-cell"><div class="kv">65.9</div><div class="kl">Avg engagement — video posts</div><div class="kd up">↑ 6× image posts</div></div>
-    <div class="kpi-cell"><div class="kv g">40.4%</div><div class="kl">Positive comment rate</div><div class="kd up">↑ vs 8.4% on Facebook</div></div>
+    <div class="kpi-cell"><div class="kv">1,775</div><div class="kl" data-i18n="kpi_fb_total_posts">Total posts (all pages)</div></div>
+    <div class="kpi-cell"><div class="kv g">26.6</div><div class="kl" data-i18n="kpi_ig_ba_avg">Banking Awareness avg eng/post</div><div class="kd up" data-i18n="kpi_ig_ba_top">↑ Outperforms PMA Core on IG</div></div>
+    <div class="kpi-cell"><div class="kv">65.9</div><div class="kl" data-i18n="kpi_fb_vid_avg">Avg engagement — video posts</div><div class="kd up" data-i18n="kpi_ig_vid_6x">↑ 6× image posts</div></div>
+    <div class="kpi-cell"><div class="kv g">40.4%</div><div class="kl" data-i18n="kpi_ig_pos_rate">Positive comment rate</div><div class="kd up" data-i18n="kpi_ig_pos_up">↑ vs 8.4% on Facebook</div></div>
   </div>
 
   <div class="card" style="margin-bottom:1.25rem">
     <h3 class="ct" data-i18n="ct_ig_vol">Monthly posting volume by page — Instagram</h3>
     <p class="cs">Jun 2021 – Mar 2026 — all 4 pages</p>
     <div class="legend">
-      <div class="li-item"><div class="li-dot" style="background:#0f2a4a"></div>PMA Core</div>
-      <div class="li-item"><div class="li-dot" style="background:#1d9e75"></div>Banking Awareness</div>
-      <div class="li-item"><div class="li-dot" style="background:#d97706"></div>CYBW</div>
-      <div class="li-item"><div class="li-dot" style="background:#c0394b"></div>Monshati</div>
+      <div class="li-item"><div class="li-dot" style="background:#0f2a4a"></div><span data-i18n="leg_pma_core">PMA Core</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#1d9e75"></div><span data-i18n="leg_banking">Banking Awareness</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#d97706"></div><span data-i18n="leg_cybw">CYBW</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#c0394b"></div><span data-i18n="leg_monshati">Monshati</span></div>
     </div>
     <div class="chart-wrap" style="height:240px"><canvas id="igVolChart"></canvas></div>
     <div class="ins" data-i18n-html="ins_ig_vol">Monshati was the most active IG account in 2021–2022, then went near-dormant. PMA Core became the dominant account from late 2022. CYBW shows same April–May campaign burst pattern as Facebook.</div>
@@ -768,7 +768,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_ig_eng">Monthly engagement trend — Instagram</h3>
       <p class="cs" data-i18n="cs_fb_eng">Total engagement per month, all accounts (2023–2026)</p>
       <div class="chart-wrap" style="height:220px"><canvas id="igEngChart"></canvas></div>
-      <div class="ins">Peak: <strong>Aug 2024 (3,145)</strong> dominated by the viral fraud video (2,430 eng.). Apr 2025 (3,620) driven by CYBW campaign burst. Engagement is generally lower than Facebook in absolute terms.</div>
+      <div class="ins" data-i18n-html="ins_ig_eng2">Peak: <strong>Aug 2024 (3,145)</strong> dominated by the viral fraud video (2,430 eng.). Apr 2025 (3,620) driven by CYBW campaign burst. Engagement is generally lower than Facebook in absolute terms.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_ig_type">Average engagement by post type — Instagram</h3>
@@ -795,10 +795,10 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <p class="section-intro" data-i18n="si_linkedin">2,676 posts from PMA Core (Mar 2017–Mar 2026). The standout trend in the entire dataset: a 5.6× engagement improvement driven by reducing posting frequency by half. The quality-over-quantity effect is confirmed and sustained into 2026.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
-    <div class="kpi-cell"><div class="kv g">5.6×</div><div class="kl">Engagement growth 2023→2025</div><div class="kd up">↑ Halved posting frequency</div></div>
-    <div class="kpi-cell"><div class="kv">12,207</div><div class="kl">Followers (Dec 2025 sample)</div></div>
-    <div class="kpi-cell"><div class="kv">25.3</div><div class="kl">Avg engagement in 2025</div><div class="kd up">↑ vs 4.5 in 2023</div></div>
-    <div class="kpi-cell"><div class="kv w">11.8%</div><div class="kl">Posts with zero engagement</div></div>
+    <div class="kpi-cell"><div class="kv g">5.6×</div><div class="kl" data-i18n="kpi_li_growth">Engagement growth 2023→2025</div><div class="kd up" data-i18n="kpi_li_halved">↑ Halved posting frequency</div></div>
+    <div class="kpi-cell"><div class="kv">12,207</div><div class="kl" data-i18n="kpi_li_followers">Followers (Dec 2025 sample)</div></div>
+    <div class="kpi-cell"><div class="kv">25.3</div><div class="kl" data-i18n="kpi_li_avg_25">Avg engagement in 2025</div><div class="kd up">↑ vs 4.5 in 2023</div></div>
+    <div class="kpi-cell"><div class="kv w">11.8%</div><div class="kl" data-i18n="kpi_li_zero">Posts with zero engagement</div></div>
   </div>
 
   <div class="g2" style="margin-bottom:1.25rem">
@@ -806,7 +806,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_li_eng_m">Monthly engagement — LinkedIn PMA Core</h3>
       <p class="cs" data-i18n="cs_li_eng_m">Total likes + comments + shares per month — bar shade indicates year</p>
       <div class="chart-wrap" style="height:220px"><canvas id="liVolChart"></canvas></div>
-      <div class="ins">2023: avg <strong>33.8 posts/month → 4.5 avg engagement</strong>. 2025: avg <strong>16.4 posts/month → 25.3 avg engagement</strong>. Halving volume yielded 5.6× better results.</div>
+      <div class="ins" data-i18n-html="ins_li_vol">2023: avg <strong>33.8 posts/month → 4.5 avg engagement</strong>. 2025: avg <strong>16.4 posts/month → 25.3 avg engagement</strong>. Halving volume yielded 5.6× better results.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_li_year">Engagement by year — LinkedIn PMA Core</h3>
@@ -816,7 +816,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
         <div class="li-item"><div class="li-dot" style="background:#1d9e75"></div>Median</div>
       </div>
       <div class="chart-wrap" style="height:220px"><canvas id="liYearChart"></canvas></div>
-      <div class="ins">2026 figures (mean 25.4, median 25.0) track 2025 exactly — confirming the improvement is <strong>sustained, not a spike</strong>. Convergence of mean and median signals content consistency.</div>
+      <div class="ins" data-i18n-html="ins_li_year">2026 figures (mean 25.4, median 25.0) track 2025 exactly — confirming the improvement is <strong>sustained, not a spike</strong>. Convergence of mean and median signals content consistency.</div>
     </div>
   </div>
 
@@ -835,7 +835,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
 
   <div class="cl success">
     <div class="cl-label" data-i18n="cl_li_quality2_lbl">Quality over quantity — confirmed finding</div>
-    <p>LinkedIn is the clearest evidence of a quality-over-quantity effect. Posting 33.8×/month in 2023 produced 4.5 avg engagement. Posting 16.4×/month in 2025 produced 25.3 — 5.6× improvement from half the volume. Optimal PMA LinkedIn cadence appears to be <strong>12–20 posts/month</strong> focused on institutional milestones, governor events, and regulatory announcements.</p>
+    <p data-i18n-html="cl_li_quality2_p">LinkedIn is the clearest evidence of a quality-over-quantity effect. Posting 33.8×/month in 2023 produced 4.5 avg engagement. Posting 16.4×/month in 2025 produced 25.3 — 5.6× improvement from half the volume. Optimal PMA LinkedIn cadence appears to be <strong>12–20 posts/month</strong> focused on institutional milestones, governor events, and regulatory announcements.</p>
   </div>
 </div>
 
@@ -848,10 +848,10 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <p class="section-intro" data-i18n="si_twitter">1,246 tweets from PMAuthority (806) and MonshatiPs (440), spanning Oct 2021–Mar 2026. The platform functions as a broadcast archive: average 47 views/tweet for PMA Core, near-zero retweet and reply activity. MonshatiPs has been dormant since mid-2023.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
-    <div class="kpi-cell"><div class="kv">1,246</div><div class="kl">Total tweets (PMAuthority + MonshatiPs)</div></div>
-    <div class="kpi-cell"><div class="kv r">47</div><div class="kl">Avg views per PMA Core tweet</div><div class="kd dn">↓ Max ever: 2,116 (outlier)</div></div>
-    <div class="kpi-cell"><div class="kv r">0.07</div><div class="kl">Avg retweets per tweet</div><div class="kd dn">↓ Near-zero amplification</div></div>
-    <div class="kpi-cell"><div class="kv r">0</div><div class="kl">MonshatiPs tweets since mid-2023</div><div class="kd dn">↓ Account dormant</div></div>
+    <div class="kpi-cell"><div class="kv">1,246</div><div class="kl" data-i18n="kpi_tw_total">Total tweets (PMAuthority + MonshatiPs)</div></div>
+    <div class="kpi-cell"><div class="kv r">47</div><div class="kl" data-i18n="kpi_tw_avg_views">Avg views per PMA Core tweet</div><div class="kd dn" data-i18n="kpi_tw_max">↓ Max ever: 2,116 (outlier)</div></div>
+    <div class="kpi-cell"><div class="kv r">0.07</div><div class="kl" data-i18n="kpi_tw_retweets">Avg retweets per tweet</div><div class="kd dn" data-i18n="kpi_tw_zero_amp">↓ Near-zero amplification</div></div>
+    <div class="kpi-cell"><div class="kv r">0</div><div class="kl" data-i18n="kpi_tw_monshati">MonshatiPs tweets since mid-2023</div><div class="kd dn" data-i18n="kpi_tw_dormant">↓ Account dormant</div></div>
   </div>
 
   <div class="g2" style="margin-bottom:1.25rem">
@@ -859,11 +859,11 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_tw_vol">Monthly tweet volume — PMAuthority &amp; MonshatiPs</h3>
       <p class="cs" data-i18n="cs_tw_vol_date">Oct 2021–Mar 2026</p>
       <div class="legend">
-        <div class="li-item"><div class="li-dot" style="background:#14171a"></div>PMAuthority</div>
-        <div class="li-item"><div class="li-dot" style="background:#c0394b"></div>MonshatiPs</div>
+        <div class="li-item"><div class="li-dot" style="background:#14171a"></div><span data-i18n="leg_pmauth">PMAuthority</span></div>
+        <div class="li-item"><div class="li-dot" style="background:#c0394b"></div><span data-i18n="leg_monshp">MonshatiPs</span></div>
       </div>
       <div class="chart-wrap" style="height:220px"><canvas id="twVolChart"></canvas></div>
-      <div class="ins">PMA Core maintained 40–60 tweets/month through 2022–2023, then dropped sharply. Monshati went silent after Oct 2023. The platform is receiving continued input but generating no measurable audience interaction.</div>
+      <div class="ins" data-i18n-html="ins_tw_vol">PMA Core maintained 40–60 tweets/month through 2022–2023, then dropped sharply. Monshati went silent after Oct 2023. The platform is receiving continued input but generating no measurable audience interaction.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_tw_top">Top tweets by views — PMAuthority</h3>
@@ -875,13 +875,13 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
         <div class="tp"><div class="tp-rank">#4</div><div class="tp-eng">249</div><div><div class="tp-meta">PMAuthority · 2023 · Job vacancy</div><div class="tp-text">#شاغر_وظيفي رئيس وحدة الاستشارات القانونية / #سلطة_النقد</div></div></div>
         <div class="tp"><div class="tp-rank">#5</div><div class="tp-eng">223</div><div><div class="tp-meta">PMAuthority · 2024 · Currency info</div><div class="tp-text">العملات المتداولة في السوق الفلسطينية، ودور البنوك المراسلة</div></div></div>
       </div>
-      <div class="ins">The top tweet (2,116 views) is a holiday greeting — not institutional content. The highest-viewed substantive tweet (443) is a banking services announcement. These figures are <strong>orders of magnitude below Facebook and Instagram</strong> performance.</div>
+      <div class="ins" data-i18n-html="ins_tw_top">The top tweet (2,116 views) is a holiday greeting — not institutional content. The highest-viewed substantive tweet (443) is a banking services announcement. These figures are <strong>orders of magnitude below Facebook and Instagram</strong> performance.</div>
     </div>
   </div>
 
   <div class="cl danger">
     <div class="cl-label" data-i18n="cl_tw_gap_lbl">Strategic gap — X/Twitter</div>
-    <p>X/Twitter is functioning as a <strong>broadcast archive</strong> with no measurable audience engagement. With an average of 47 views per tweet, 0.07 retweets, and near-zero reply rate, the platform is consuming resources without generating impact. Recommend: (1) Define a clear X-specific content strategy or (2) Redirect resources to higher-performing platforms. The current approach — mirroring Facebook content — is not working on this platform.</p>
+    <p data-i18n-html="cl_tw_gap_p">X/Twitter is functioning as a <strong>broadcast archive</strong> with no measurable audience engagement. With an average of 47 views per tweet, 0.07 retweets, and near-zero reply rate, the platform is consuming resources without generating impact. Recommend: (1) Define a clear X-specific content strategy or (2) Redirect resources to higher-performing platforms. The current approach — mirroring Facebook content — is not working on this platform.</p>
   </div>
 </div>
 
@@ -894,10 +894,10 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <p class="section-intro" data-i18n="si_youtube">Single PMA channel launched Nov 2012. 191 videos in dataset, 1,150 subscribers, 120,383 total channel views. The channel is chronically under-invested given the demonstrated power of video content on Facebook and Instagram.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
-    <div class="kpi-cell"><div class="kv">191</div><div class="kl">Videos in dataset</div></div>
-    <div class="kpi-cell"><div class="kv w">1,150</div><div class="kl">Channel subscribers</div><div class="kd dn">↓ After 13 years</div></div>
-    <div class="kpi-cell"><div class="kv">120K</div><div class="kl">Total channel views (all-time)</div></div>
-    <div class="kpi-cell"><div class="kv">192</div><div class="kl">Avg views per video (dataset)</div><div class="kd dn">↓ 36,644 total in scraped subset</div></div>
+    <div class="kpi-cell"><div class="kv">191</div><div class="kl" data-i18n="kpi_yt_videos">Videos in dataset</div></div>
+    <div class="kpi-cell"><div class="kv w">1,150</div><div class="kl" data-i18n="kpi_yt_subs">Channel subscribers</div><div class="kd dn" data-i18n="kpi_yt_13y">↓ After 13 years</div></div>
+    <div class="kpi-cell"><div class="kv">120K</div><div class="kl" data-i18n="kpi_yt_views">Total channel views (all-time)</div></div>
+    <div class="kpi-cell"><div class="kv">192</div><div class="kl" data-i18n="kpi_yt_avg">Avg views per video (dataset)</div><div class="kd dn" data-i18n="kpi_yt_36k">↓ 36,644 total in scraped subset</div></div>
   </div>
 
   <div class="g2" style="margin-bottom:1.25rem">
@@ -905,19 +905,19 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_yt_year">YouTube uploads by year</h3>
       <p class="cs" data-i18n="cs_yt_year">Video count per year — sporadic production schedule</p>
       <div class="chart-wrap" style="height:220px"><canvas id="ytYearChart"></canvas></div>
-      <div class="ins">No consistent annual upload schedule. Production peaked in 2013 (11 videos) and remains sporadic. This contrasts sharply with Facebook video performance — the same content would likely dramatically outperform on YouTube if properly produced and distributed.</div>
+      <div class="ins" data-i18n-html="ins_yt_year">No consistent annual upload schedule. Production peaked in 2013 (11 videos) and remains sporadic. This contrasts sharply with Facebook video performance — the same content would likely dramatically outperform on YouTube if properly produced and distributed.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_yt_top">Top 5 videos by views</h3>
       <p class="cs" data-i18n="cs_yt_top">The PMA mobile app explainer is the clear outlier (10,160 views)</p>
       <div id="yt-top-videos" style="margin-top:0.5rem"></div>
-      <div class="ins">The top video (individual inquiry system explainer, 2023) has <strong>10,160 views</strong> — suggesting strong demand for practical how-to content. Financial literacy explainers from 2019 remain among the most-viewed, indicating evergreen demand.</div>
+      <div class="ins" data-i18n-html="ins_yt_top">The top video (individual inquiry system explainer, 2023) has <strong>10,160 views</strong> — suggesting strong demand for practical how-to content. Financial literacy explainers from 2019 remain among the most-viewed, indicating evergreen demand.</div>
     </div>
   </div>
 
   <div class="cl warn">
     <div class="cl-label" data-i18n="cl_yt_opp_lbl">Strategic opportunity — YouTube</div>
-    <p>Given that video content generates 2–6× higher engagement on Facebook and Instagram, PMA has an opportunity to build YouTube as a <strong>long-form content repository</strong> that supports shorter social clips. Recommended approach: republish existing high-performing video content to YouTube, create dedicated series for financial literacy explainers, consumer protection guides, and iBURAQ/digital payment tutorials. Target: 2–4 uploads/month from repurposed social content.</p>
+    <p data-i18n-html="cl_yt_opp_p">Given that video content generates 2–6× higher engagement on Facebook and Instagram, PMA has an opportunity to build YouTube as a <strong>long-form content repository</strong> that supports shorter social clips. Recommended approach: republish existing high-performing video content to YouTube, create dedicated series for financial literacy explainers, consumer protection guides, and iBURAQ/digital payment tutorials. Target: 2–4 uploads/month from repurposed social content.</p>
   </div>
 </div>
 
@@ -932,10 +932,10 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <p class="section-intro" data-i18n="si_audience">Age, gender, city, and country breakdown for PMA Core's Facebook and Instagram audiences. Data sourced from native Meta Business Suite audience insights exports. Figures represent percentage of total page audience.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
-    <div class="kpi-cell"><div class="kv">67.8%</div><div class="kl">Facebook audience — male</div><div class="kd dn">↓ Significant gender skew</div></div>
-    <div class="kpi-cell"><div class="kv g">44.9%</div><div class="kl">Instagram audience — female</div><div class="kd up">↑ More balanced than FB</div></div>
-    <div class="kpi-cell"><div class="kv">81.8%</div><div class="kl">FB audience in Palestine</div></div>
-    <div class="kpi-cell"><div class="kv">78%</div><div class="kl">IG audience in Palestine</div></div>
+    <div class="kpi-cell"><div class="kv">67.8%</div><div class="kl" data-i18n="kpi_aud_fb_male">Facebook audience — male</div><div class="kd dn" data-i18n="kpi_aud_fb_skew">↓ Significant gender skew</div></div>
+    <div class="kpi-cell"><div class="kv g">44.9%</div><div class="kl" data-i18n="kpi_aud_ig_female">Instagram audience — female</div><div class="kd up" data-i18n="kpi_aud_ig_bal">↑ More balanced than FB</div></div>
+    <div class="kpi-cell"><div class="kv">81.8%</div><div class="kl" data-i18n="kpi_aud_fb_ps">FB audience in Palestine</div></div>
+    <div class="kpi-cell"><div class="kv">78%</div><div class="kl" data-i18n="kpi_aud_ig_ps">IG audience in Palestine</div></div>
   </div>
 
   <div class="g2" style="margin-bottom:1.25rem">
@@ -943,13 +943,13 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct">Age & gender distribution — Facebook audience</h3>
       <p class="cs" data-i18n="cs_age_fb">% of total page audience by age band and gender — PMA Core Facebook</p>
       <div class="chart-wrap" style="height:240px"><canvas id="fbAgeChart"></canvas></div>
-      <div class="ins">The 25–34 male segment (25.8%) is the largest single cohort on Facebook, followed by 35–44 males (23.9%). <strong>Women account for only 32.2%</strong> of the total audience — a significant gap given that financial inclusion for women is a stated PMA priority. The 25–44 combined segment represents 74.5% of the audience.</div>
+      <div class="ins" data-i18n-html="ins_age_fb">The 25–34 male segment (25.8%) is the largest single cohort on Facebook, followed by 35–44 males (23.9%). <strong>Women account for only 32.2%</strong> of the total audience — a significant gap given that financial inclusion for women is a stated PMA priority. The 25–44 combined segment represents 74.5% of the audience.</div>
     </div>
     <div class="card">
       <h3 class="ct">Age & gender distribution — Instagram audience</h3>
       <p class="cs" data-i18n="cs_age_ig">% of total page audience by age band and gender — PMA Core Instagram</p>
       <div class="chart-wrap" style="height:240px"><canvas id="igAgeChart"></canvas></div>
-      <div class="ins">Instagram audience is substantially more gender-balanced: <strong>55.1% male vs 44.9% female</strong>. The 25–34 age band dominates on both genders (22.9% male, 22.2% female) — and the 18–24 band is near-equal (7.1% vs 7.4%), suggesting Instagram is more effective at reaching young women.</div>
+      <div class="ins" data-i18n-html="ins_age_ig">Instagram audience is substantially more gender-balanced: <strong>55.1% male vs 44.9% female</strong>. The 25–34 age band dominates on both genders (22.9% male, 22.2% female) — and the 18–24 band is near-equal (7.1% vs 7.4%), suggesting Instagram is more effective at reaching young women.</div>
     </div>
   </div>
 
@@ -958,13 +958,13 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_cities">Top cities — Facebook vs Instagram</h3>
       <p class="cs" data-i18n="cs_cities">% of audience by city — FB: Gaza leads · IG: Ramallah leads</p>
       <div class="chart-wrap" style="height:260px"><canvas id="cityChart"></canvas></div>
-      <div class="ins">Gaza leads on Facebook (16.2%) while Ramallah leads on Instagram (15.9%) — reflecting the different platform penetration and demographic profiles in each city. Nablus and Hebron feature in both top 10s. The Ramallah concentration on Instagram likely reflects its younger, more connected population.</div>
+      <div class="ins" data-i18n-html="ins_cities">Gaza leads on Facebook (16.2%) while Ramallah leads on Instagram (15.9%) — reflecting the different platform penetration and demographic profiles in each city. Nablus and Hebron feature in both top 10s. The Ramallah concentration on Instagram likely reflects its younger, more connected population.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_countries">Top countries — Facebook vs Instagram</h3>
       <p class="cs" data-i18n="cs_countries">% of audience outside Palestine — diaspora and regional reach</p>
       <div class="chart-wrap" style="height:260px"><canvas id="countryChart"></canvas></div>
-      <div class="ins">Palestine dominates both platforms (FB: 81.8%, IG: 78%). Israel ranks second on both — likely reflecting Palestinian citizens within 1948 borders. The diaspora reach is limited but covers key markets: Egypt, Jordan, UAE, USA. IG has slightly wider international reach (22% non-Palestinian vs FB's 18.2%).</div>
+      <div class="ins" data-i18n-html="ins_countries">Palestine dominates both platforms (FB: 81.8%, IG: 78%). Israel ranks second on both — likely reflecting Palestinian citizens within 1948 borders. The diaspora reach is limited but covers key markets: Egypt, Jordan, UAE, USA. IG has slightly wider international reach (22% non-Palestinian vs FB's 18.2%).</div>
     </div>
   </div>
 
@@ -973,15 +973,15 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_ig_follow">Instagram daily follower gains — Jan–Apr 2026</h3>
       <p class="cs" data-i18n="cs_ig_follow">New followers per day from native Meta export — 95 days tracked</p>
       <div class="chart-wrap" style="height:200px"><canvas id="igFollowChart"></canvas></div>
-      <div class="ins">Average 18 new followers/day during Jan–Apr 2026. Spike on Jan 12 (293 new followers) coincides with a high-engagement post. Daily follower acquisition is modest but consistent — indicating organic growth without a paid acquisition strategy.</div>
+      <div class="ins" data-i18n-html="ins_ig_follow">Average 18 new followers/day during Jan–Apr 2026. Spike on Jan 12 (293 new followers) coincides with a high-engagement post. Daily follower acquisition is modest but consistent — indicating organic growth without a paid acquisition strategy.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_aud_insights">Strategic audience insights</h3>
       <p class="cs" data-i18n="cs_aud_insights">Key implications of demographic findings</p>
       <div style="display:flex;flex-direction:column;gap:0.6rem;margin-top:0.5rem">
-        <div class="cl danger" style="margin:0"><div class="cl-label" data-i18n="cl_gender_fb_lbl">Gender gap — Facebook</div><p>At 67.8% male, PMA Core Facebook has a structurally male-skewed audience — despite financial inclusion for women being a key PMA mandate. Content strategy should actively target financial empowerment for women.</p></div>
-        <div class="cl success" style="margin:0"><div class="cl-label" data-i18n="cl_ig_fit_lbl">Instagram audience fit</div><p>Instagram's near-balanced gender split (55/45) makes it the better platform for women-focused financial inclusion campaigns. Banking Awareness Platform's IG account (26.6 avg engagement) already demonstrates stronger fit — cross-promote more aggressively there.</p></div>
-        <div class="cl info" style="margin:0"><div class="cl-label" data-i18n="cl_25_44_lbl">25–44 concentration</div><p>The 25–44 working-age segment represents 74.5% of Facebook audience and ~72% of Instagram — the prime target for iBURAQ adoption, digital payment messaging, and financial literacy content. Content should be skewed toward practical financial tools, not general banking education.</p></div>
+        <div class="cl danger" style="margin:0"><div class="cl-label" data-i18n="cl_gender_fb_lbl">Gender gap — Facebook</div><p data-i18n-html="cl_gender_fb_p">At 67.8% male, PMA Core Facebook has a structurally male-skewed audience — despite financial inclusion for women being a key PMA mandate. Content strategy should actively target financial empowerment for women.</p></div>
+        <div class="cl success" style="margin:0"><div class="cl-label" data-i18n="cl_ig_fit_lbl">Instagram audience fit</div><p data-i18n-html="cl_ig_fit_p">Instagram's near-balanced gender split (55/45) makes it the better platform for women-focused financial inclusion campaigns. Banking Awareness Platform's IG account (26.6 avg engagement) already demonstrates stronger fit — cross-promote more aggressively there.</p></div>
+        <div class="cl info" style="margin:0"><div class="cl-label" data-i18n="cl_25_44_lbl">25–44 concentration</div><p data-i18n-html="cl_25_44_p">The 25–44 working-age segment represents 74.5% of Facebook audience and ~72% of Instagram — the prime target for iBURAQ adoption, digital payment messaging, and financial literacy content. Content should be skewed toward practical financial tools, not general banking education.</p></div>
       </div>
     </div>
   </div>
@@ -996,11 +996,11 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <p class="section-intro" data-i18n="si_ads">94 campaigns across Facebook and Instagram, March 2023 – April 2026. Total ad spend: $4,924 across 20M+ impressions and 8.3M reach. Data sourced from native Meta Ads Manager exports at campaign level and demographic breakdown level.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(5,1fr)" id="ads-kpi-strip">
-    <div class="kpi-cell"><div class="kv">94</div><div class="kl">Total campaigns</div><div class="kd">Mar 2023 – Apr 2026</div></div>
-    <div class="kpi-cell"><div class="kv g">$4,924</div><div class="kl">Total ad spend (USD)</div></div>
-    <div class="kpi-cell"><div class="kv">20.1M</div><div class="kl">Total impressions</div></div>
-    <div class="kpi-cell"><div class="kv">8.3M</div><div class="kl">Total reach</div></div>
-    <div class="kpi-cell"><div class="kv g">$0.044</div><div class="kl">Avg cost per result</div><div class="kd up">↑ Efficient across objectives</div></div>
+    <div class="kpi-cell"><div class="kv">94</div><div class="kl" data-i18n="kpi_ads_campaigns">Total campaigns</div><div class="kd" data-i18n="kpi_ads_range">Mar 2023 – Apr 2026</div></div>
+    <div class="kpi-cell"><div class="kv g">$4,924</div><div class="kl" data-i18n="kpi_ads_spend">Total ad spend (USD)</div></div>
+    <div class="kpi-cell"><div class="kv">20.1M</div><div class="kl" data-i18n="kpi_ads_impr">Total impressions</div></div>
+    <div class="kpi-cell"><div class="kv">8.3M</div><div class="kl" data-i18n="kpi_ads_reach">Total reach</div></div>
+    <div class="kpi-cell"><div class="kv g">$0.044</div><div class="kl" data-i18n="kpi_ads_cpr">Avg cost per result</div><div class="kd up" data-i18n="kpi_ads_eff">↑ Efficient across objectives</div></div>
   </div>
 
   <div class="g2" style="margin-bottom:1.25rem">
@@ -1008,13 +1008,13 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_ads_spend">Ad spend by year</h3>
       <p class="cs" data-i18n="cs_ads_spend">Budget allocation across campaign creation years</p>
       <div class="chart-wrap" style="height:220px"><canvas id="adsSpendChart"></canvas></div>
-      <div class="ins">2023 dominated campaign creation volume (62 campaigns). 2025 saw the highest single campaign spend ($999.80 — iDplus launch). 2026 already shows $866 spend in the first quarter, indicating an accelerating paid media investment.</div>
+      <div class="ins" data-i18n-html="ins_ads_spend">2023 dominated campaign creation volume (62 campaigns). 2025 saw the highest single campaign spend ($999.80 — iDplus launch). 2026 already shows $866 spend in the first quarter, indicating an accelerating paid media investment.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_ads_obj">Campaign objectives breakdown</h3>
       <p class="cs" data-i18n="cs_ads_obj">By result indicator — what campaigns were optimised to achieve</p>
       <div class="chart-wrap" style="height:220px"><canvas id="adsObjChart"></canvas></div>
-      <div class="ins">Link clicks (32 campaigns) and post engagement (15 campaigns) are the dominant objectives. <strong>Video ThruPlay</strong> campaigns (8) represent the most efficient ad format — cost per result as low as $0.001 in some campaigns. Reach campaigns (5) were used for high-priority public announcements.</div>
+      <div class="ins" data-i18n-html="ins_ads_obj">Link clicks (32 campaigns) and post engagement (15 campaigns) are the dominant objectives. <strong>Video ThruPlay</strong> campaigns (8) represent the most efficient ad format — cost per result as low as $0.001 in some campaigns. Reach campaigns (5) were used for high-priority public announcements.</div>
     </div>
   </div>
 
@@ -1031,11 +1031,11 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <div class="g2">
     <div class="cl success" style="margin:0">
       <div class="cl-label" data-i18n="cl_ads_eff_lbl">Most efficient campaign — iDplus 2026</div>
-      <p>The iDplus Videos campaign (Jan 2026) achieved <strong>26,098 landing page views at $0.019 per result</strong> from a $500 budget — the most efficient campaign in the dataset. This confirms video content + landing page objective as the optimal paid media formula for product launches.</p>
+      <p data-i18n-html="cl_ads_eff_p">The iDplus Videos campaign (Jan 2026) achieved <strong>26,098 landing page views at $0.019 per result</strong> from a $500 budget — the most efficient campaign in the dataset. This confirms video content + landing page objective as the optimal paid media formula for product launches.</p>
     </div>
     <div class="cl warn" style="margin:0">
       <div class="cl-label" data-i18n="cl_ads_gap_lbl">Data gap — demographic breakdown</div>
-      <p>A separate demographic breakdown report (17 campaigns with age/gender data) is available but requires further processing to produce audience-level paid media insights. This will be integrated in the next update. Overall: 73 campaigns are inactive, 15 archived, 3 completed, 3 still active.</p>
+      <p data-i18n-html="cl_ads_gap_p">A separate demographic breakdown report (17 campaigns with age/gender data) is available but requires further processing to produce audience-level paid media insights. This will be integrated in the next update. Overall: 73 campaigns are inactive, 15 archived, 3 completed, 3 still active.</p>
     </div>
   </div>
 </div>
@@ -1053,13 +1053,13 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_type_comp">Post type performance — Facebook vs Instagram</h3>
       <p class="cs" data-i18n="cs_type_comp">Average engagement per post type, both platforms</p>
       <div class="chart-wrap" style="height:240px"><canvas id="typeCompChart"></canvas></div>
-      <div class="ins">Video's advantage is even larger on Instagram (6×) than Facebook (2×). Both platforms massively under-utilise video relative to its performance. <strong>Shared posts on Facebook average 3.9</strong> — effectively invisible, should be eliminated.</div>
+      <div class="ins" data-i18n-html="ins_content_type">Video's advantage is even larger on Instagram (6×) than Facebook (2×). Both platforms massively under-utilise video relative to its performance. <strong>Shared posts on Facebook average 3.9</strong> — effectively invisible, should be eliminated.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_dow">Day of week — avg engagement by platform</h3>
       <p class="cs" data-i18n="cs_dow">Facebook peaks Saturday · Instagram peaks Thursday · LinkedIn peaks Saturday</p>
       <div class="chart-wrap" style="height:240px"><canvas id="dowChart"></canvas></div>
-      <div class="ins">The data reveals a <strong>scheduling misalignment</strong>: Facebook posts most on Wednesday (low-return day) while Saturday (highest engagement) is under-utilised. Platform-specific scheduling should replace the current uniform approach.</div>
+      <div class="ins" data-i18n-html="ins_content_dow">The data reveals a <strong>scheduling misalignment</strong>: Facebook posts most on Wednesday (low-return day) while Saturday (highest engagement) is under-utilised. Platform-specific scheduling should replace the current uniform approach.</div>
     </div>
   </div>
 
@@ -1067,13 +1067,13 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
     <h3 class="ct" data-i18n="ct_hours">Posting hour distribution — all platforms</h3>
     <p class="cs" data-i18n="cs_hours">Post count by hour (Palestine time) — all accounts, all platforms</p>
     <div class="legend">
-      <div class="li-item"><div class="li-dot" style="background:#1877f2"></div>Facebook</div>
-      <div class="li-item"><div class="li-dot" style="background:#e1306c"></div>Instagram</div>
-      <div class="li-item"><div class="li-dot" style="background:#0a66c2"></div>LinkedIn</div>
+      <div class="li-item"><div class="li-dot" style="background:#1877f2"></div><span data-i18n="leg_facebook">Facebook</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#e1306c"></div><span data-i18n="leg_instagram">Instagram</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#0a66c2"></div><span data-i18n="leg_linkedin">LinkedIn</span></div>
       <div class="li-item"><div class="li-dot" style="background:#374151"></div>X</div>
     </div>
     <div class="chart-wrap" style="height:200px"><canvas id="hourChart"></canvas></div>
-    <div class="ins"><strong>Critical finding:</strong> All four <em>social</em> platforms (Facebook, Instagram, LinkedIn, X) peak at the same hours (5–8am Palestine time) — the signature of a single scheduling tool publishing identical queues simultaneously. This produces consistency but <strong>zero platform-specific timing optimisation</strong>. Facebook and Instagram perform better at 8–9am and 13–16pm; LinkedIn at 7–9am weekdays. The Mobile App operates independently of this scheduling system.</div>
+    <div class="ins" data-i18n-html="ins_content_sched"><strong>Critical finding:</strong> All four <em>social</em> platforms (Facebook, Instagram, LinkedIn, X) peak at the same hours (5–8am Palestine time) — the signature of a single scheduling tool publishing identical queues simultaneously. This produces consistency but <strong>zero platform-specific timing optimisation</strong>. Facebook and Instagram perform better at 8–9am and 13–16pm; LinkedIn at 7–9am weekdays. The Mobile App operates independently of this scheduling system.</div>
   </div>
 
   <!-- Content theme matrix -->
@@ -1107,7 +1107,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <!-- Key insight callout -->
   <div class="cl warn" style="margin-bottom:1.25rem">
     <div class="cl-label" data-i18n="cl_paid_lbl">Paid vs organic — key finding</div>
-    <p>11.3% of Facebook posts (54 boosted) account for <strong>42.9% of all engagement</strong>. Average boosted post: 739 engagement vs 126 for organic — a 5.9× gap driven entirely by paid reach, not content quality. The reaction:comment ratio is the clearest proxy: <strong>paid posts average 12:1, organic average 7:1</strong>. Ratios above 20 almost always indicate boosted distribution.</p>
+    <p data-i18n-html="cl_paid_p">11.3% of Facebook posts (54 boosted) account for <strong>42.9% of all engagement</strong>. Average boosted post: 739 engagement vs 126 for organic — a 5.9× gap driven entirely by paid reach, not content quality. The reaction:comment ratio is the clearest proxy: <strong>paid posts average 12:1, organic average 7:1</strong>. Ratios above 20 almost always indicate boosted distribution.</p>
   </div>
 
   <!-- View toggle -->
@@ -1156,7 +1156,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
 
   <div class="cl info">
     <div class="cl-label" data-i18n="cl_method_paid_lbl">Methodology — paid detection</div>
-    <p><strong>Facebook:</strong> Paid status confirmed from native Meta exports where available (Reach from Boosted Posts &gt; 0 = paid, = 0 = organic). For posts outside the native export window (pre-2024), proxy detection is used: reactions ÷ comments &gt; 20 AND engagement &gt; 200. <strong>Instagram:</strong> Native IG exports do not include a boosted/organic reach split — proxy method applied throughout (likes ÷ comments &gt; 30 AND engagement &gt; 200). IG paid labels are estimates only. Ratio = reactions (or likes) ÷ comments. Lower ratio = more organic audience discussion.</p>
+    <p data-i18n-html="cl_method_paid_p"><strong>Facebook:</strong> Paid status confirmed from native Meta exports where available (Reach from Boosted Posts &gt; 0 = paid, = 0 = organic). For posts outside the native export window (pre-2024), proxy detection is used: reactions ÷ comments &gt; 20 AND engagement &gt; 200. <strong>Instagram:</strong> Native IG exports do not include a boosted/organic reach split — proxy method applied throughout (likes ÷ comments &gt; 30 AND engagement &gt; 200). IG paid labels are estimates only. Ratio = reactions (or likes) ÷ comments. Lower ratio = more organic audience discussion.</p>
   </div>
 
 
@@ -1173,11 +1173,11 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <p class="section-intro" data-i18n="si_sentiment">7,690 Facebook comments and 795 Instagram comments classified using a rule-based Arabic sentiment classifier (80+ term lexicon + emoji signals + VADER for Latin text). 609 Facebook posts and 179 Instagram posts have matched comment data.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(5,1fr)">
-    <div class="kpi-cell"><div class="kv">7,690</div><div class="kl">FB comments classified</div></div>
-    <div class="kpi-cell"><div class="kv g">8.4%</div><div class="kl">FB positive comments</div></div>
-    <div class="kpi-cell"><div class="kv r">3.0%</div><div class="kl">FB negative comments</div></div>
-    <div class="kpi-cell"><div class="kv g">40.4%</div><div class="kl">IG positive comments</div></div>
-    <div class="kpi-cell"><div class="kv r">31</div><div class="kl">Peak negative on single post</div><div class="kd dn">↓ Cash reduction law, Nov 2025</div></div>
+    <div class="kpi-cell"><div class="kv">7,690</div><div class="kl" data-i18n="kpi_sent_fb">FB comments classified</div></div>
+    <div class="kpi-cell"><div class="kv g">8.4%</div><div class="kl" data-i18n="kpi_sent_fb_pos">FB positive comments</div></div>
+    <div class="kpi-cell"><div class="kv r">3.0%</div><div class="kl" data-i18n="kpi_sent_fb_neg">FB negative comments</div></div>
+    <div class="kpi-cell"><div class="kv g">40.4%</div><div class="kl" data-i18n="kpi_sent_ig_pos">IG positive comments</div></div>
+    <div class="kpi-cell"><div class="kv r">31</div><div class="kl" data-i18n="kpi_sent_peak">Peak negative on single post</div><div class="kd dn" data-i18n="kpi_sent_cash">↓ Cash reduction law, Nov 2025</div></div>
   </div>
 
   <div class="g2" style="margin-bottom:1.25rem">
@@ -1185,13 +1185,13 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_sent_dist">Sentiment distribution — Facebook vs Instagram</h3>
       <p class="cs" data-i18n="cs_sent_dist">% of classified comments by sentiment label</p>
       <div class="chart-wrap" style="height:220px"><canvas id="sentOverviewChart"></canvas></div>
-      <div class="ins">Instagram's audience is substantially warmer. Facebook's higher neutral rate (88.6%) reflects more substantive public discourse — questions, requests, information-seeking. The platforms attract structurally different audience behaviours.</div>
+      <div class="ins" data-i18n-html="ins_sent_dist">Instagram's audience is substantially warmer. Facebook's higher neutral rate (88.6%) reflects more substantive public discourse — questions, requests, information-seeking. The platforms attract structurally different audience behaviours.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_sent_trend">Facebook comment sentiment — monthly (2023–2026)</h3>
       <p class="cs" data-i18n="cs_sent_trend">Stacked volume of positive / negative / neutral comments</p>
       <div class="chart-wrap" style="height:220px"><canvas id="sentTrendChart"></canvas></div>
-      <div class="ins">Negative comment spikes track policy-sensitive posts. Nov 2025 cash reduction consultation generated the largest negative cluster. Positive comments remain low but consistent — driven by iBURAQ and fraud awareness posts.</div>
+      <div class="ins" data-i18n-html="ins_sent_trend">Negative comment spikes track policy-sensitive posts. Nov 2025 cash reduction consultation generated the largest negative cluster. Positive comments remain low but consistent — driven by iBURAQ and fraud awareness posts.</div>
     </div>
   </div>
 
@@ -1216,7 +1216,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_sent_acct">Sentiment score by account — Facebook</h3>
       <p class="cs" data-i18n="cs_sent_acct">CYBW and Banking Awareness score better than PMA Core</p>
       <div class="chart-wrap" style="height:200px"><canvas id="sentAcctChart"></canvas></div>
-      <div class="ins">PMA Core, as the most visible and policy-exposed account, receives the most negative feedback proportionally. CYBW's campaign content scores positively — audience arrives already interested.</div>
+      <div class="ins" data-i18n-html="ins_sent_acct">PMA Core, as the most visible and policy-exposed account, receives the most negative feedback proportionally. CYBW's campaign content scores positively — audience arrives already interested.</div>
     </div>
   </div>
 
@@ -1227,19 +1227,19 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_ig_sent_top">Instagram comment sentiment — top positive posts</h3>
       <p class="cs" data-i18n="cs_ig_sent_top">Posts with highest positive comment sentiment (179 posts with matched comments)</p>
       <div id="ig-sent-posts"></div>
-      <div class="ins">Instagram comments skew strongly positive (40.4%) — largely driven by emoji reactions (👏❤️🔥) and celebratory language. Negative comments are rare (1.8%) and concentrated on financial service complaint posts.</div>
+      <div class="ins" data-i18n-html="ins_ig_sent">Instagram comments skew strongly positive (40.4%) — largely driven by emoji reactions (👏❤️🔥) and celebratory language. Negative comments are rare (1.8%) and concentrated on financial service complaint posts.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_ig_sent_comp">Sentiment comparison — Instagram vs Facebook by account</h3>
       <p class="cs" data-i18n="cs_ig_sent_comp">IG audiences respond warmer than FB across all accounts</p>
       <div class="chart-wrap" style="height:220px"><canvas id="igVsFbSentChart"></canvas></div>
-      <div class="ins">Banking Awareness achieves the strongest positive ratio on Instagram — consistent with its content being more educational and less policy-heavy than PMA Core. The platform-audience fit difference (IG 40% vs FB 8% positive) is structural, not content-specific.</div>
+      <div class="ins" data-i18n-html="ins_ig_sent2">Banking Awareness achieves the strongest positive ratio on Instagram — consistent with its content being more educational and less policy-heavy than PMA Core. The platform-audience fit difference (IG 40% vs FB 8% positive) is structural, not content-specific.</div>
     </div>
   </div>
 
   <div class="cl warn" style="margin-top:1.25rem">
     <div class="cl-label" data-i18n="cl_sent_mod_lbl">Moderation gap</div>
-    <p>Negative comments on public policy posts are publicly visible and unanswered in the scraped data. A community management protocol — especially for policy consultation posts and service announcements — would materially reduce reputational risk. Priority topics: <strong>loan/interest concerns, app login issues, payment discount claims, cash reduction law</strong>.</p>
+    <p data-i18n-html="cl_sent_mod_p">Negative comments on public policy posts are publicly visible and unanswered in the scraped data. A community management protocol — especially for policy consultation posts and service announcements — would materially reduce reputational risk. Priority topics: <strong>loan/interest concerns, app login issues, payment discount claims, cash reduction law</strong>.</p>
   </div>
 </div>
 
@@ -1270,14 +1270,14 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
         <tr><td><span class="plat li">LI</span></td><td>Sep 2025</td><td>PMA Core</td><td class="num">160</td><td><a class="view-link" href="https://www.linkedin.com/posts/pmauthority-pma_activity-7376986225502674944--Jqy" target="_blank">iDplus Digital Identity launch ↗</a></td></tr>
       </tbody>
     </table>
-    <div class="ins">★ The Aug 2024 fraud video is the <strong>only post to rank top-5 simultaneously on Facebook, Instagram, and LinkedIn</strong>. It defines the cross-platform content template.</div>
+    <div class="ins" data-i18n-html="ins_cross_viral">★ The Aug 2024 fraud video is the <strong>only post to rank top-5 simultaneously on Facebook, Instagram, and LinkedIn</strong>. It defines the cross-platform content template.</div>
   </div>
 
   <!-- Viral template + scheduling -->
   <div class="g2" style="margin-bottom:1.25rem">
     <div class="cl success" style="margin:0">
       <div class="cl-label" data-i18n="cl_cross_template_lbl">The viral content template — 5 common factors</div>
-      <p>Every high-performing post across all platforms shares these characteristics:<br><br>
+      <p data-i18n-html="cl_cross_template_p">Every high-performing post across all platforms shares these characteristics:<br><br>
       <strong>1.</strong> Consumer protection or financial safety — direct personal relevance<br>
       <strong>2.</strong> A single actionable message — audience can act within 24 hours<br>
       <strong>3.</strong> Video format — under 60 seconds<br>
@@ -1286,7 +1286,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
     </div>
     <div class="cl danger" style="margin:0">
       <div class="cl-label" data-i18n="cl_cross_sched_lbl">Universal scheduling anomaly</div>
-      <p>All four <em>social</em> platforms (Facebook, Instagram, LinkedIn, X) peak at identical posting hours (5–8am Palestine time) — the unmistakable signature of a single scheduling tool publishing the same queue to all channels at once.<br><br>
+      <p data-i18n-html="cl_cross_sched_p">All four <em>social</em> platforms (Facebook, Instagram, LinkedIn, X) peak at identical posting hours (5–8am Palestine time) — the unmistakable signature of a single scheduling tool publishing the same queue to all channels at once.<br><br>
       This eliminates platform-specific timing optimisation. Each platform has a distinct optimal window: <strong>Facebook</strong> performs best Saturday 8–10am; <strong>Instagram</strong> Thursday 7–9am; <strong>LinkedIn</strong> Tuesday–Thursday 7–9am weekdays. A platform-differentiated scheduling protocol should replace the current uniform approach.</p>
     </div>
   </div>
@@ -1297,12 +1297,12 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
     <h3 class="ct" data-i18n="ct_cross_eng">Monthly engagement trend — all platforms compared (2023–2026)</h3>
     <p class="cs" data-i18n="cs_cross_eng">Facebook, Instagram, and LinkedIn on the same axis — reveals relative scale and growth patterns</p>
     <div class="legend">
-      <div class="li-item"><div class="li-dot" style="background:#1877f2"></div>Facebook</div>
-      <div class="li-item"><div class="li-dot" style="background:#e1306c"></div>Instagram</div>
-      <div class="li-item"><div class="li-dot" style="background:#0a66c2"></div>LinkedIn</div>
+      <div class="li-item"><div class="li-dot" style="background:#1877f2"></div><span data-i18n="leg_facebook">Facebook</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#e1306c"></div><span data-i18n="leg_instagram">Instagram</span></div>
+      <div class="li-item"><div class="li-dot" style="background:#0a66c2"></div><span data-i18n="leg_linkedin">LinkedIn</span></div>
     </div>
     <div class="chart-wrap" style="height:260px"><canvas id="crossEngChart"></canvas></div>
-    <div class="ins">Facebook engagement dwarfs other platforms in absolute terms — but <strong>LinkedIn's growth trajectory is the steepest</strong> when normalised per post. Instagram tracks Facebook seasonality but at ~25% of the volume. All three platforms show a clear upward trend from mid-2024 onward.</div>
+    <div class="ins" data-i18n-html="ins_cross_eng">Facebook engagement dwarfs other platforms in absolute terms — but <strong>LinkedIn's growth trajectory is the steepest</strong> when normalised per post. Instagram tracks Facebook seasonality but at ~25% of the volume. All three platforms show a clear upward trend from mid-2024 onward.</div>
   </div>
 
   <!-- Cross-platform volume comparison -->
@@ -1342,11 +1342,11 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
 
   <!-- KPI STRIP -->
   <div class="kpi-strip" style="grid-template-columns:repeat(5,1fr)">
-    <div class="kpi-cell"><div class="kv">25,400</div><div class="kl">Active installed devices</div><div class="kd up">↑ 80.6% retention of install base</div></div>
-    <div class="kpi-cell"><div class="kv r">2.4 ★</div><div class="kl">Public rating (335 reviews)</div><div class="kd dn">↓ Target 4.0+ · 57% are 1★</div></div>
-    <div class="kpi-cell"><div class="kv w">10,100</div><div class="kl">Monthly Active Users (MAU)</div><div class="kd dn">↓ -2% vs prior 28 days</div></div>
-    <div class="kpi-cell"><div class="kv g">0.04%</div><div class="kl">Crash rate</div><div class="kd up">↑ 27× below Google threshold</div></div>
-    <div class="kpi-cell"><div class="kv r">41</div><div class="kl">7-day retention (cohort)</div><div class="kd dn">↓ -35% vs prior period — critical</div></div>
+    <div class="kpi-cell"><div class="kv">25,400</div><div class="kl" data-i18n="kpi_app_installed">Active installed devices</div><div class="kd up">↑ 80.6% retention of install base</div></div>
+    <div class="kpi-cell"><div class="kv r">2.4 ★</div><div class="kl" data-i18n="kpi_app_rating">Public rating (335 reviews)</div><div class="kd dn" data-i18n="kpi_app_rating_tgt">↓ Target 4.0+ · 57% are 1★</div></div>
+    <div class="kpi-cell"><div class="kv w">10,100</div><div class="kl" data-i18n="kpi_app_mau">Monthly Active Users (MAU)</div><div class="kd dn" data-i18n="kpi_app_mau_dn">↓ -2% vs prior 28 days</div></div>
+    <div class="kpi-cell"><div class="kv g">0.04%</div><div class="kl" data-i18n="kpi_app_crash">Crash rate</div><div class="kd up" data-i18n="kpi_app_crash_up">↑ 27× below Google threshold</div></div>
+    <div class="kpi-cell"><div class="kv r">41</div><div class="kl" data-i18n="kpi_app_retention">7-day retention (cohort)</div><div class="kd dn" data-i18n="kpi_app_ret_dn">↓ -35% vs prior period — critical</div></div>
   </div>
 
   <!-- ROW 1: Install base + Acquisition -->
@@ -1355,13 +1355,13 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_app_install">Install base overview</h3>
       <p class="cs" data-i18n="cs_app_install">Current installed audience vs lifetime downloads · Google Play Console</p>
       <div class="chart-wrap" style="height:200px"><canvas id="appInstallChart"></canvas></div>
-      <div class="ins">50,000+ lifetime downloads vs 25,400 currently installed implies <strong>~50% lifetime churn</strong>. The 19,000 active installs (80.6% of installed base) indicates good retention among those who have kept the app — the problem is earlier in the funnel (discovery and first-run experience).</div>
+      <div class="ins" data-i18n-html="ins_app_install">50,000+ lifetime downloads vs 25,400 currently installed implies <strong>~50% lifetime churn</strong>. The 19,000 active installs (80.6% of installed base) indicates good retention among those who have kept the app — the problem is earlier in the funnel (discovery and first-run experience).</div>
     </div>
     <div class="card">
       <h3 class="ct">28-day acquisition & engagement funnel</h3>
       <p class="cs" data-i18n="cs_app_funnel">Device acquisitions → first opens → MAU → 7-day retention</p>
       <div class="chart-wrap" style="height:200px"><canvas id="appFunnelChart"></canvas></div>
-      <div class="ins"><strong>Critical funnel leak:</strong> 2,170 new devices acquired but only 963 first opens (44% open rate). Only 10,100 of 25,400 installed devices are monthly active — a 40% MAU/install ratio. 7-day retention of 41 users is the most alarming metric — dropped 35% vs prior period.</div>
+      <div class="ins" data-i18n-html="ins_app_funnel"><strong>Critical funnel leak:</strong> 2,170 new devices acquired but only 963 first opens (44% open rate). Only 10,100 of 25,400 installed devices are monthly active — a 40% MAU/install ratio. 7-day retention of 41 users is the most alarming metric — dropped 35% vs prior period.</div>
     </div>
   </div>
 
@@ -1371,13 +1371,13 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       <h3 class="ct" data-i18n="ct_app_rating">Rating distribution — 335 total ratings</h3>
       <p class="cs" data-i18n="cs_app_rating">Lifetime star distribution · 2.4★ public average · Target 4.0+</p>
       <div class="chart-wrap" style="height:220px"><canvas id="appRatingChart"></canvas></div>
-      <div class="ins"><strong>Bimodal distribution:</strong> 56.7% of users give 1★, 20.3% give 5★ — almost nothing in between. This polarisation is the signature of an app with a specific painful failure mode (login/auth) that alienates most users, while a loyal minority find it indispensable. The middle ground is missing, which means the majority experience needs to be fixed before a rating recovery campaign will work.</div>
+      <div class="ins" data-i18n-html="ins_app_rating"><strong>Bimodal distribution:</strong> 56.7% of users give 1★, 20.3% give 5★ — almost nothing in between. This polarisation is the signature of an app with a specific painful failure mode (login/auth) that alienates most users, while a loyal minority find it indispensable. The middle ground is missing, which means the majority experience needs to be fixed before a rating recovery campaign will work.</div>
     </div>
     <div class="card">
       <h3 class="ct" data-i18n="ct_app_review">Review themes — qualitative analysis</h3>
       <p class="cs" data-i18n="cs_app_review">226 written reviews synthesised into 8 themes · Frequency and sentiment</p>
       <div class="chart-wrap" style="height:220px"><canvas id="appReviewChart"></canvas></div>
-      <div class="ins">Login/authentication issues are the dominant complaint — high frequency, confirmed by negative ratings. Barcode scanner failures are directly supported by crash data (ZXing, CameraProvider in top crash list). Positive themes (banking utility, institutional trust) exist but are outnumbered 5:1 by negative categories.</div>
+      <div class="ins" data-i18n-html="ins_app_review">Login/authentication issues are the dominant complaint — high frequency, confirmed by negative ratings. Barcode scanner failures are directly supported by crash data (ZXing, CameraProvider in top crash list). Positive themes (banking utility, institutional trust) exist but are outnumbered 5:1 by negative categories.</div>
     </div>
   </div>
 
@@ -1398,7 +1398,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
             <tr><td>Battery drain</td><td>Not flagged</td><td>—</td><td>—</td><td><span class="tag high">No issues ✓</span></td></tr>
           </tbody>
         </table>
-        <div class="ins" style="margin-top:0.75rem">Despite the low public rating, the app's <strong>technical stability is genuinely excellent</strong>. Crash and ANR rates are 12–27× below Google's bad-behaviour thresholds. The slow cold start rate (+0.26pp trending) is the only technical concern worth monitoring before it breaches the threshold.</div>
+        <div class="ins" data-i18n-html="ins_app_vitals" style="margin-top:0.75rem">Despite the low public rating, the app's <strong>technical stability is genuinely excellent</strong>. Crash and ANR rates are 12–27× below Google's bad-behaviour thresholds. The slow cold start rate (+0.26pp trending) is the only technical concern worth monitoring before it breaches the threshold.</div>
       </div>
     </div>
   </div>
@@ -1418,7 +1418,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
         <tr><td>6</td><td><span class="tag low">ANR</span></td><td style="font-family:'DM Mono',monospace;font-size:0.75rem">std::_fl::co... (stdlib)</td><td class="num">1</td><td class="num">10%</td><td>Native C++ coroutine stall — Flutter SDK issue, likely fixable via upgrade</td></tr>
       </tbody>
     </table>
-    <div class="ins">The barcode/camera subsystem (issues #3 and #5) appears twice and maps directly to user complaints about QR scanner failures. This is a <strong>high-priority fix</strong> — the QR scanner is a signature feature visible in store screenshots. All 6 issues together affected only 10 users in 28 days, consistent with the excellent 0.04% crash rate.</div>
+    <div class="ins" data-i18n-html="ins_app_crash">The barcode/camera subsystem (issues #3 and #5) appears twice and maps directly to user complaints about QR scanner failures. This is a <strong>high-priority fix</strong> — the QR scanner is a signature feature visible in store screenshots. All 6 issues together affected only 10 users in 28 days, consistent with the excellent 0.04% crash rate.</div>
   </div>
 
   <!-- ROW 5: Recommendations + App details -->
@@ -1461,7 +1461,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
       </table>
       <div class="cl warn" style="margin-top:1rem">
         <div class="cl-label">Geographic reach</div>
-        <p>Top usage countries: <strong>Palestine (primary) → Israel (diaspora) → United States (Palestinian diaspora) → Jordan.</strong> The Explore channel generated 896 acquisitions in 90 days — organic store discovery is working, but not converting to retained users.</p>
+        <p data-i18n-html="cl_app_geo_p">Top usage countries: <strong>Palestine (primary) → Israel (diaspora) → United States (Palestinian diaspora) → Jordan.</strong> The Explore channel generated 896 acquisitions in 90 days — organic store discovery is working, but not converting to retained users.</p>
       </div>
     </div>
   </div>
@@ -1470,11 +1470,11 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
   <div class="g2">
     <div class="cl danger" style="margin:0">
       <div class="cl-label">Critical risk — public rating</div>
-      <p>A 2.4★ rating on Google Play is publicly visible on the store listing and <strong>actively deters new installs</strong>. Google's own research shows apps below 3.0★ see significantly reduced store conversion. With 57% of reviews being 1★, the rating distribution is structurally skewed. Recovery requires fixing the login/auth failure (root cause) before any rating campaign will be effective.</p>
+      <p data-i18n-html="cl_app_risk_p">A 2.4★ rating on Google Play is publicly visible on the store listing and <strong>actively deters new installs</strong>. Google's own research shows apps below 3.0★ see significantly reduced store conversion. With 57% of reviews being 1★, the rating distribution is structurally skewed. Recovery requires fixing the login/auth failure (root cause) before any rating campaign will be effective.</p>
     </div>
     <div class="cl success" style="margin:0">
       <div class="cl-label">Key strength — technical stability</div>
-      <p>The gap between user perception (2.4★) and technical performance (0.04% crash rate, A grade stability) is unusual. The app is <strong>not crashing on most users</strong> — the negative reviews are driven by UX and login failures, not technical instability. This means the engineering effort required for recovery is primarily UX/auth-focused, not a ground-up rewrite.</p>
+      <p data-i18n-html="cl_app_strength_p">The gap between user perception (2.4★) and technical performance (0.04% crash rate, A grade stability) is unusual. The app is <strong>not crashing on most users</strong> — the negative reviews are driven by UX and login failures, not technical instability. This means the engineering effort required for recovery is primarily UX/auth-focused, not a ground-up rewrite.</p>
     </div>
   </div>
 </div>
@@ -1740,7 +1740,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
             <tr><td><strong>Sentiment Score</strong></td><td>(Positive − Negative) ÷ Total classified comments</td><td><span class="plat fb">FB</span> <span class="plat ig">IG</span></td></tr>
           </tbody>
         </table>
-        <div class="ins" style="margin-top:0.75rem">Saves, Reach, Impressions, and Video Views are available in native platform exports but are <strong>not used as primary engagement metrics</strong> in this analysis — they are treated as secondary reach indicators because they are not available from public scrapes, making cross-period comparisons inconsistent.</div>
+        <div class="ins" data-i18n-html="ins_methodology" style="margin-top:0.75rem">Saves, Reach, Impressions, and Video Views are available in native platform exports but are <strong>not used as primary engagement metrics</strong> in this analysis — they are treated as secondary reach indicators because they are not available from public scrapes, making cross-period comparisons inconsistent.</div>
       </div>
       <div>
         <p style="font-size:0.82rem;font-weight:600;color:var(--navy);margin-bottom:0.6rem">Normalisation &amp; comparability</p>
@@ -1794,7 +1794,7 @@ html[lang="ar"] .ins { font-family: 'Cairo','Tajawal',sans-serif; }
         </div>
         <div class="cl warn" style="margin-top:0.75rem">
           <div class="cl-label">Planned upgrade</div>
-          <p>Once network access to HuggingFace is available in the analysis environment, the classifier will be upgraded to <strong>CAMeL-Lab/bert-base-arabic-camelbert-msa-sentiment</strong> (transformer-based, trained on 100M+ Arabic tokens). Current rule-based results are directionally reliable but should be treated as indicative, not definitive.</p>
+          <p data-i18n-html="cl_nlp_upgrade_p">Once network access to HuggingFace is available in the analysis environment, the classifier will be upgraded to <strong>CAMeL-Lab/bert-base-arabic-camelbert-msa-sentiment</strong> (transformer-based, trained on 100M+ Arabic tokens). Current rule-based results are directionally reliable but should be treated as indicative, not definitive.</p>
         </div>
       </div>
     </div>
@@ -2325,7 +2325,7 @@ const HEADERS = {
 // ══════════════════════════════════════════════════════════════════════
 let LANG = 'en';
 
-const T = {"nav_overview_group":{"en":"Overview","ar":"نظرة عامة"},"nav_platforms_group":{"en":"Platforms","ar":"المنصات"},"nav_analysis_group":{"en":"Analysis","ar":"التحليل"},"nav_reference_group":{"en":"Reference","ar":"مرجع"},"nav_overview":{"en":"Portfolio Overview","ar":"نظرة عامة على المحفظة"},"nav_accounts":{"en":"Account Scorecards","ar":"بطاقات أداء الحسابات"},"nav_facebook":{"en":"Facebook","ar":"فيسبوك"},"nav_instagram":{"en":"Instagram","ar":"إنستغرام"},"nav_linkedin":{"en":"LinkedIn","ar":"لينكد إن"},"nav_twitter":{"en":"X / Twitter","ar":"إكس / تويتر"},"nav_youtube":{"en":"YouTube","ar":"يوتيوب"},"nav_mobileapp":{"en":"Mobile App","ar":"التطبيق الجوال"},"nav_audience":{"en":"Audience","ar":"الجمهور"},"nav_ads":{"en":"Meta Ads","ar":"إعلانات ميتا"},"nav_content":{"en":"Content Performance","ar":"أداء المحتوى"},"nav_sentiment":{"en":"Sentiment","ar":"تحليل المشاعر"},"nav_cross":{"en":"Cross-Platform","ar":"متعدد المنصات"},"nav_methodology":{"en":"Methodology","ar":"المنهجية"},"footer_date":{"en":"April 2026","ar":"أبريل 2026"},"footer_conf":{"en":"Confidential — SSA Internal","ar":"سري — داخلي لـ SSA"},"label_overview":{"en":"Portfolio Overview","ar":"نظرة عامة على المحفظة"},"label_accounts":{"en":"Account Scorecards","ar":"بطاقات أداء الحسابات"},"label_facebook":{"en":"Platform Analysis · Facebook","ar":"تحليل المنصة · فيسبوك"},"label_instagram":{"en":"Platform Analysis · Instagram","ar":"تحليل المنصة · إنستغرام"},"label_linkedin":{"en":"LinkedIn — PMA Core","ar":"لينكد إن — سلطة النقد"},"label_twitter":{"en":"Platform Analysis · X / Twitter","ar":"تحليل المنصة · إكس / تويتر"},"label_youtube":{"en":"Platform Analysis · YouTube","ar":"تحليل المنصة · يوتيوب"},"label_audience":{"en":"Analysis · Audience Demographics","ar":"التحليل · ديموغرافيا الجمهور"},"label_ads":{"en":"Analysis · Paid Media","ar":"التحليل · الإعلانات المدفوعة"},"label_content":{"en":"Analysis · Content Performance","ar":"التحليل · أداء المحتوى"},"label_sentiment":{"en":"Analysis · Comment Sentiment","ar":"التحليل · مشاعر التعليقات"},"label_cross":{"en":"Synthesis · Cross-Platform","ar":"التوليف · متعدد المنصات"},"label_mobileapp":{"en":"Platform Analysis · Mobile App","ar":"تحليل المنصة · التطبيق الجوال"},"label_methodology":{"en":"Methodology, Theory & Assumptions","ar":"المنهجية والنظرية والافتراضات"},"title_overview":{"en":"All platforms at a glance","ar":"جميع المنصات في لمحة"},"title_accounts":{"en":"Four Brand Pages — Side by Side","ar":"أربع صفحات — مقارنة جنباً إلى جنب"},"title_facebook":{"en":"Facebook analysis","ar":"تحليل فيسبوك"},"title_instagram":{"en":"Instagram analysis","ar":"تحليل إنستغرام"},"title_linkedin":{"en":"LinkedIn analysis","ar":"تحليل لينكد إن"},"title_twitter":{"en":"X / Twitter analysis","ar":"تحليل إكس / تويتر"},"title_youtube":{"en":"YouTube channel analysis","ar":"تحليل قناة يوتيوب"},"title_audience":{"en":"Audience demographics","ar":"ديموغرافيا الجمهور"},"title_ads":{"en":"Meta Ads performance","ar":"أداء إعلانات ميتا"},"title_content":{"en":"What works — format, timing & theme","ar":"ما الذي ينجح — الشكل والتوقيت والموضوع"},"title_sentiment":{"en":"Comment sentiment — Facebook & Instagram","ar":"مشاعر التعليقات — فيسبوك وإنستغرام"},"title_cross":{"en":"Patterns that span all channels","ar":"أنماط تمتد عبر جميع القنوات"},"title_mobileapp":{"en":"PMA Mobile App — Google Play assessment","ar":"تطبيق سلطة النقد — تقييم جوجل بلاي"},"title_methodology":{"en":"How this assessment was built","ar":"كيف بُنيت هذا التقييم"}};
+const T = {"nav_overview_group":{"en":"Overview","ar":"نظرة عامة"},"nav_platforms_group":{"en":"Platforms","ar":"المنصات"},"nav_analysis_group":{"en":"Analysis","ar":"التحليل"},"nav_reference_group":{"en":"Reference","ar":"مرجع"},"nav_overview":{"en":"Portfolio Overview","ar":"نظرة عامة على المحفظة"},"nav_accounts":{"en":"Account Scorecards","ar":"بطاقات أداء الحسابات"},"nav_facebook":{"en":"Facebook","ar":"فيسبوك"},"nav_instagram":{"en":"Instagram","ar":"إنستغرام"},"nav_linkedin":{"en":"LinkedIn","ar":"لينكد إن"},"nav_twitter":{"en":"X / Twitter","ar":"إكس / تويتر"},"nav_youtube":{"en":"YouTube","ar":"يوتيوب"},"nav_mobileapp":{"en":"Mobile App","ar":"التطبيق الجوال"},"nav_audience":{"en":"Audience","ar":"الجمهور"},"nav_ads":{"en":"Meta Ads","ar":"إعلانات ميتا"},"nav_content":{"en":"Content Performance","ar":"أداء المحتوى"},"nav_sentiment":{"en":"Sentiment","ar":"تحليل المشاعر"},"nav_cross":{"en":"Cross-Platform","ar":"متعدد المنصات"},"nav_methodology":{"en":"Methodology","ar":"المنهجية"},"footer_date":{"en":"April 2026","ar":"أبريل 2026"},"footer_conf":{"en":"Confidential — SSA Internal","ar":"سري — داخلي لـ SSA"},"label_overview":{"en":"Portfolio Overview","ar":"نظرة عامة على المحفظة"},"label_accounts":{"en":"Account Scorecards","ar":"بطاقات أداء الحسابات"},"label_facebook":{"en":"Platform Analysis · Facebook","ar":"تحليل المنصة · فيسبوك"},"label_instagram":{"en":"Platform Analysis · Instagram","ar":"تحليل المنصة · إنستغرام"},"label_linkedin":{"en":"LinkedIn — PMA Core","ar":"لينكد إن — سلطة النقد"},"label_twitter":{"en":"Platform Analysis · X / Twitter","ar":"تحليل المنصة · إكس / تويتر"},"label_youtube":{"en":"Platform Analysis · YouTube","ar":"تحليل المنصة · يوتيوب"},"label_audience":{"en":"Analysis · Audience Demographics","ar":"التحليل · ديموغرافيا الجمهور"},"label_ads":{"en":"Analysis · Paid Media","ar":"التحليل · الإعلانات المدفوعة"},"label_content":{"en":"Analysis · Content Performance","ar":"التحليل · أداء المحتوى"},"label_sentiment":{"en":"Analysis · Comment Sentiment","ar":"التحليل · مشاعر التعليقات"},"label_cross":{"en":"Synthesis · Cross-Platform","ar":"التوليف · متعدد المنصات"},"label_mobileapp":{"en":"Platform Analysis · Mobile App","ar":"تحليل المنصة · التطبيق الجوال"},"label_methodology":{"en":"Methodology, Theory & Assumptions","ar":"المنهجية والنظرية والافتراضات"},"title_overview":{"en":"All platforms at a glance","ar":"جميع المنصات في لمحة"},"title_accounts":{"en":"Four Brand Pages — Side by Side","ar":"أربع صفحات — مقارنة جنباً إلى جنب"},"title_facebook":{"en":"Facebook analysis","ar":"تحليل فيسبوك"},"title_instagram":{"en":"Instagram analysis","ar":"تحليل إنستغرام"},"title_linkedin":{"en":"LinkedIn analysis","ar":"تحليل لينكد إن"},"title_twitter":{"en":"X / Twitter analysis","ar":"تحليل إكس / تويتر"},"title_youtube":{"en":"YouTube channel analysis","ar":"تحليل قناة يوتيوب"},"title_audience":{"en":"Audience demographics","ar":"ديموغرافيا الجمهور"},"title_ads":{"en":"Meta Ads performance","ar":"أداء إعلانات ميتا"},"title_content":{"en":"What works — format, timing & theme","ar":"ما الذي ينجح — الشكل والتوقيت والموضوع"},"title_sentiment":{"en":"Comment sentiment — Facebook & Instagram","ar":"مشاعر التعليقات — فيسبوك وإنستغرام"},"title_cross":{"en":"Patterns that span all channels","ar":"أنماط تمتد عبر جميع القنوات"},"title_mobileapp":{"en":"PMA Mobile App — Google Play assessment","ar":"تطبيق سلطة النقد — تقييم جوجل بلاي"},"title_methodology":{"en":"How this assessment was built","ar":"كيف بُنيت هذا التقييم"},"kpi_fb_total_posts":{"en":"Total posts (all pages)","ar":"إجمالي المنشورات (جميع الصفحات)"},"kpi_fb_core_avg":{"en":"PMA Core avg engagement/post","ar":"متوسط تفاعل سلطة النقد/منشور"},"kpi_fb_core_top":{"en":"↑ Top page in portfolio","ar":"↑ أعلى صفحة في المحفظة"},"kpi_fb_vid_avg":{"en":"Avg engagement — video posts","ar":"متوسط التفاعل — منشورات الفيديو"},"kpi_fb_vid_2x":{"en":"↑ 2× image posts","ar":"↑ ضعف منشورات الصورة"},"kpi_fb_shared_avg":{"en":"Avg engagement — shared posts","ar":"متوسط التفاعل — المنشورات المشتركة"},"kpi_fb_shared_stop":{"en":"↓ Discontinue immediately","ar":"↓ أوقفها فوراً"},"kpi_ig_ba_avg":{"en":"Banking Awareness avg eng/post","ar":"متوسط تفاعل منصة الوعي المصرفي/منشور"},"kpi_ig_ba_top":{"en":"↑ Outperforms PMA Core on IG","ar":"↑ تتفوق على سلطة النقد على إنستغرام"},"kpi_ig_vid_6x":{"en":"↑ 6× image posts","ar":"↑ 6 أضعاف منشورات الصورة"},"kpi_ig_pos_rate":{"en":"Positive comment rate","ar":"معدل التعليقات الإيجابية"},"kpi_ig_pos_up":{"en":"↑ vs 8.4% on Facebook","ar":"↑ مقابل 8.4% على فيسبوك"},"kpi_li_growth":{"en":"Engagement growth 2023→2025","ar":"نمو التفاعل 2023→2025"},"kpi_li_halved":{"en":"↑ Halved posting frequency","ar":"↑ تقليص وتيرة النشر إلى النصف"},"kpi_li_followers":{"en":"Followers (Dec 2025 sample)","ar":"المتابعون (عينة ديسمبر 2025)"},"kpi_li_avg_25":{"en":"Avg engagement in 2025","ar":"متوسط التفاعل في 2025"},"kpi_li_zero":{"en":"Posts with zero engagement","ar":"منشورات بتفاعل صفري"},"kpi_tw_total":{"en":"Total tweets (PMAuthority + MonshatiPs)","ar":"إجمالي التغريدات (PMAuthority + MonshatiPs)"},"kpi_tw_avg_views":{"en":"Avg views per PMA Core tweet","ar":"متوسط المشاهدات/تغريدة لسلطة النقد"},"kpi_tw_max":{"en":"↓ Max ever: 2,116 (outlier)","ar":"↓ أقصى رقم: 2,116 (شاذ)"},"kpi_tw_retweets":{"en":"Avg retweets per tweet","ar":"متوسط إعادة التغريد/تغريدة"},"kpi_tw_zero_amp":{"en":"↓ Near-zero amplification","ar":"↓ تضخيم شبه معدوم"},"kpi_tw_monshati":{"en":"MonshatiPs tweets since mid-2023","ar":"تغريدات MonshatiPs منذ منتصف 2023"},"kpi_tw_dormant":{"en":"↓ Account dormant","ar":"↓ الحساب خامل"},"kpi_yt_videos":{"en":"Videos in dataset","ar":"فيديوهات في مجموعة البيانات"},"kpi_yt_subs":{"en":"Channel subscribers","ar":"مشتركو القناة"},"kpi_yt_13y":{"en":"↓ After 13 years","ar":"↓ بعد 13 عاماً"},"kpi_yt_views":{"en":"Total channel views (all-time)","ar":"إجمالي مشاهدات القناة (كل الوقت)"},"kpi_yt_avg":{"en":"Avg views per video (dataset)","ar":"متوسط المشاهدات/فيديو (مجموعة البيانات)"},"kpi_yt_36k":{"en":"↓ 36,644 total in scraped subset","ar":"↓ 36,644 إجمالاً في المجموعة المستخلصة"},"kpi_aud_fb_male":{"en":"Facebook audience — male","ar":"جمهور فيسبوك — ذكور"},"kpi_aud_fb_skew":{"en":"↓ Significant gender skew","ar":"↓ ميل كبير في الجنس"},"kpi_aud_ig_female":{"en":"Instagram audience — female","ar":"جمهور إنستغرام — إناث"},"kpi_aud_ig_bal":{"en":"↑ More balanced than FB","ar":"↑ أكثر توازناً من فيسبوك"},"kpi_aud_fb_ps":{"en":"FB audience in Palestine","ar":"جمهور فيسبوك في فلسطين"},"kpi_aud_ig_ps":{"en":"IG audience in Palestine","ar":"جمهور إنستغرام في فلسطين"},"kpi_ads_campaigns":{"en":"Total campaigns","ar":"إجمالي الحملات"},"kpi_ads_range":{"en":"Mar 2023 – Apr 2026","ar":"مارس 2023 – أبريل 2026"},"kpi_ads_spend":{"en":"Total ad spend (USD)","ar":"إجمالي الإنفاق الإعلاني (USD)"},"kpi_ads_impr":{"en":"Total impressions","ar":"إجمالي مرات الظهور"},"kpi_ads_reach":{"en":"Total reach","ar":"الوصول الإجمالي"},"kpi_ads_cpr":{"en":"Avg cost per result","ar":"متوسط التكلفة/نتيجة"},"kpi_ads_eff":{"en":"↑ Efficient across objectives","ar":"↑ كفاءة عبر الأهداف"},"kpi_sent_fb":{"en":"FB comments classified","ar":"تعليقات فيسبوك المصنّفة"},"kpi_sent_fb_pos":{"en":"FB positive comments","ar":"التعليقات الإيجابية على فيسبوك"},"kpi_sent_fb_neg":{"en":"FB negative comments","ar":"التعليقات السلبية على فيسبوك"},"kpi_sent_ig_pos":{"en":"IG positive comments","ar":"التعليقات الإيجابية على إنستغرام"},"kpi_sent_peak":{"en":"Peak negative on single post","ar":"أعلى سلبية في منشور واحد"},"kpi_sent_cash":{"en":"↓ Cash reduction law, Nov 2025","ar":"↓ قانون خفض الكاش، نوفمبر 2025"},"kpi_app_installed":{"en":"Active installed devices","ar":"معدات مثبتة نشطة"},"kpi_app_rating":{"en":"Public rating (335 reviews)","ar":"التقييم العام (335 مراجعة)"},"kpi_app_rating_tgt":{"en":"↓ Target 4.0+ · 57% are 1★","ar":"↓ الهدف 4.0+ · 57% نجمة واحدة"},"kpi_app_mau":{"en":"Monthly Active Users (MAU)","ar":"المستخدمون النشطون شهرياً (MAU)"},"kpi_app_mau_dn":{"en":"↓ -2% vs prior 28 days","ar":"↓ -2% مقارنة بالـ 28 يوماً الماضية"},"kpi_app_crash":{"en":"Crash rate","ar":"معدل الأعطال"},"kpi_app_crash_up":{"en":"↑ 27× below Google threshold","ar":"↑ 27× أقل من حد جوجل"},"kpi_app_retention":{"en":"7-day retention (cohort)","ar":"الاحتفاظ لـ 7 أيام (مجموعة)"},"kpi_app_ret_dn":{"en":"↓ -35% vs prior period — critical","ar":"↓ -35% مقارنة بالفترة السابقة — حرج"},"leg_facebook":{"en":"Facebook","ar":"فيسبوك"},"leg_instagram":{"en":"Instagram","ar":"إنستغرام"},"leg_linkedin":{"en":"LinkedIn","ar":"لينكد إن"},"leg_twitter":{"en":"X / Twitter","ar":"إكس / تويتر"},"leg_pma_core":{"en":"PMA Core","ar":"سلطة النقد"},"leg_banking":{"en":"Banking Awareness","ar":"منصة الوعي المصرفي"},"leg_cybw":{"en":"CYBW","ar":"CYBW"},"leg_monshati":{"en":"Monshati","ar":"منشأتي"},"leg_pmauth":{"en":"PMAuthority","ar":"PMAuthority"},"leg_monshp":{"en":"MonshatiPs","ar":"MonshatiPs"}};
 const HEADERS_AR = {"overview":{"eyebrow":"رقم المناقصة P2025/34 · أبريل 2026 · سري","title":"محفظة سلطة النقد الرقمية","titleEm":"لوحة التحكم التفاعلية","sub":"عرض شامل لجميع المنصات وأربع صفحات للعلامة التجارية. جميع الأرقام مبنية على التصدير الأصلي من المنصات وبيانات الاستخلاص العام. نافذة التحليل: 2021–2026.","stats":[{"num":"6,789","lbl":"إجمالي المنشورات المحللة"},{"num":"6","lbl":"المنصات"},{"num":"4","lbl":"صفحات العلامة التجارية"},{"num":"8,485","lbl":"تعليقات مصنّفة"},{"num":"5.6×","lbl":"نمو تفاعل لينكد إن 2023→2025"},{"num":"2.4 ★","lbl":"تقييم التطبيق العام"}],"accounts":[{"name":"سلطة النقد","url":"facebook.com/pmauthority","color":"#7ec8f4"},{"name":"منصة الوعي المصرفي","url":"financialinclusion.ps","color":"#4ade80"},{"name":"CYBW","url":"cybw.ps","color":"#fbbf24"},{"name":"منشأتي","url":"monshati.ps","color":"#f87171"}],"notes":[{"icon":"📅","text":"نطاق البيانات: مارس 2023 – مارس 2026"},{"icon":"⚠️","text":"GA4 لموقع pma.ps مؤجل"},{"icon":"🔒","text":"سري — داخلي لـ SSA"}]},"accounts":{"eyebrow":"بطاقات أداء الحسابات · جميع المنصات","title":"أربع صفحات برعاية","titleEm":"مقارنة جنباً إلى جنب","sub":"مقارنة الأداء بين سلطة النقد ومنصة الوعي المصرفي وأسبوع CYBW ومنشأتي — على فيسبوك وإنستغرام.","stats":[{"num":"1,341","lbl":"منشورات فيسبوك"},{"num":"1,775","lbl":"منشورات إنستغرام"},{"num":"127","lbl":"متوسط تفاعل سلطة النقد على فيسبوك"},{"num":"26.6","lbl":"متوسط تفاعل منصة الوعي المصرفي على إنستغرام"}],"accounts":[{"name":"سلطة النقد","url":"fb.com/pmauthority","color":"#7ec8f4","status":"نشط"},{"name":"منصة الوعي المصرفي","url":"fb: bankingawarenessplatformpma","color":"#4ade80","status":"نشط"},{"name":"CYBW","url":"fb: childyouthbankingweekpma","color":"#fbbf24","status":"حملة"},{"name":"منشأتي","url":"fb: monshatips","color":"#f87171","status":"خامل"}],"notes":[{"icon":"📅","text":"التغطية: مارس 2023 – مارس 2026"},{"icon":"⚠️","text":"منشأتي شبه خاملة منذ أكتوبر 2023"},{"icon":"📌","text":"CYBW نشط في فترات الحملة فقط"}]},"facebook":{"eyebrow":"تحليل المنصة · فيسبوك","title":"فيسبوك","titleEm":"4 صفحات · 1,341 منشور","sub":"بيانات على مستوى المنشور من صادرات Meta Business Suite الأصلية (الربع الأول 2024 – الربع الأول 2026) مع بيانات الاستخلاص العام (مارس 2023 – مارس 2026).","stats":[{"num":"1,341","lbl":"إجمالي المنشورات"},{"num":"112K","lbl":"إجمالي التفاعل"},{"num":"127","lbl":"متوسط تفاعل سلطة النقد/منشور"},{"num":"206","lbl":"متوسط تفاعل — منشورات الفيديو"}],"accounts":[{"name":"سلطة النقد","url":"facebook.com/pmauthority","color":"#7ec8f4"},{"name":"منصة الوعي المصرفي","url":"facebook.com/bankingawarenessplatformpma","color":"#4ade80"},{"name":"CYBW","url":"facebook.com/childyouthbankingweekpma","color":"#fbbf24"},{"name":"منشأتي","url":"facebook.com/monshatips","color":"#f87171"}],"notes":[{"icon":"📅","text":"الصادرات الأصلية: الربع الأول 2024 – الربع الأول 2026"},{"icon":"⚠️","text":"ملفا الربع الأول 2024 والربع الثالث 2024 فارغان"},{"icon":"💡","text":"الفيديو أكثر تفاعلاً بمرتين من الصورة — لكن 9.5% فقط من المنشورات"}]},"instagram":{"eyebrow":"تحليل المنصة · إنستغرام","title":"إنستغرام","titleEm":"4 صفحات · 1,775 منشور","sub":"بيانات على مستوى المنشور. يونيو 2021 – مارس 2026.","stats":[{"num":"1,775","lbl":"إجمالي المنشورات"},{"num":"26.7K","lbl":"إجمالي التفاعل"},{"num":"26.6","lbl":"متوسط تفاعل منصة الوعي المصرفي"},{"num":"40.4%","lbl":"نسبة التعليقات الإيجابية"}],"accounts":[{"name":"سلطة النقد","url":"instagram.com/pmauthority","color":"#f9a8d4"},{"name":"منصة الوعي المصرفي","url":"instagram.com/bankingawarenessplatform","color":"#4ade80"},{"name":"CYBW","url":"instagram.com/cybw.ps","color":"#fbbf24"},{"name":"منشأتي","url":"instagram.com/monshati.ps","color":"#f87171"}],"notes":[{"icon":"📅","text":"الصادرات الأصلية: الربع الأول 2024 – الربع الأول 2026"},{"icon":"⚠️","text":"صادرات الربع الثالث 2024 مفقودة"},{"icon":"💡","text":"منشورات الفيديو أكثر تفاعلاً بـ 6 أضعاف من الصور"}]},"linkedin":{"eyebrow":"تحليل المنصة · لينكد إن","title":"لينكد إن","titleEm":"سلطة النقد · 2,676 منشور","sub":"صادرات Page Admin الأصلية (أبريل 2025 فصاعداً) + استخلاص عام (مارس 2017 – مارس 2026).","stats":[{"num":"2,676","lbl":"منشورات سلطة النقد"},{"num":"12,207","lbl":"المتابعون"},{"num":"5.6×","lbl":"نمو التفاعل 2023→2025"},{"num":"25.3","lbl":"متوسط التفاعل في 2025"}],"accounts":[{"name":"سلطة النقد","url":"linkedin.com/company/pmauthority-pma","color":"#7ec8f4"},{"name":"منشأتي","url":"6 منشورات فقط","color":"#f87171"}],"notes":[{"icon":"📅","text":"الاستخلاص: مارس 2017 – مارس 2026"},{"icon":"💡","text":"تقليص وتيرة النشر إلى النصف أدى إلى نمو التفاعل 5.6 أضعاف"}]},"twitter":{"eyebrow":"تحليل المنصة · إكس / تويتر","title":"إكس / تويتر","titleEm":"أرشيف بث — تفاعل ضئيل","sub":"استخلاص عام لـ PMAuthority (806 تغريدة) وMonshatiPs (440 تغريدة). أكتوبر 2021 – مارس 2026.","stats":[{"num":"1,246","lbl":"إجمالي التغريدات"},{"num":"47","lbl":"متوسط المشاهدات"},{"num":"0.07","lbl":"متوسط إعادة التغريد"},{"num":"0","lbl":"تغريدات MonshatiPs منذ 2023"}],"accounts":[{"name":"PMAuthority","url":"x.com/PMAuthority","color":"#9ca3af"},{"name":"MonshatiPs","url":"x.com/MonshatiPs · خامل","color":"#f87171"}],"notes":[{"icon":"📅","text":"الاستخلاص: أكتوبر 2021 – مارس 2026"},{"icon":"🔴","text":"المنصة تعمل كأرشيف بث — يوصى بمراجعة استراتيجية"}]},"youtube":{"eyebrow":"تحليل المنصة · يوتيوب","title":"يوتيوب","titleEm":"قناة سلطة النقد · منذ 2012","sub":"بيانات استخلاص عام — 191 فيديو. 1,150 مشترك، 120,383 مشاهدة إجمالية.","stats":[{"num":"191","lbl":"فيديو في مجموعة البيانات"},{"num":"1,150","lbl":"المشتركون"},{"num":"120K","lbl":"المشاهدات الإجمالية"},{"num":"2012","lbl":"سنة إطلاق القناة"}],"accounts":[{"name":"قناة سلطة النقد","url":"youtube.com/channel/UCbQBgvY3lWGZaqRaLIO4y8g","color":"#fca5a5"}],"notes":[{"icon":"📅","text":"مجموعة البيانات: نوفمبر 2012 – فبراير 2026"},{"icon":"💡","text":"أبرز فيديو: 10,160 مشاهدة — تطبيق سلطة النقد (2023)"}]},"audience":{"eyebrow":"التحليل · ديموغرافيا الجمهور","title":"الجمهور","titleEm":"العمر · الجنس · الجغرافيا","sub":"بيانات جمهور Meta Business Suite الأصلية لحسابات سلطة النقد على فيسبوك وإنستغرام.","stats":[{"num":"67.8%","lbl":"جمهور فيسبوك — ذكور"},{"num":"44.9%","lbl":"جمهور إنستغرام — إناث"},{"num":"81.8%","lbl":"جمهور فيسبوك في فلسطين"},{"num":"25–34","lbl":"الفئة العمرية المهيمنة"}],"accounts":[{"name":"فيسبوك — سلطة النقد","url":"facebook.com/pmauthority","color":"#7ec8f4"},{"name":"إنستغرام — سلطة النقد","url":"instagram.com/pmauthority","color":"#f9a8d4"}],"notes":[{"icon":"📅","text":"لقطة الجمهور — تصدير أبريل 2026"},{"icon":"💡","text":"فجوة الجنس: فيسبوك 68% ذكور مقابل إنستغرام 55%"}]},"ads":{"eyebrow":"التحليل · الإعلانات المدفوعة","title":"إعلانات ميتا","titleEm":"94 حملة · 4,924 دولار إنفاقاً","sub":"بيانات أداء الحملات من تصدير Meta Ads Manager الأصلي. مارس 2023 – أبريل 2026.","stats":[{"num":"94","lbl":"إجمالي الحملات"},{"num":"$4,924","lbl":"إجمالي الإنفاق (USD)"},{"num":"20.1M","lbl":"إجمالي مرات الظهور"},{"num":"$0.019","lbl":"أفضل تكلفة/نتيجة — iDplus 2026"}],"accounts":[{"name":"إعلانات سلطة النقد","url":"Meta Ads Manager · فيسبوك + إنستغرام","color":"#6ee7b7"}],"notes":[{"icon":"📅","text":"بيانات الحملات: مارس 2023 – أبريل 2026"},{"icon":"💡","text":"حملة iDplus: أعلى إنفاق ($999) وأقوى نتائج"}]},"content":{"eyebrow":"التحليل · أداء المحتوى","title":"أداء المحتوى","titleEm":"الشكل · التوقيت · الموضوع","sub":"تحليل أداء التنسيق وأنماط أيام الأسبوع وتوزيع ساعات النشر عبر المنصات الاجتماعية.","stats":[{"num":"206","lbl":"متوسط تفاعل فيديو فيسبوك"},{"num":"6×","lbl":"أفضلية فيديو إنستغرام على الصورة"},{"num":"9.5%","lbl":"نسبة الفيديو في منشورات فيسبوك"},{"num":"3.9","lbl":"متوسط تفاعل المنشورات المشتركة"}],"accounts":[],"notes":[{"icon":"💡","text":"جميع المنصات الاجتماعية تذروة النشر في 5–8 صباحاً"},{"icon":"🔴","text":"8 من أصل 10 منشورات أعلى أداء تتعلق بحماية المستهلك"}]},"sentiment":{"eyebrow":"تحليل التعليقات · المشاعر","title":"مشاعر التعليقات","titleEm":"فيسبوك وإنستغرام · 8,485 تعليق","sub":"مصنّف باستخدام مُصنِّف عربي يستند إلى قواعد — 80+ مصطلح، كشف الرموز التعبيرية.","stats":[{"num":"7,690","lbl":"تعليقات فيسبوك المصنّفة"},{"num":"8.4%","lbl":"نسبة الإيجابية — فيسبوك"},{"num":"795","lbl":"تعليقات إنستغرام المصنّفة"},{"num":"40.4%","lbl":"نسبة الإيجابية — إنستغرام"}],"accounts":[{"name":"609 منشور فيسبوك مطابق","url":"45% من 1,341 منشور","color":"#a78bfa"},{"name":"179 منشور إنستغرام مطابق","url":"10% من 1,775 منشور","color":"#818cf8"}],"notes":[{"icon":"📅","text":"تعليقات فيسبوك: أبريل 2023 – أبريل 2026"},{"icon":"⚠️","text":"المصنّف يعتمد على القواعد — NLP المتقدم معلّق"}]},"cross":{"eyebrow":"التوليف متعدد المنصات","title":"متعدد المنصات","titleEm":"أنماط عبر جميع القنوات","sub":"رؤى تظهر فقط عند النظر إلى جميع المنصات معاً.","stats":[{"num":"3,137","lbl":"أعلى تفاعل منشور واحد (فيسبوك)"},{"num":"★","lbl":"منشور واحد في أعلى 5 على 3 منصات"},{"num":"5 صباحاً","lbl":"ذروة النشر — جميع المنصات"},{"num":"8/10","lbl":"أفضل المنشورات حول حماية المستهلك"}],"accounts":[{"name":"سلطة النقد","url":"نشط على 6 منصات","color":"#4ade80"},{"name":"منصة الوعي المصرفي","url":"فيسبوك + إنستغرام فقط","color":"#86efac"},{"name":"CYBW","url":"فيسبوك + إنستغرام (حملات فقط)","color":"#fbbf24"},{"name":"منشأتي","url":"فيسبوك + إنستغرام + إكس (خاملة)","color":"#f87171"}],"notes":[{"icon":"📅","text":"النافذة المشتركة: يونيو 2021 – مارس 2026"},{"icon":"★","text":"فيديو أغسطس 2024: الوحيد في أعلى 5 عبر 3 منصات"}]},"mobileapp":{"eyebrow":"تحليل المنصة · تطبيق سلطة النقد","title":"التطبيق الجوال","titleEm":"تطبيق سلطة النقد · تقييم جوجل بلاي","sub":"تقييم Google Play Console للتطبيق الرسمي. بيانات حتى 14 أبريل 2026.","stats":[{"num":"25,400","lbl":"معدات مثبتة نشطة"},{"num":"2.4 ★","lbl":"التقييم العام"},{"num":"0.04%","lbl":"معدل الأعطال"},{"num":"C+","lbl":"التقييم الإجمالي"}],"accounts":[{"name":"تطبيق سلطة النقد","url":"play.google.com/store/apps/details?id=ps.mobileDT.pma","color":"#6ee7b7"},{"name":"iDplus","url":"ps.pma.fdid.mobile · 10,600 مثبت · 2.6★","color":"#fbbf24"}],"notes":[{"icon":"📅","text":"تاريخ التقييم: 14 أبريل 2026"},{"icon":"🔴","text":"تقييم 2.4★ — 57% من المراجعات بنجمة واحدة"},{"icon":"✅","text":"الاستقرار التقني ممتاز"}]},"methodology":{"eyebrow":"مرجع · المنهجية والنظرية","title":"المنهجية","titleEm":"الإطار والافتراضات والنطاق","sub":"التوثيق التقني الكامل لمصادر البيانات والقرارات التحليلية ومكدس الأدوات.","stats":[{"num":"13","lbl":"أنواع مصادر البيانات"},{"num":"8","lbl":"مراحل منهجية SSA"},{"num":"80+","lbl":"مصطلحات قاموس المشاعر العربي"},{"num":"v1","lbl":"إصدار لوحة التحكم"}],"accounts":[{"name":"الصادرات الأصلية","url":"فيسبوك · إنستغرام · لينكد إن · Meta Ads","color":"#4ade80"},{"name":"الاستخلاص العام","url":"فيسبوك · إنستغرام · لينكد إن · إكس · يوتيوب","color":"#94a3b8"},{"name":"مؤجل","url":"GA4 pma.ps · يوتيوب ستوديو","color":"#f87171"}],"notes":[{"icon":"⚠️","text":"مصنّف المشاعر يعتمد على القواعد"},{"icon":"📌","text":"مُصاغ كنتائج حالية — ليس تحليلاً نهائياً"}]}};
 
 // ── UNIFIED updateHeader (bilingual) ─────────────────────────────────
@@ -2695,7 +2695,7 @@ function translateStatusTags(lang) {
 // translatePage defined below with AR_HTML support
 
 // AR inner-HTML dictionary for rich-text (with <strong> tags)
-const AR_HTML = {"ins_overview_monthly":"يحافظ فيسبوك على أعلى حجم نشر وأكثره اتساقاً. تم تخفيض حجم لينكد إن إلى النصف عمداً في 2024 — مما أدى إلى <strong>تحسن 5.6 أضعاف في التفاعل</strong>. شهد إكس/تويتر تراجعاً حاداً بعد منتصف 2023. إنستغرام هو المنصة الأكثر نشاطاً من حيث عدد المنشورات.","cl_video_p":"متوسط تفاعل منشورات الفيديو <strong>206 على فيسبوك</strong> (2× الصورة) و<strong>65.9 على إنستغرام</strong> (6× الصورة). 9.5% فقط من المنشورات فيديو — أكبر فجوة في المحتوى في المحفظة.","cl_linkedin_p":"تقليص وتيرة النشر إلى النصف 2023→2025 أدى إلى <strong>نمو التفاعل 5.6 أضعاف</strong>. محتوى أقل، نتائج أفضل بشكل ملحوظ — مؤكد ومستمر حتى 2026.","cl_dormant_p":"منشأتي شبه خامل عبر جميع المنصات منذ أكتوبر 2023. إكس/تويتر متوسطه 47 مشاهدة/تغريدة. يوتيوب لديه 1,150 مشترك بعد 13 عاماً. تطبيق سلطة النقد يحمل تقييم 2.4★. ملاحظة: <strong>42.9% من تفاعل فيسبوك تولده 11.3% فقط من المنشورات — كلها مدفوعة/مُعززة</strong>. متوسط التفاعل العضوي 126 مقابل 739 للمنشورات المُعززة.","cl_datascope_p":"تستند هذه اللوحة إلى استخلاص المنشورات العامة + الصادرات الأصلية المستلمة حتى الآن. <strong>الثغرات المُعلَّمة:</strong> GA4 لـ pma.ps (مؤجل) · مرات ظهور لينكد إن غير متاحة في الاستخلاص · تفاعل إكس محدود بـ 2021–2026 · بيانات يوتيوب على مستوى القناة فقط · قصص إنستغرام غير متاحة · حسابات منشأتي/CYBW/منصة الوعي المصرفي تفتقر إلى الصادرات الأصلية. سيتم دمجها عند تأكيد الوصول.","ins_acct_eng":"منصة الوعي المصرفي <strong>تتفوق على سلطة النقد على إنستغرام</strong> (26.6 مقابل 14.5) — مما يشير إلى توافق أقوى بين المحتوى والجمهور. منشأتي هو الحساب الأضعف عبر كلتا المنصتين.","ins_acct_vol":"سلطة النقد تهيمن على الحجم (1,488 منشوراً مشتركاً لفيسبوك+إنستغرام). انهار حضور منشأتي على إنستغرام في أواخر 2023. يعمل CYBW في موجات حملات — ذروة أبريل/مايو.","ins_fb_vol":"تنشر سلطة النقد كل شهر دون استثناء. <strong>انهارت منشأتي بعد أكتوبر 2023</strong> وهي شبه خاملة منذ ذلك الحين. يُظهر CYBW موجات حملات مميزة في أبريل–مايو. تعافت منصة الوعي المصرفي بقوة منذ يناير 2025.","ins_fb_eng":"الذروة: <strong>أبريل 2025 (10,523)</strong> مدفوعاً بحملة السلامة المالية في غزة. أغسطس 2024 (4,279) يمثل فيديو الاحتيال الفيروسي. اتجاه تصاعدي متسق خلال 2025.","ins_fb_dow":"<strong>السبت (202) والخميس (171)</strong> هما الأعلى. الأربعاء يتلقى أعلى عدد منشورات لكن عائداً دون المتوسط — خلل في الجدولة يستحق التصحيح.","ins_fb_type":"<strong>المنشورات المشتركة (متوسط 3.9)</strong> غير مرئية فعلياً لخوارزمية ميتا. إزالتها سيرفع متوسط المحفظة فوراً. <strong>الفيديو (206)</strong> يمثل الاستثمار الأعلى تأثيراً في المحتوى.","ins_fb_react":"ردود الفعل إيجابية بنسبة <strong>94–98%</strong> عبر جميع الصفحات. منشأتي يملك أعلى معدل للحب (5.6%) — محتوى أكثر تأثيراً عاطفياً رغم الحجم الأقل.","ins_ig_vol":"كانت منشأتي أكثر حسابات إنستغرام نشاطاً في 2021–2022، ثم أصبحت شبه خاملة. أصبحت سلطة النقد الحساب المهيمن من أواخر 2022. يُظهر CYBW نفس نمط موجات الحملات في أبريل–مايو كفيسبوك.","ins_ig_eng":"الذروة: أغسطس 2024 (3,145) يهيمن عليه الفيديو الفيروسي للاحتيال (2,430 تفاعلاً). أبريل 2025 (3,620) مدفوع بموجة حملة CYBW. التفاعل أقل عموماً من فيسبوك من حيث الحجم المطلق.","ins_ig_type":"فجوة الفيديو والصورة على إنستغرام (6×) أكثر وضوحاً من فجوة فيسبوك (2×). مع 143 منشوراً فيديو فقط من 1,775 (8.1%)، هذا أكثر تنسيق غير مستثمر عالي الأثر في المحفظة."};
+const AR_HTML = {"ins_overview_monthly":"يحافظ فيسبوك على أعلى حجم نشر وأكثره اتساقاً. تم تخفيض حجم لينكد إن إلى النصف عمداً في 2024 — مما أدى إلى <strong>تحسن 5.6 أضعاف في التفاعل</strong>. شهد إكس/تويتر تراجعاً حاداً بعد منتصف 2023. إنستغرام هو المنصة الأكثر نشاطاً من حيث عدد المنشورات.","cl_video_p":"متوسط تفاعل منشورات الفيديو <strong>206 على فيسبوك</strong> (2× الصورة) و<strong>65.9 على إنستغرام</strong> (6× الصورة). 9.5% فقط من المنشورات فيديو — أكبر فجوة في المحتوى في المحفظة.","cl_linkedin_p":"تقليص وتيرة النشر إلى النصف 2023→2025 أدى إلى <strong>نمو التفاعل 5.6 أضعاف</strong>. محتوى أقل، نتائج أفضل بشكل ملحوظ — مؤكد ومستمر حتى 2026.","cl_dormant_p":"منشأتي شبه خامل عبر جميع المنصات منذ أكتوبر 2023. إكس/تويتر متوسطه 47 مشاهدة/تغريدة. يوتيوب لديه 1,150 مشترك بعد 13 عاماً. تطبيق سلطة النقد يحمل تقييم 2.4★. ملاحظة: <strong>42.9% من تفاعل فيسبوك تولده 11.3% فقط من المنشورات — كلها مدفوعة/مُعززة</strong>. متوسط التفاعل العضوي 126 مقابل 739 للمنشورات المُعززة.","cl_datascope_p":"تستند هذه اللوحة إلى استخلاص المنشورات العامة + الصادرات الأصلية المستلمة حتى الآن. <strong>الثغرات المُعلَّمة:</strong> GA4 لـ pma.ps (مؤجل) · مرات ظهور لينكد إن غير متاحة في الاستخلاص · تفاعل إكس محدود بـ 2021–2026 · بيانات يوتيوب على مستوى القناة فقط · قصص إنستغرام غير متاحة · حسابات منشأتي/CYBW/منصة الوعي المصرفي تفتقر إلى الصادرات الأصلية. سيتم دمجها عند تأكيد الوصول.","ins_acct_eng":"منصة الوعي المصرفي <strong>تتفوق على سلطة النقد على إنستغرام</strong> (26.6 مقابل 14.5) — مما يشير إلى توافق أقوى بين المحتوى والجمهور. منشأتي هو الحساب الأضعف عبر كلتا المنصتين.","ins_acct_vol":"سلطة النقد تهيمن على الحجم (1,488 منشوراً مشتركاً لفيسبوك+إنستغرام). انهار حضور منشأتي على إنستغرام في أواخر 2023. يعمل CYBW في موجات حملات — ذروة أبريل/مايو.","ins_fb_vol":"تنشر سلطة النقد كل شهر دون استثناء. <strong>انهارت منشأتي بعد أكتوبر 2023</strong> وهي شبه خاملة منذ ذلك الحين. يُظهر CYBW موجات حملات مميزة في أبريل–مايو. تعافت منصة الوعي المصرفي بقوة منذ يناير 2025.","ins_fb_eng":"الذروة: <strong>أبريل 2025 (10,523)</strong> مدفوعاً بحملة السلامة المالية في غزة. أغسطس 2024 (4,279) يمثل فيديو الاحتيال الفيروسي. اتجاه تصاعدي متسق خلال 2025.","ins_fb_dow":"<strong>السبت (202) والخميس (171)</strong> هما الأعلى. الأربعاء يتلقى أعلى عدد منشورات لكن عائداً دون المتوسط — خلل في الجدولة يستحق التصحيح.","ins_fb_type":"<strong>المنشورات المشتركة (متوسط 3.9)</strong> غير مرئية فعلياً لخوارزمية ميتا. إزالتها سيرفع متوسط المحفظة فوراً. <strong>الفيديو (206)</strong> يمثل الاستثمار الأعلى تأثيراً في المحتوى.","ins_fb_react":"ردود الفعل إيجابية بنسبة <strong>94–98%</strong> عبر جميع الصفحات. منشأتي يملك أعلى معدل للحب (5.6%) — محتوى أكثر تأثيراً عاطفياً رغم الحجم الأقل.","ins_ig_vol":"كانت منشأتي أكثر حسابات إنستغرام نشاطاً في 2021–2022، ثم أصبحت شبه خاملة. أصبحت سلطة النقد الحساب المهيمن من أواخر 2022. يُظهر CYBW نفس نمط موجات الحملات في أبريل–مايو كفيسبوك.","ins_ig_eng":"الذروة: أغسطس 2024 (3,145) يهيمن عليه الفيديو الفيروسي للاحتيال (2,430 تفاعلاً). أبريل 2025 (3,620) مدفوع بموجة حملة CYBW. التفاعل أقل عموماً من فيسبوك من حيث الحجم المطلق.","ins_ig_type":"فجوة الفيديو والصورة على إنستغرام (6×) أكثر وضوحاً من فجوة فيسبوك (2×). مع 143 منشوراً فيديو فقط من 1,775 (8.1%)، هذا أكثر تنسيق غير مستثمر عالي الأثر في المحفظة.","ins_ig_eng2":"الذروة: <strong>أغسطس 2024 (3,145)</strong> يهيمن عليه الفيديو الفيروسي للاحتيال (2,430 تفاعلاً). أبريل 2025 (3,620) مدفوع بموجة حملة CYBW. التفاعل أقل عموماً من فيسبوك من حيث الحجم المطلق.","ins_li_vol":"2023: متوسط <strong>33.8 منشوراً/شهر → 4.5 متوسط تفاعل</strong>. 2025: متوسط <strong>16.4 منشوراً/شهر → 25.3 متوسط تفاعل</strong>. تخفيض الحجم إلى النصف أنتج نتائج أفضل بـ 5.6 مرة.","ins_li_year":"أرقام 2026 (المتوسط 25.4، الوسيط 25.0) تتطابق مع 2025 تماماً — مما يؤكد أن التحسن مستدام وليس مجرد ارتفاع مؤقت. تقارب المتوسط والوسيط يشير إلى اتساق المحتوى.","ins_tw_vol":"حافظت سلطة النقد على 40–60 تغريدة/شهر خلال 2022–2023، ثم انخفضت حدة. صمتت منشأتي بعد أكتوبر 2023. المنصة تتلقى مدخلات مستمرة لكنها لا تولد أي تفاعل جمهور قابل للقياس.","ins_tw_top":"أعلى تغريدة (2,116 مشاهدة) هي تهنئة بمناسبة عيد — وليست محتوى مؤسسياً. أعلى تغريدة موضوعية مشاهدة (443) هي إعلان عن خدمات مصرفية. هذه الأرقام أدنى بكثير من أداء فيسبوك وإنستغرام.","ins_yt_year":"لا يوجد جدول تحميل سنوي منتظم. بلغ الإنتاج ذروته في 2013 (11 فيديو) ولا يزال متقطعاً. هذا يتعارض بشكل حاد مع أداء الفيديو على فيسبوك — نفس المحتوى سيتفوق بشكل كبير على يوتيوب لو تم توزيعه بشكل صحيح.","ins_yt_top":"أعلى فيديو (شرح نظام الاستعلام الفردي، 2023) يملك <strong>10,160 مشاهدة</strong> — طلب قوي على محتوى الشرح العملي. تفسيرات الثقافة المالية من 2019 لا تزال بين الأكثر مشاهدة.","ins_age_fb":"شريحة الذكور 25–34 (25.8%) هي أكبر مجموعة على فيسبوك، تليها الذكور 35–44 (23.9%). <strong>النساء يمثلن 32.2% فقط</strong> من الجمهور — فجوة كبيرة نظراً لأن الشمول المالي للمرأة أولوية معلنة. الشريحة 25–44 تمثل 74.5% من الجمهور.","ins_age_ig":"جمهور إنستغرام أكثر توازناً من حيث الجنس: <strong>55.1% ذكور مقابل 44.9% إناث</strong>. تهيمن الفئة 25–34 على كلا الجنسين (22.9% ذكور، 22.2% إناث) — والفئة 18–24 متقاربة (7.1% مقابل 7.4%).","ins_cities":"غزة في المقدمة على فيسبوك (16.2%) بينما رام الله في المقدمة على إنستغرام (15.9%). نابلس والخليل ضمن أعلى 10 في كلتا المنصتين. التركيز في رام الله على إنستغرام يعكس جمهورها الأصغر سناً والأكثر اتصالاً.","ins_countries":"تهيمن فلسطين على كلا المنصتين (فيسبوك: 81.8%، إنستغرام: 78%). إسرائيل في المرتبة الثانية على كليهما — على الأرجح تعكس الفلسطينيين ضمن حدود 1948. الانتشار في الشتات محدود لكنه يغطي أسواقاً رئيسية: مصر والأردن والإمارات والولايات المتحدة.","ins_ig_follow":"متوسط 18 متابعاً جديداً/يوم خلال يناير–أبريل 2026. ارتفاع في 12 يناير (293 متابعاً جديداً) يتزامن مع منشور عالي التفاعل. اكتساب المتابعين اليومي متواضع لكن منتظم — يشير إلى نمو عضوي دون استراتيجية مدفوعة.","ins_ads_spend":"2023 هيمن على حجم إنشاء الحملات (62 حملة). شهد 2025 أعلى إنفاق لحملة واحدة (999.80 دولار — إطلاق iDplus). يُظهر 2026 بالفعل 866 دولاراً في الربع الأول، مما يشير إلى تسارع الاستثمار في الإعلانات المدفوعة.","ins_ads_obj":"النقرات على الروابط (32 حملة) والتفاعل مع المنشورات (15 حملة) هي الأهداف المهيمنة. حملات <strong>Video ThruPlay</strong> (8) تمثل أكثر تنسيق إعلاني كفاءة — تكلفة/نتيجة منخفضة حتى 0.001 دولار في بعض الحملات.","ins_content_type":"ميزة الفيديو أكبر على إنستغرام (6×) منها على فيسبوك (2×). كلتا المنصتين تُظهران أن الفيديو غير مُستثمر بشكل كبير: 8.1% فقط من منشورات إنستغرام و9.5% من فيسبوك هي فيديو. هذا الفارق يمثل أعلى فرصة غير مستغلة في المحفظة.","ins_content_dow":"تكشف البيانات عن <strong>خلل في الجدولة</strong>: فيسبوك ينشر أكثر يوم الأربعاء لكن يحقق أفضل تفاعل يوم السبت. إنستغرام يبلغ ذروته يوم الخميس. لينكد إن يؤدي بشكل أفضل الثلاثاء–الخميس. توحيد أوقات النشر لجميع المنصات هو الخلل الاستراتيجي الأوضح.","ins_content_sched":"<strong>نتيجة حاسمة:</strong> جميع المنصات الاجتماعية الأربع تذروة النشر في ساعات متطابقة (5–8 صباحاً بتوقيت فلسطين) — البصمة الواضحة لأداة جدولة واحدة تنشر نفس قائمة الانتظار لجميع القنوات في آن واحد.","ins_sent_dist":"جمهور إنستغرام أكثر دفئاً بشكل ملحوظ. يعكس المعدل المحايد الأعلى لفيسبوك (88.6%) خطاباً عاماً أكثر جوهرية — أسئلة وطلبات وبحث عن معلومات. تجذب المنصتان سلوكيات جمهور مختلفة هيكلياً.","ins_sent_trend":"ارتفاعات التعليقات السلبية تتتبع المنشورات الحساسة للسياسات. أنتجت استشارة قانون خفض الكاش في نوفمبر 2025 أكبر مجموعة سلبية. التعليقات الإيجابية منخفضة لكن منتظمة — مدفوعة بمنشورات iBURAQ والتوعية بالاحتيال.","ins_sent_acct":"سلطة النقد، بوصفها الحساب الأكثر ظهوراً والأكثر تعرضاً للسياسات، تتلقى أكثر ردود الفعل السلبية نسبياً. محتوى حملات CYBW يسجل بشكل إيجابي — الجمهور يصل وهو مهتم بالفعل.","ins_ig_sent":"تتجه تعليقات إنستغرام بشكل قوي نحو الإيجابية (40.4%) — مدفوعة بردود الفعل بالرموز التعبيرية (👏❤️🔥) واللغة الاحتفالية. التعليقات السلبية نادرة (1.8%) ومركزة على منشورات شكاوى الخدمات المالية.","ins_ig_sent2":"منصة الوعي المصرفي تحقق أقوى نسبة إيجابية على إنستغرام — متسقة مع كون محتواها أكثر تعليمية وأقل تعرضاً للسياسات. الفارق بين المنصات (إنستغرام 40% مقابل فيسبوك 8% إيجابي) هيكلي وليس خاصاً بالمحتوى.","ins_cross_viral":"★ فيديو الاحتيال في أغسطس 2024 هو <strong>المنشور الوحيد الذي يحتل أعلى 5 في آن واحد</strong> على فيسبوك وإنستغرام ولينكد إن. يُحدد نموذج المحتوى متعدد المنصات: حماية المستهلك + فيديو + نشر متزامن.","ins_cross_eng":"تفاعل فيسبوك يُقزِّم المنصات الأخرى من حيث الحجم المطلق — لكن <strong>مسار نمو لينكد إن هو الأكثر حدة</strong> عند التطبيع لكل منشور. إنستغرام يتتبع موسمية فيسبوك لكن بنحو 25% من الحجم.","ins_app_install":"50,000+ تنزيل مدى الحياة مقابل 25,400 مثبت حالياً يعني <strong>~50% تراجع مدى الحياة</strong>. 19,000 تثبيت نشط (80.6% من القاعدة المثبتة) يشير إلى احتفاظ جيد بمن أبقوا التطبيق — المشكلة في مرحلة الاكتشاف وتجربة التشغيل الأول.","ins_app_funnel":"<strong>تسرب حاسم في القمع:</strong> 2,170 جهازاً جديداً مُكتسباً لكن 963 فتحة أولى فقط (معدل فتح 44%). 10,100 فقط من 25,400 جهازاً مثبتاً هم مستخدمون نشطون شهرياً — نسبة MAU/تثبيت 40%. الاحتفاظ لـ 7 أيام البالغ 41 مستخدماً انخفض 35% عن الفترة السابقة.","ins_app_rating":"<strong>توزيع ثنائي القطب:</strong> 56.7% من المستخدمين يعطون 1★، 20.3% يعطون 5★ — لا شيء يُذكر بينهما. هذا الاستقطاب علامة تطبيق يعاني من نمط فشل محدد مؤلم (تسجيل الدخول/المصادقة) يُنفِّر معظم المستخدمين.","ins_app_review":"مشاكل تسجيل الدخول/المصادقة هي الشكوى الأكثر شيوعاً — تكرار مرتفع، مؤكدة بتقييمات سلبية. أعطال الماسح الضوئي للباركود مدعومة مباشرة بالبيانات التقنية (ZXing، CameraProvider في قائمة الأعطال الأعلى). الموضوعات الإيجابية موجودة لكن تفوقها السلبيات بنسبة 5:1.","ins_app_vitals":"رغم التقييم العام المنخفض، فإن <strong>الاستقرار التقني للتطبيق ممتاز بحق</strong>. معدلات الأعطال وANR أقل بـ 12–27× من حدود جوجل للسلوك السيئ. معدل البداية الباردة البطيئة (+0.26 نقطة مئوية في الارتفاع) هو القلق التقني الوحيد الجدير بالمراقبة.","ins_app_crash":"يظهر نظام الباركود/الكاميرا (المشكلتان #3 و#5) مرتين ويتطابق مع شكاوى المستخدمين حول أعطال ماسح QR. هذا <strong>إصلاح ذو أولوية عالية</strong>. جميع المشاكل الستة أثرت على 10 مستخدمين فقط في 28 يوماً، متسقة مع معدل الأعطال الممتاز 0.04%.","ins_methodology":"الحفظ والوصول ومرات الظهور ومشاهدات الفيديو متاحة في الصادرات الأصلية (Q1 2024–Q1 2026). البيانات العامة تُغطي فترات أطول لكنها تفتقر إلى هذه المقاييس. التحليلات الجمعية المبلغ عنها هنا تتطابق مع نطاق الصادرات الأصلية حيثما تتوفر.","cl_li_quality2_p":"لينكد إن هو أوضح دليل على تأثير الجودة على الكمية. 33.8 منشوراً/شهر في 2023 أنتج 4.5 متوسط تفاعل. 16.4 منشوراً/شهر في 2025 أنتج 25.3 — تحسن 5.6× من نصف الحجم. يبدو أن الوتيرة المثلى للينكد إن لسلطة النقد هي <strong>12–20 منشوراً/شهر</strong> مركزة على المعالم المؤسسية وأحداث المحافظ.","cl_tw_gap_p":"إكس/تويتر يعمل كـ<strong>أرشيف بث</strong> دون أي تفاعل جمهور قابل للقياس. بمتوسط 47 مشاهدة/تغريدة و0.07 إعادة تغريد ومعدل رد شبه معدوم، تستهلك المنصة الموارد دون تحقيق أي أثر. يُوصى: (1) تحديد استراتيجية محتوى خاصة بإكس أو (2) إعادة توجيه الموارد للمنصات الأعلى أداءً.","cl_yt_opp_p":"نظراً لأن محتوى الفيديو يولد تفاعلاً أعلى بـ 2–6 أضعاف على فيسبوك وإنستغرام، تملك سلطة النقد فرصة لبناء يوتيوب كـ<strong>مستودع محتوى طويل</strong> يدعم مقاطع الوسائل الاجتماعية القصيرة. النهج الموصى به: إعادة نشر محتوى الفيديو الأعلى أداءً على يوتيوب، وإنشاء سلاسل مخصصة. الهدف: 2–4 تحميلات/شهر.","cl_gender_fb_p":"بنسبة 67.8% ذكوراً، يملك فيسبوك لسلطة النقد جمهوراً مائلاً هيكلياً نحو الذكور — رغم أن الشمول المالي للمرأة هو تكليف رئيسي لسلطة النقد. ينبغي أن تستهدف استراتيجية المحتوى بشكل فعّال تمكين المرأة مالياً.","cl_ig_fit_p":"التوزيع شبه المتوازن للجنس على إنستغرام (55/45) يجعله المنصة الأفضل لحملات الشمول المالي للمرأة. حساب منصة الوعي المصرفي على إنستغرام (متوسط تفاعل 26.6) يُظهر بالفعل توافقاً أقوى — عزز الترويج المتبادل هناك بشكل أكثر فاعلية.","cl_25_44_p":"تمثل شريحة السن العاملة 25–44 نسبة 74.5% من جمهور فيسبوك و~72% من إنستغرام — الهدف الأساسي لاعتماد iBURAQ ورسائل الدفع الرقمي ومحتوى الثقافة المالية. ينبغي أن يتجه المحتوى نحو الأدوات المالية العملية، لا التثقيف المصرفي العام.","cl_ads_eff_p":"حققت حملة iDplus Videos (يناير 2026) 26,098 مشاهدة للصفحة المقصودة بتكلفة <strong>0.019 دولار/نتيجة</strong> من ميزانية 500 دولار — أكثر حملة كفاءة في مجموعة البيانات. هذا يؤكد أن محتوى الفيديو + هدف الصفحة المقصودة هو الصيغة المثلى لإطلاق المنتجات.","cl_ads_gap_p":"تقرير التوزيع الديموغرافي المنفصل (17 حملة مع بيانات العمر/الجنس) متاح لكنه يتطلب معالجة إضافية. سيتم دمجه في التحديث التالي. إجمالاً: 73 حملة غير نشطة، 15 مؤرشفة، 3 مكتملة، 3 لا تزال نشطة.","cl_paid_p":"11.3% من منشورات فيسبوك (54 منشوراً مُعززاً) تمثل 42.9% من إجمالي التفاعل. متوسط المنشور المُعزز: 739 تفاعلاً مقابل 126 للعضوي — فجوة <strong>5.9×</strong> مدفوعة كلياً بالوصول المدفوع، لا بجودة المحتوى. نسبة ردود الفعل:التعليقات هي الوكيل الأوضح: المنشورات المدفوعة متوسطها 12:1، والعضوية 7:1.","cl_method_paid_p":"<strong>فيسبوك:</strong> تأكيد الحالة المدفوعة من الصادرات الأصلية حيثما متاحة. للمنشورات قبل 2024، يُستخدم الكشف بالوكالة: ردود الفعل ÷ التعليقات > 20 والتفاعل > 200. <strong>إنستغرام:</strong> الصادرات الأصلية لإنستغرام لا تتضمن تقسيم وصول مُعزز/عضوي — طريقة الوكالة مطبقة (الإعجابات ÷ التعليقات > 30 والتفاعل > 200). تسميات المدفوع لإنستغرام هي تقديرات فقط.","cl_cross_template_p":"كل منشور عالي الأداء عبر جميع المنصات يشترك في: 1. حماية المستهلك أو السلامة المالية. 2. رسالة واحدة قابلة للتنفيذ. 3. تنسيق فيديو — أقل من 60 ثانية. 4. نُشر في آن واحد عبر فيسبوك وإنستغرام ولينكد إن. 5. عربية سهلة — محادثاتية وليست لغة تنظيمية.","cl_cross_sched_p":"تبلغ جميع المنصات الاجتماعية الأربع ذروتها في ساعات نشر متطابقة (5–8 صباحاً بتوقيت فلسطين) — البصمة الواضحة لأداة جدولة واحدة. هذا يلغي التحسين الزمني الخاص بكل منصة. كل منصة لها نافذة مثلى مميزة: فيسبوك السبت 8–10 صباحاً؛ إنستغرام الخميس 7–9 صباحاً؛ لينكد إن الثلاثاء–الخميس 7–9 صباحاً.","cl_sent_mod_p":"التعليقات السلبية على منشورات السياسات العامة مرئية علناً وغير مُجاب عليها. بروتوكول إدارة المجتمع سيقلل بشكل ملموس من المخاطر السمعية. الموضوعات ذات الأولوية: مخاوف القروض/الفائدة، مشاكل تسجيل الدخول في التطبيق، مطالبات خصومات الدفع، قانون خفض الكاش.","cl_app_risk_p":"تقييم 2.4★ على Google Play مرئي علناً و<strong>يثني المستخدمين الجدد بشكل نشط عن التثبيت</strong>. مع 57% من المراجعات بنجمة واحدة، توزيع التقييم مائل هيكلياً. الانتعاش يتطلب إصلاح فشل تسجيل الدخول/المصادقة (السبب الجذري) قبل أن تؤتي أي حملة تقييم ثمارها.","cl_app_strength_p":"الفجوة بين تصور المستخدم (2.4★) والأداء التقني (معدل أعطال 0.04%) غير معتادة. التطبيق <strong>لا يتعطل على معظم المستخدمين</strong> — المراجعات السلبية مدفوعة بفشل تجربة المستخدم وتسجيل الدخول، لا بعدم الاستقرار التقني. هذا يعني أن الجهد الهندسي يركز على تجربة المستخدم/المصادقة.","cl_app_geo_p":"أبرز دول الاستخدام: <strong>فلسطين (أساسي) ← إسرائيل (فلسطينيو الداخل) ← الولايات المتحدة (شتات فلسطيني) ← الأردن.</strong> قناة Explore ولّدت 896 استحواذاً في 90 يوماً — الاكتشاف العضوي في المتجر يعمل، لكنه لا يُحوَّل إلى مستخدمين محتفظ بهم.","cl_nlp_upgrade_p":"بمجرد توفر الوصول الشبكي إلى HuggingFace في بيئة التحليل، سيتم ترقية المُصنِّف إلى <strong>CAMeL-Lab AraBERT أو نموذج Transformer مخصص للعربية</strong>. تحليلات المشاعر الحالية موثوقة بشكل معقول للكشف الثنائي (إيجابي/سلبي) ولكنها تفتقر إلى الدقة الدقيقة. يُوصى بمراجعة القضايا عالية المخاطر يدوياً."};
 
 // Translate innerHTML of elements tagged with data-i18n-html
 function translateRichHTML(lang) {
