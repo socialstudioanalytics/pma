@@ -2926,6 +2926,13 @@ function filterIgAcct(acct, btn) {
 const _chartMap = {};
 const _origChartCtor = Chart;
 
+function mkChart(id, config) {
+  if (_chartMap[id]) { try { _chartMap[id].destroy(); } catch(e) {} }
+  const c = new _origChartCtor(document.getElementById(id), config);
+  _chartMap[id] = c;
+  return c;
+}
+
 
 // FB Top posts
 function sentBadge(score){if(score===null||isNaN(score)||score===undefined)return'';if(score>0.15)return'<span class="tag high">↑ Positive</span>';if(score<-0.05)return'<span class="tag low">↓ Mixed</span>';return'<span style="font-size:0.65rem;background:#f3f4f6;color:#374151;padding:2px 5px;border-radius:3px;font-weight:600">→ Neutral</span>';}
@@ -3004,13 +3011,6 @@ function renderAllCharts() {
   const fbTypeLabels_r = LANG==='ar'?['فيديو','رابط مشترك','صورة','نص','ألبوم','منشور مشترك']:['Video','Shared Link','Image','Text','Album','Shared Post'];
   const igTypeLabels_r = LANG==='ar'?['فيديو','صورة','كاروسيل']:['Video','Image','Sidecar'];
   
-  // Override Chart constructor to register instances
-  function mkChart(id, config) {
-    if (_chartMap[id]) { try { _chartMap[id].destroy(); } catch(e) {} }
-    const c = new _origChartCtor(document.getElementById(id), config);
-    _chartMap[id] = c;
-    return c;
-  }
   
   // Re-assign language arrays into scope (overriding module-level declarations)
   // Charts that use 'days' will pick up days_r etc. via closure
