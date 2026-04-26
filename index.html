@@ -2078,10 +2078,10 @@ const HEADERS = {
       {num:'26.6',lbl:'Banking Awareness IG avg eng'},
     ],
     accounts: [
-      {name:'PMA Core',url:'fb.com/pmauthority · ig: @pmauthority',color:'#7ec8f4',status:'active'},
-      {name:'Banking Awareness',url:'fb: bankingawarenessplatformpma · ig: @bankingawarenessplatform',color:'#4ade80',status:'active'},
-      {name:'CYBW',url:'fb: childyouthbankingweekpma · ig: @cybw.ps',color:'#fbbf24',status:'campaign'},
-      {name:'Monshati',url:'fb: monshatips · ig: @monshati.ps',color:'#f87171',status:'dormant'},
+      {name:'PMA Core',url:'fb.com/pmauthority · ig: @pmauthority',color:'#7ec8f4',status:LANG==='ar'?'نشط':'active'},
+      {name:'Banking Awareness',url:'fb: bankingawarenessplatformpma · ig: @bankingawarenessplatform',color:'#4ade80',status:LANG==='ar'?'نشط':'active'},
+      {name:'CYBW',url:'fb: childyouthbankingweekpma · ig: @cybw.ps',color:'#fbbf24',status:LANG==='ar'?'حملة':'campaign'},
+      {name:'Monshati',url:'fb: monshatips · ig: @monshati.ps',color:'#f87171',status:LANG==='ar'?'خامل':'dormant'},
     ],
     notes: [
       {icon:'📅',text:'Coverage: Mar 2023 – Mar 2026'},
@@ -2181,10 +2181,10 @@ const HEADERS = {
       {name:'MonshatiPs',url:'x.com/MonshatiPs · 440 tweets · dormant since 2023',color:'#f87171'},
     ],
     notes: [
-      {icon:'📅',text:'Scrape data: Oct 2021 – Mar 2026'},
-      {icon:'⚠️',text:'No native X Analytics access — views/retweets only'},
-      {icon:'⚠️',text:'Follower count, impressions, link clicks not available'},
-      {icon:'🔴',text:'Platform functions as broadcast archive — strategic review recommended'},
+      {icon:'📅',text:LANG==='ar'?'بيانات الاستخلاص: أكتوبر 2021 – مارس 2026':'Scrape data: Oct 2021 – Mar 2026'},
+      {icon:'⚠️',text:LANG==='ar'?'لا يوجد وصول لـ X Analytics الأصلي — مشاهدات/إعادة تغريد فقط':'No native X Analytics access — views/retweets only'},
+      {icon:'⚠️',text:LANG==='ar'?'عدد المتابعين ومرات الظهور والنقرات على الروابط غير متاحة':'Follower count, impressions, link clicks not available'},
+      {icon:'🔴',text:LANG==='ar'?'المنصة تعمل كأرشيف بث — يُوصى بمراجعة استراتيجية':'Platform functions as broadcast archive — strategic review recommended'},
     ],
   },
   youtube: {
@@ -2203,11 +2203,11 @@ const HEADERS = {
       {name:'PMA YouTube Channel',url:'youtube.com/channel/UCbQBgvY3lWGZaqRaLIO4y8g',color:'#fca5a5'},
     ],
     notes: [
-      {icon:'📅',text:'Dataset: Nov 2012 – Feb 2026'},
-      {icon:'⚠️',text:'No YouTube Studio access — per-video analytics unavailable'},
-      {icon:'⚠️',text:'No subscriber growth timeline available'},
-      {icon:'💡',text:'Top video: 10,160 views — PMA individual inquiry app (2023)'},
-      {icon:'🔴',text:'Chronically under-invested vs video performance on FB/IG'},
+      {icon:'📅',text:LANG==='ar'?'مجموعة البيانات: نوفمبر 2012 – فبراير 2026':'Dataset: Nov 2012 – Feb 2026'},
+      {icon:'⚠️',text:LANG==='ar'?'لا يوجد وصول لـ YouTube Studio — تحليلات الفيديو الفردي غير متاحة':'No YouTube Studio access — per-video analytics unavailable'},
+      {icon:'⚠️',text:LANG==='ar'?'لا يوجد جدول زمني لنمو المشتركين':'No subscriber growth timeline available'},
+      {icon:'💡',text:LANG==='ar'?'أعلى فيديو: 10,160 مشاهدة — تطبيق الاستعلام الفردي لسلطة النقد (2023)':'Top video: 10,160 views — PMA individual inquiry app (2023)'},
+      {icon:'🔴',text:LANG==='ar'?'استثمار مزمن ضعيف مقارنة بأداء الفيديو على فيسبوك/إنستغرام':'Chronically under-invested vs video performance on FB/IG'},
     ],
   },
   content: {
@@ -2224,10 +2224,10 @@ const HEADERS = {
     ],
     accounts: [],
     notes: [
-      {icon:'📅',text:'All platforms · 2023–2026'},
-      {icon:'💡',text:'All 4 social platforms peak at same hour (5–8am) — scheduling tool signature'},
-      {icon:'💡',text:'Saturday peak on FB · Thursday peak on IG · Saturday on LinkedIn'},
-      {icon:'🔴',text:'8 of 10 top posts are consumer protection / financial fraud content'},
+      {icon:'📅',text:LANG==='ar'?'جميع المنصات · 2023–2026':'All platforms · 2023–2026'},
+      {icon:'💡',text:LANG==='ar'?'جميع المنصات الاجتماعية الأربع تذروة النشر في 5–8 صباحاً — أداة جدولة واحدة':'All 4 social platforms peak at same hour (5–8am) — scheduling tool signature'},
+      {icon:'💡',text:LANG==='ar'?'السبت الأعلى على فيسبوك · الخميس على إنستغرام · السبت على لينكد إن':'Saturday peak on FB · Thursday peak on IG · Saturday on LinkedIn'},
+      {icon:'🔴',text:LANG==='ar'?'8 من أصل 10 منشورات الأعلى أداءً تتعلق بحماية المستهلك / الاحتيال المالي':'8 of 10 top posts are consumer protection / financial fraud content'},
     ],
   },
   sentiment: {
@@ -2247,10 +2247,10 @@ const HEADERS = {
       {name:'IG: 179 posts matched',url:'10% of 1,775 posts have comment data',color:'#818cf8'},
     ],
     notes: [
-      {icon:'📅',text:'FB comments: Apr 2023 – Apr 2026'},
-      {icon:'📅',text:'IG comments: Jul 2021 – Feb 2026'},
+      {icon:'📅',text:LANG==='ar'?'تعليقات فيسبوك: أبريل 2023 – أبريل 2026':'FB comments: Apr 2023 – Apr 2026'},
+      {icon:'📅',text:LANG==='ar'?'تعليقات إنستغرام: يوليو 2021 – فبراير 2026':'IG comments: Jul 2021 – Feb 2026'},
       {icon:'⚠️',text:'Classifier is rule-based — deep NLP (CAMeL-Lab) pending data access'},
-      {icon:'💡',text:'Negative spikes track policy-sensitive posts — cash reduction law Nov 2025'},
+      {icon:'💡',text:LANG==='ar'?'ارتفاعات السلبية تتتبع المنشورات الحساسة للسياسات — قانون خفض الكاش نوفمبر 2025':'Negative spikes track policy-sensitive posts — cash reduction law Nov 2025'},
     ],
   },
   cross: {
@@ -2272,9 +2272,9 @@ const HEADERS = {
       {name:'Monshati',url:'FB + IG + X (all near-dormant)',color:'#f87171'},
     ],
     notes: [
-      {icon:'📅',text:'Combined window: Jun 2021 – Mar 2026'},
-      {icon:'★',text:'Aug 2024 fraud video: only post ranked top-5 across FB, IG & LI'},
-      {icon:'💡',text:'All 4 social platforms peak 5–8am — single scheduling tool in use'},
+      {icon:'📅',text:LANG==='ar'?'النافذة المشتركة: يونيو 2021 – مارس 2026':'Combined window: Jun 2021 – Mar 2026'},
+      {icon:'★',text:LANG==='ar'?'فيديو أغسطس 2024: المنشور الوحيد في أعلى 5 عبر فيسبوك وإنستغرام ولينكد إن':'Aug 2024 fraud video: only post ranked top-5 across FB, IG & LI'},
+      {icon:'💡',text:LANG==='ar'?'جميع المنصات الاجتماعية الأربع تذروة النشر 5–8 صباحاً — أداة جدولة واحدة':'All 4 social platforms peak 5–8am — single scheduling tool in use'},
       {icon:'⚠️',text:'Recommendations section pending full native data access'},
     ],
   },
@@ -2296,10 +2296,10 @@ const HEADERS = {
     ],
     notes: [
       {icon:'📅',text:'Assessment date: April 14, 2026 · Last app update: Dec 3, 2025'},
-      {icon:'📱',text:'Android (Google Play) only — iOS App Store not assessed'},
-      {icon:'🔴',text:'2.4★ public rating — 57% of reviews are 1★ — deters new installs'},
-      {icon:'⚠️',text:'7-day retention dropped -35% vs prior period — critical cohort issue'},
-      {icon:'✅',text:'Technical stability is excellent — crash and ANR rates 12–27× below Google thresholds'},
+      {icon:'📱',text:LANG==='ar'?'أندرويد (Google Play) فقط — لم يتم تقييم iOS App Store':'Android (Google Play) only — iOS App Store not assessed'},
+      {icon:'🔴',text:LANG==='ar'?'تقييم عام 2.4★ — 57% من المراجعات بنجمة واحدة — يثني عن التثبيت الجديد':'2.4★ public rating — 57% of reviews are 1★ — deters new installs'},
+      {icon:'⚠️',text:LANG==='ar'?'الاحتفاظ لـ 7 أيام انخفض -35% مقارنة بالفترة السابقة — مشكلة حرجة في المجموعة':'7-day retention dropped -35% vs prior period — critical cohort issue'},
+      {icon:'✅',text:LANG==='ar'?'الاستقرار التقني ممتاز — معدلات الأعطال وANR أقل بـ 12–27× من حدود جوجل':'Technical stability is excellent — crash and ANR rates 12–27× below Google thresholds'},
     ],
   },
   methodology: {
@@ -2457,6 +2457,8 @@ function setLang(lang) {
 
   // Full page translation
   translatePage(lang);
+  // Rebuild all charts with language-conditional labels
+  if (typeof renderAllCharts === 'function') renderAllCharts();
 
   try { localStorage.setItem('pma_lang', lang); } catch(e) {}
 }
@@ -2777,8 +2779,8 @@ function applyRTLFixes(lang) {
 const lc='#6b7280', grid='rgba(0,0,0,0.06)';
 const co={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}};
 const pageColors=['#0f2a4a','#1d9e75','#d97706','#c0394b'];
-const days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-const daysFull=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const days=LANG==='ar'?['الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد']:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+const daysFull=LANG==='ar'?['الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد']:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
 const months=M.monthly.months;
 
 function mkAx(xl,yl){return{x:{ticks:{color:lc,font:{size:9},maxRotation:45,autoSkip:true,maxTicksLimit:14},grid:{display:false},title:xl?{display:true,text:xl,color:lc,font:{size:9}}:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:yl?{display:true,text:yl,color:lc,font:{size:9}}:{display:false}}};}
@@ -2817,23 +2819,59 @@ document.getElementById('plat-scorecard').innerHTML=platData.map(p=>`
   <div class="ps-lbl">${p.lbl}${p.extra?' · <span style="font-size:0.65rem;opacity:0.8">'+p.extra+'</span>':''}</div>
 </div>`).join('');
 
+// ── BILINGUAL CHART RENDERER ────────────────────────────────────────
+// Called on init AND on every lang switch to rebuild all charts
+// with language-conditional labels
+
+// Store chart instances for destroy-before-recreate
+const _chartMap = {};
+const _origChartCtor = Chart;
+
+function renderAllCharts() {
+  // Destroy all existing chart instances before re-rendering
+  Object.values(_chartMap).forEach(c => { try { c.destroy(); } catch(e) {} });
+  
+  // Re-declare language-sensitive label arrays
+  const days_r         = LANG==='ar'?['الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد']:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const pages4_r       = LANG==='ar'?['سلطة النقد','منصة الوعي المصرفي','CYBW','منشأتي']:['PMA Core','Banking Awareness','CYBW','Monshati'];
+  const fbTypeLabels_r = LANG==='ar'?['فيديو','رابط مشترك','صورة','نص','ألبوم','منشور مشترك']:['Video','Shared Link','Image','Text','Album','Shared Post'];
+  const igTypeLabels_r = LANG==='ar'?['فيديو','صورة','كاروسيل']:['Video','Image','Sidecar'];
+  
+  // Override Chart constructor to register instances
+  function mkChart(id, config) {
+    if (_chartMap[id]) { try { _chartMap[id].destroy(); } catch(e) {} }
+    const c = new _origChartCtor(document.getElementById(id), config);
+    _chartMap[id] = c;
+    return c;
+  }
+  
+  // Re-assign language arrays into scope (overriding module-level declarations)
+  // Charts that use 'days' will pick up days_r etc. via closure
+  const days = days_r;
+  const pages4 = pages4_r;
+  const fbTypeLabels = fbTypeLabels_r;
+  const igTypeLabels = igTypeLabels_r;
+  const fbRPages = LANG==='ar'?['سلطة النقد','منصة الوعي المصرفي','CYBW','منشأتي']:['PMA Core','Banking Awareness','CYBW','Monshati'];
+  const teng = LANG==='ar'?'إجمالي التفاعل':'total engagement';
+
+
 // Platform engagement bar chart
-new Chart(document.getElementById('platEngChart'),{type:'bar',data:{labels:['Facebook','Instagram','LinkedIn','X (views)','YouTube (views)','Mobile App (MAU)'],datasets:[{data:[M.kpis.fb_total_eng,M.kpis.ig_total_eng,M.kpis.li_total_eng,M.kpis.tw_total_views,M.kpis.yt_total_views,10100],backgroundColor:['#1877f2cc','#e1306ccc','#0a66c2cc','#374151cc','#ff0000cc','#10b981cc'],borderRadius:5,borderSkipped:false}]},options:{...co,indexAxis:'y',scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid}},y:{ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
+mkChart('platEngChart'),{type:'bar',data:{labels:LANG==='ar'?['فيسبوك','إنستغرام','لينكد إن','إكس (مشاهدات)','يوتيوب (مشاهدات)','التطبيق (MAU)']:['Facebook','Instagram','LinkedIn','X (views)','YouTube (views)','Mobile App (MAU)'],datasets:[{data:[M.kpis.fb_total_eng,M.kpis.ig_total_eng,M.kpis.li_total_eng,M.kpis.tw_total_views,M.kpis.yt_total_views,10100],backgroundColor:['#1877f2cc','#e1306ccc','#0a66c2cc','#374151cc','#ff0000cc','#10b981cc'],borderRadius:5,borderSkipped:false}]},options:{...co,indexAxis:'y',scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid}},y:{ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
 
 // Portfolio volume chart (FB+IG+LI+TW combined monthly)
 const fbTot=months.map((_,i)=>M.monthly.fb_pma[i]+M.monthly.fb_banking[i]+M.monthly.fb_cybw[i]+M.monthly.fb_monshati[i]);
 const igTot=months.map((_,i)=>M.monthly.ig_pma[i]+M.monthly.ig_banking[i]+M.monthly.ig_cybw[i]+M.monthly.ig_monshati[i]);
 const liTot=M.monthly.li_pma;
 const twTot=months.map((_,i)=>M.monthly.tw_pma[i]+M.monthly.tw_monshati[i]);
-new Chart(document.getElementById('portfolioVolChart'),{type:'line',data:{labels:months,datasets:[
-  {label:'Facebook',data:fbTot,borderColor:'#1877f2',backgroundColor:'#1877f215',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-  {label:'Instagram',data:igTot,borderColor:'#e1306c',backgroundColor:'#e1306c15',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-  {label:'LinkedIn',data:liTot,borderColor:'#0a66c2',backgroundColor:'#0a66c215',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+mkChart('portfolioVolChart'),{type:'line',data:{labels:months,datasets:[
+  {label:LANG==='ar'?'فيسبوك':'Facebook',data:fbTot,borderColor:'#1877f2',backgroundColor:'#1877f215',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+  {label:LANG==='ar'?'إنستغرام':'Instagram',data:igTot,borderColor:'#e1306c',backgroundColor:'#e1306c15',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+  {label:LANG==='ar'?'لينكد إن':'LinkedIn',data:liTot,borderColor:'#0a66c2',backgroundColor:'#0a66c215',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
   {label:'X',data:twTot,borderColor:'#374151',backgroundColor:'#37415115',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-]},options:{...co,scales:mkAx(null,'posts/month')}});
+]},options:{...co,scales:mkAx(null,LANG==='ar'?'منشور/شهر':'posts/month')}});
 
 // ── ACCOUNTS ─────────────────────────────────────────────────────────
-const acctList=[{key:'PMA Core',cls:'pma'},{key:'Banking Awareness',cls:'ba'},{key:'CYBW',cls:'cybw'},{key:'Monshati',cls:'mon'}];
+const acctList=[{key:LANG==='ar'?'سلطة النقد':'PMA Core',cls:'pma'},{key:LANG==='ar'?'منصة الوعي المصرفي':'Banking Awareness',cls:'ba'},{key:'CYBW',cls:'cybw'},{key:LANG==='ar'?'منشأتي':'Monshati',cls:'mon'}];
 document.getElementById('acct-cards').innerHTML=acctList.map(a=>{
   const d=M.accounts[a.key];
   return`<div class="acct-card ${a.cls}" onclick="highlightAcct(this)">
@@ -2846,34 +2884,34 @@ document.getElementById('acct-cards').innerHTML=acctList.map(a=>{
 }).join('');
 
 // Account engagement chart
-const pages4=['PMA Core','Banking Awareness','CYBW','Monshati'];
-new Chart(document.getElementById('acctEngChart'),{type:'bar',data:{labels:pages4,datasets:[
-  {label:'Facebook',data:pages4.map(p=>M.accounts[p].fb.avg_eng),backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false},
-  {label:'Instagram',data:pages4.map(p=>M.accounts[p].ig.avg_eng),backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false},
+const pages4=LANG==='ar'?['سلطة النقد','منصة الوعي المصرفي','CYBW','منشأتي']:['PMA Core','Banking Awareness','CYBW','Monshati'];
+mkChart('acctEngChart'),{type:'bar',data:{labels:pages4,datasets:[
+  {label:LANG==='ar'?'فيسبوك':'Facebook',data:pages4.map(p=>M.accounts[p].fb.avg_eng),backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false},
+  {label:LANG==='ar'?'إنستغرام':'Instagram',data:pages4.map(p=>M.accounts[p].ig.avg_eng),backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false},
 ]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
 // Account total posts
 const fbPosts=pages4.map(p=>M.accounts[p].fb.posts);
 const igPosts=pages4.map(p=>M.accounts[p].ig.posts);
-new Chart(document.getElementById('acctVolChart'),{type:'bar',data:{labels:pages4,datasets:[
-  {label:'Facebook',data:fbPosts,backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false,stack:'p'},
-  {label:'Instagram',data:igPosts,backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false,stack:'p'},
+mkChart('acctVolChart'),{type:'bar',data:{labels:pages4,datasets:[
+  {label:LANG==='ar'?'فيسبوك':'Facebook',data:fbPosts,backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false,stack:'p'},
+  {label:LANG==='ar'?'إنستغرام':'Instagram',data:igPosts,backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false,stack:'p'},
 ]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{stacked:true,ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
 // Account matrix table
 const matrixRows=[
-  {acct:'PMA Core',plat:'Facebook',cls:'fb',posts:M.accounts['PMA Core'].fb.posts,total:M.accounts['PMA Core'].fb.total_eng,avg:M.accounts['PMA Core'].fb.avg_eng,status:'active'},
-  {acct:'PMA Core',plat:'Instagram',cls:'ig',posts:M.accounts['PMA Core'].ig.posts,total:M.accounts['PMA Core'].ig.total_eng,avg:M.accounts['PMA Core'].ig.avg_eng,status:'active'},
-  {acct:'PMA Core',plat:'LinkedIn',cls:'li',posts:M.accounts['PMA Core'].li.posts,total:M.li_years['2025'].mean*197+'≈',avg:M.accounts['PMA Core'].li.avg_eng,status:'active'},
+  {acct:'PMA Core',plat:'Facebook',cls:'fb',posts:M.accounts['PMA Core'].fb.posts,total:M.accounts['PMA Core'].fb.total_eng,avg:M.accounts['PMA Core'].fb.avg_eng,status:LANG==='ar'?'نشط':'active'},
+  {acct:'PMA Core',plat:'Instagram',cls:'ig',posts:M.accounts['PMA Core'].ig.posts,total:M.accounts['PMA Core'].ig.total_eng,avg:M.accounts['PMA Core'].ig.avg_eng,status:LANG==='ar'?'نشط':'active'},
+  {acct:'PMA Core',plat:'LinkedIn',cls:'li',posts:M.accounts['PMA Core'].li.posts,total:M.li_years['2025'].mean*197+'≈',avg:M.accounts['PMA Core'].li.avg_eng,status:LANG==='ar'?'نشط':'active'},
   {acct:'PMA Core',plat:'X/Twitter',cls:'tw',posts:M.accounts['PMA Core'].tw.posts,total:'33,024 views',avg:47,status:'low'},
   {acct:'PMA Core',plat:'YouTube',cls:'yt',posts:191,total:'36,644 views',avg:192,status:'low'},
-  {acct:'Banking Awareness',plat:'Facebook',cls:'fb',posts:M.accounts['Banking Awareness'].fb.posts,total:M.accounts['Banking Awareness'].fb.total_eng,avg:M.accounts['Banking Awareness'].fb.avg_eng,status:'active'},
-  {acct:'Banking Awareness',plat:'Instagram',cls:'ig',posts:M.accounts['Banking Awareness'].ig.posts,total:M.accounts['Banking Awareness'].ig.total_eng,avg:M.accounts['Banking Awareness'].ig.avg_eng,status:'active'},
-  {acct:'CYBW',plat:'Facebook',cls:'fb',posts:M.accounts['CYBW'].fb.posts,total:M.accounts['CYBW'].fb.total_eng,avg:M.accounts['CYBW'].fb.avg_eng,status:'campaign'},
-  {acct:'CYBW',plat:'Instagram',cls:'ig',posts:M.accounts['CYBW'].ig.posts,total:M.accounts['CYBW'].ig.total_eng,avg:M.accounts['CYBW'].ig.avg_eng,status:'campaign'},
-  {acct:'Monshati',plat:'Facebook',cls:'fb',posts:M.accounts['Monshati'].fb.posts,total:M.accounts['Monshati'].fb.total_eng,avg:M.accounts['Monshati'].fb.avg_eng,status:'dormant'},
-  {acct:'Monshati',plat:'Instagram',cls:'ig',posts:M.accounts['Monshati'].ig.posts,total:M.accounts['Monshati'].ig.total_eng,avg:M.accounts['Monshati'].ig.avg_eng,status:'dormant'},
-  {acct:'Monshati',plat:'X/Twitter',cls:'tw',posts:M.accounts['Monshati'].tw.posts,total:'est. views',avg:M.accounts['Monshati'].tw.avg_views,status:'dormant'},
+  {acct:'Banking Awareness',plat:'Facebook',cls:'fb',posts:M.accounts['Banking Awareness'].fb.posts,total:M.accounts['Banking Awareness'].fb.total_eng,avg:M.accounts['Banking Awareness'].fb.avg_eng,status:LANG==='ar'?'نشط':'active'},
+  {acct:'Banking Awareness',plat:'Instagram',cls:'ig',posts:M.accounts['Banking Awareness'].ig.posts,total:M.accounts['Banking Awareness'].ig.total_eng,avg:M.accounts['Banking Awareness'].ig.avg_eng,status:LANG==='ar'?'نشط':'active'},
+  {acct:'CYBW',plat:'Facebook',cls:'fb',posts:M.accounts['CYBW'].fb.posts,total:M.accounts['CYBW'].fb.total_eng,avg:M.accounts['CYBW'].fb.avg_eng,status:LANG==='ar'?'حملة':'campaign'},
+  {acct:'CYBW',plat:'Instagram',cls:'ig',posts:M.accounts['CYBW'].ig.posts,total:M.accounts['CYBW'].ig.total_eng,avg:M.accounts['CYBW'].ig.avg_eng,status:LANG==='ar'?'حملة':'campaign'},
+  {acct:'Monshati',plat:'Facebook',cls:'fb',posts:M.accounts['Monshati'].fb.posts,total:M.accounts['Monshati'].fb.total_eng,avg:M.accounts['Monshati'].fb.avg_eng,status:LANG==='ar'?'خامل':'dormant'},
+  {acct:'Monshati',plat:'Instagram',cls:'ig',posts:M.accounts['Monshati'].ig.posts,total:M.accounts['Monshati'].ig.total_eng,avg:M.accounts['Monshati'].ig.avg_eng,status:LANG==='ar'?'خامل':'dormant'},
+  {acct:'Monshati',plat:'X/Twitter',cls:'tw',posts:M.accounts['Monshati'].tw.posts,total:'est. views',avg:M.accounts['Monshati'].tw.avg_views,status:LANG==='ar'?'خامل':'dormant'},
 ];
 document.getElementById('acct-matrix-body').innerHTML=matrixRows.map(r=>{
   const tagC=r.status==='active'?'high':r.status==='campaign'?'med':'low';
@@ -2895,27 +2933,27 @@ function highlightAcct(el){
 }
 
 // ── FACEBOOK ─────────────────────────────────────────────────────────
-new Chart(document.getElementById('fbVolChart'),{type:'line',data:{labels:months,datasets:[
-  {label:'PMA Core',data:M.monthly.fb_pma,borderColor:pageColors[0],backgroundColor:pageColors[0]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-  {label:'Banking Awareness',data:M.monthly.fb_banking,borderColor:pageColors[1],backgroundColor:pageColors[1]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+mkChart('fbVolChart'),{type:'line',data:{labels:months,datasets:[
+  {label:LANG==='ar'?'سلطة النقد':'PMA Core',data:M.monthly.fb_pma,borderColor:pageColors[0],backgroundColor:pageColors[0]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+  {label:LANG==='ar'?'منصة الوعي المصرفي':'Banking Awareness',data:M.monthly.fb_banking,borderColor:pageColors[1],backgroundColor:pageColors[1]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
   {label:'CYBW',data:M.monthly.fb_cybw,borderColor:pageColors[2],backgroundColor:pageColors[2]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-  {label:'Monshati',data:M.monthly.fb_monshati,borderColor:pageColors[3],backgroundColor:pageColors[3]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-]},options:{...co,scales:mkAx(null,'posts/month')}});
+  {label:LANG==='ar'?'منشأتي':'Monshati',data:M.monthly.fb_monshati,borderColor:pageColors[3],backgroundColor:pageColors[3]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+]},options:{...co,scales:mkAx(null,LANG==='ar'?'منشور/شهر':'posts/month')}});
 
-new Chart(document.getElementById('fbEngChart'),{type:'bar',data:{labels:M.fb_eng_monthly.months,datasets:[{data:M.fb_eng_monthly.total,backgroundColor:M.fb_eng_monthly.total.map(v=>v>6000?'#0f2a4acc':'#1877f2cc'),borderRadius:3,borderSkipped:false}]},options:{...co,scales:mkAx(null,'total engagement'),plugins:{legend:{display:false},tooltip:{callbacks:{afterBody:ctx=>['Avg/post: '+M.fb_eng_monthly.avg[ctx[0].dataIndex]]}}}}});
+mkChart('fbEngChart'),{type:'bar',data:{labels:M.fb_eng_monthly.months,datasets:[{data:M.fb_eng_monthly.total,backgroundColor:M.fb_eng_monthly.total.map(v=>v>6000?'#0f2a4acc':'#1877f2cc'),borderRadius:3,borderSkipped:false}]},options:{...co,scales:mkAx(null,LANG==='ar'?'إجمالي التفاعل':'total engagement'),plugins:{legend:{display:false},tooltip:{callbacks:{afterBody:ctx=>['Avg/post: '+M.fb_eng_monthly.avg[ctx[0].dataIndex]]}}}}});
 
 const fbDowVals=daysFull.map(d=>M.content.fb_dow[d]);
-new Chart(document.getElementById('fbDowChart'),{type:'bar',data:{labels:days,datasets:[{data:fbDowVals,backgroundColor:days.map((_,i)=>(i===3||i===5)?'#0f2a4acc':'#3b8bd4aa'),borderRadius:4,borderSkipped:false}]},options:{...co,scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
+mkChart('fbDowChart'),{type:'bar',data:{labels:days,datasets:[{data:fbDowVals,backgroundColor:days.map((_,i)=>(i===3||i===5)?'#0f2a4acc':'#3b8bd4aa'),borderRadius:4,borderSkipped:false}]},options:{...co,scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
-const fbTypeLabels=['Video','Shared Link','Image','Text','Album','Shared Post'];
+const fbTypeLabels=LANG==='ar'?['فيديو','رابط مشترك','صورة','نص','ألبوم','منشور مشترك']:['Video','Shared Link','Image','Text','Album','Shared Post'];
 const fbTypeVals=[206.3,161.2,100.1,58.5,44.3,3.9];
-new Chart(document.getElementById('fbTypeChart'),{type:'bar',data:{labels:fbTypeLabels,datasets:[{data:fbTypeVals,backgroundColor:['#0f2a4acc','#1a5fa8cc','#3b8bd4cc','#d97706cc','#9ca3afcc','#ef4444cc'],borderRadius:4,borderSkipped:false}]},options:{...co,indexAxis:'y',scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid}},y:{ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
+mkChart('fbTypeChart'),{type:'bar',data:{labels:fbTypeLabels,datasets:[{data:fbTypeVals,backgroundColor:['#0f2a4acc','#1a5fa8cc','#3b8bd4cc','#d97706cc','#9ca3afcc','#ef4444cc'],borderRadius:4,borderSkipped:false}]},options:{...co,indexAxis:'y',scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid}},y:{ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
 
 const fbRPages=['PMA Core','Banking Awareness','CYBW','Monshati'];
-new Chart(document.getElementById('fbReactChart'),{type:'bar',data:{labels:fbRPages,datasets:[
-  {label:'Like',data:fbRPages.map(p=>M.content.fb_reactions[p].like),backgroundColor:'#1877f2cc',stack:'r'},
-  {label:'Love',data:fbRPages.map(p=>M.content.fb_reactions[p].love),backgroundColor:'#e1306ccc',stack:'r'},
-  {label:'Angry',data:fbRPages.map(p=>M.content.fb_reactions[p].angry),backgroundColor:'#ef4444cc',stack:'r'},
+mkChart('fbReactChart'),{type:'bar',data:{labels:fbRPages,datasets:[
+  {label:LANG==='ar'?'إعجاب':'Like',data:fbRPages.map(p=>M.content.fb_reactions[p].like),backgroundColor:'#1877f2cc',stack:'r'},
+  {label:LANG==='ar'?'حب':'Love',data:fbRPages.map(p=>M.content.fb_reactions[p].love),backgroundColor:'#e1306ccc',stack:'r'},
+  {label:LANG==='ar'?'غاضب':'Angry',data:fbRPages.map(p=>M.content.fb_reactions[p].angry),backgroundColor:'#ef4444cc',stack:'r'},
 ]},options:{...co,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{stacked:true,max:101,ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid}},y:{stacked:true,ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
 
 // FB Top posts
@@ -2936,16 +2974,16 @@ document.getElementById('fb-top-posts').innerHTML=M.top_posts.fb.map((p,i)=>`
 // ── INSTAGRAM ────────────────────────────────────────────────────────
 const igMonthsFull=M.monthly.months;
 const igVolData={pma:M.monthly.ig_pma,banking:M.monthly.ig_banking,cybw:M.monthly.ig_cybw,monshati:M.monthly.ig_monshati};
-new Chart(document.getElementById('igVolChart'),{type:'line',data:{labels:igMonthsFull,datasets:[
-  {label:'PMA Core',data:igVolData.pma,borderColor:pageColors[0],backgroundColor:pageColors[0]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-  {label:'Banking Awareness',data:igVolData.banking,borderColor:pageColors[1],backgroundColor:pageColors[1]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+mkChart('igVolChart'),{type:'line',data:{labels:igMonthsFull,datasets:[
+  {label:LANG==='ar'?'سلطة النقد':'PMA Core',data:igVolData.pma,borderColor:pageColors[0],backgroundColor:pageColors[0]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+  {label:LANG==='ar'?'منصة الوعي المصرفي':'Banking Awareness',data:igVolData.banking,borderColor:pageColors[1],backgroundColor:pageColors[1]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
   {label:'CYBW',data:igVolData.cybw,borderColor:pageColors[2],backgroundColor:pageColors[2]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-  {label:'Monshati',data:igVolData.monshati,borderColor:pageColors[3],backgroundColor:pageColors[3]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-]},options:{...co,scales:mkAx(null,'posts/month')}});
+  {label:LANG==='ar'?'منشأتي':'Monshati',data:igVolData.monshati,borderColor:pageColors[3],backgroundColor:pageColors[3]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+]},options:{...co,scales:mkAx(null,LANG==='ar'?'منشور/شهر':'posts/month')}});
 
-new Chart(document.getElementById('igEngChart'),{type:'bar',data:{labels:M.ig_eng_monthly.months,datasets:[{data:M.ig_eng_monthly.total,backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false}]},options:{...co,scales:mkAx(null,'total engagement'),plugins:{legend:{display:false},tooltip:{callbacks:{afterBody:ctx=>['Avg/post: '+M.ig_eng_monthly.avg[ctx[0].dataIndex]]}}}}});
+mkChart('igEngChart'),{type:'bar',data:{labels:M.ig_eng_monthly.months,datasets:[{data:M.ig_eng_monthly.total,backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false}]},options:{...co,scales:mkAx(null,LANG==='ar'?'إجمالي التفاعل':'total engagement'),plugins:{legend:{display:false},tooltip:{callbacks:{afterBody:ctx=>['Avg/post: '+M.ig_eng_monthly.avg[ctx[0].dataIndex]]}}}}});
 
-new Chart(document.getElementById('igTypeChart'),{type:'bar',data:{labels:['Video','Image','Sidecar'],datasets:[{data:[65.9,11.1,8.6],backgroundColor:['#e1306ccc','#e1306c77','#e1306c44'],borderRadius:5,borderSkipped:false}]},options:{...co,scales:{x:{ticks:{color:lc,font:{size:11}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
+mkChart('igTypeChart'),{type:'bar',data:{labels:['Video','Image','Sidecar'],datasets:[{data:[65.9,11.1,8.6],backgroundColor:['#e1306ccc','#e1306c77','#e1306c44'],borderRadius:5,borderSkipped:false}]},options:{...co,scales:{x:{ticks:{color:lc,font:{size:11}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
 document.getElementById('ig-top-posts').innerHTML=M.top_posts.ig.slice(0,7).map((p,i)=>`
 <div class="tp">
@@ -2960,15 +2998,15 @@ document.getElementById('ig-top-posts').innerHTML=M.top_posts.ig.slice(0,7).map(
 
 // ── LINKEDIN ──────────────────────────────────────────────────────────
 const liMonths=M.li_eng_monthly.months;
-new Chart(document.getElementById('liVolChart'),{type:'bar',data:{labels:liMonths,datasets:[{data:M.li_eng_monthly.total.map((v,i)=>v>0?v:null),backgroundColor:liMonths.map(m=>m.startsWith('2023')?'#0a66c244':m.startsWith('2024')?'#0a66c288':'#0a66c2cc'),borderRadius:3,borderSkipped:false}]},options:{...co,scales:mkAx(null,'total engagement'),plugins:{legend:{display:false},tooltip:{callbacks:{afterBody:ctx=>['Avg/post: '+M.li_eng_monthly.avg[ctx[0].dataIndex]]}}}}})
+mkChart('liVolChart'),{type:'bar',data:{labels:liMonths,datasets:[{data:M.li_eng_monthly.total.map((v,i)=>v>0?v:null),backgroundColor:liMonths.map(m=>m.startsWith('2023')?'#0a66c244':m.startsWith('2024')?'#0a66c288':'#0a66c2cc'),borderRadius:3,borderSkipped:false}]},options:{...co,scales:mkAx(null,LANG==='ar'?'إجمالي التفاعل':'total engagement'),plugins:{legend:{display:false},tooltip:{callbacks:{afterBody:ctx=>['Avg/post: '+M.li_eng_monthly.avg[ctx[0].dataIndex]]}}}}})
 
 const liYrs=['2023','2024','2025','2026'];
-new Chart(document.getElementById('liYearChart'),{type:'bar',data:{labels:liYrs.map(y=>`${y} (n=${M.li_years[y].count})`),datasets:[
-  {label:'Mean',data:liYrs.map(y=>M.li_years[y].mean),backgroundColor:['#0a66c244','#0a66c277','#0a66c2cc','#0a66c2cc'],borderRadius:5,borderSkipped:false},
-  {label:'Median',data:liYrs.map(y=>M.li_years[y].median),backgroundColor:['#1d9e7544','#1d9e7577','#1d9e75cc','#1d9e75cc'],borderRadius:5,borderSkipped:false},
+mkChart('liYearChart'),{type:'bar',data:{labels:liYrs.map(y=>`${y} (n=${M.li_years[y].count})`),datasets:[
+  {label:LANG==='ar'?'المتوسط':'Mean',data:liYrs.map(y=>M.li_years[y].mean),backgroundColor:['#0a66c244','#0a66c277','#0a66c2cc','#0a66c2cc'],borderRadius:5,borderSkipped:false},
+  {label:LANG==='ar'?'الوسيط':'Median',data:liYrs.map(y=>M.li_years[y].median),backgroundColor:['#1d9e7544','#1d9e7577','#1d9e75cc','#1d9e75cc'],borderRadius:5,borderSkipped:false},
 ]},options:{...co,plugins:{legend:{display:false}},scales:{x:{ticks:{color:lc,font:{size:9}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
-new Chart(document.getElementById('liEngChart'),{type:'line',data:{labels:liMonths,datasets:[{data:M.li_eng_monthly.total,borderColor:'#0a66c2',backgroundColor:'#0a66c215',fill:true,tension:0.35,pointRadius:2,borderWidth:2}]},options:{...co,scales:mkAx(null,'total engagement')}});
+mkChart('liEngChart'),{type:'line',data:{labels:liMonths,datasets:[{data:M.li_eng_monthly.total,borderColor:'#0a66c2',backgroundColor:'#0a66c215',fill:true,tension:0.35,pointRadius:2,borderWidth:2}]},options:{...co,scales:mkAx(null,LANG==='ar'?'إجمالي التفاعل':'total engagement')}});
 
 document.getElementById('li-top-posts').innerHTML=M.top_posts.li.map((p,i)=>`
 <div class="tp">
@@ -2981,14 +3019,14 @@ document.getElementById('li-top-posts').innerHTML=M.top_posts.li.map((p,i)=>`
 </div>`).join('');
 
 // ── TWITTER ───────────────────────────────────────────────────────────
-new Chart(document.getElementById('twVolChart'),{type:'line',data:{labels:months,datasets:[
+mkChart('twVolChart'),{type:'line',data:{labels:months,datasets:[
   {label:'PMAuthority',data:M.monthly.tw_pma,borderColor:'#14171a',backgroundColor:'#14171a18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
   {label:'MonshatiPs',data:M.monthly.tw_monshati,borderColor:'#c0394b',backgroundColor:'#c0394b18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
 ]},options:{...co,scales:mkAx(null,'tweets/month')}});
 
 // ── YOUTUBE ───────────────────────────────────────────────────────────
 const ytYrs=Object.keys(M.yt_yearly).sort();
-new Chart(document.getElementById('ytYearChart'),{type:'bar',data:{labels:ytYrs,datasets:[{data:ytYrs.map(y=>M.yt_yearly[y].videos),backgroundColor:ytYrs.map(y=>parseInt(y)>=2020?'#ff0000cc':'#ff000066'),borderRadius:3,borderSkipped:false}]},options:{...co,scales:{x:{ticks:{color:lc,font:{size:9}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:'videos uploaded',color:lc,font:{size:9}}}}}});
+mkChart('ytYearChart'),{type:'bar',data:{labels:ytYrs,datasets:[{data:ytYrs.map(y=>M.yt_yearly[y].videos),backgroundColor:ytYrs.map(y=>parseInt(y)>=2020?'#ff0000cc':'#ff000066'),borderRadius:3,borderSkipped:false}]},options:{...co,scales:{x:{ticks:{color:lc,font:{size:9}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:LANG==='ar'?'فيديوهات مُحمَّلة':'videos uploaded',color:lc,font:{size:9}}}}}});
 
 document.getElementById('yt-top-videos').innerHTML=M.top_posts.yt.map((v,i)=>`
 <div class="tp">
@@ -3002,36 +3040,36 @@ document.getElementById('yt-top-videos').innerHTML=M.top_posts.yt.map((v,i)=>`
 </div>`).join('');
 
 // ── CONTENT PERFORMANCE ───────────────────────────────────────────────
-new Chart(document.getElementById('typeCompChart'),{type:'bar',data:{labels:['Video','Image/Photo','Album/Sidecar'],datasets:[
-  {label:'Facebook',data:[206.3,100.1,44.3],backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false},
-  {label:'Instagram',data:[65.9,11.1,8.6],backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false},
+mkChart('typeCompChart'),{type:'bar',data:{labels:['Video','Image/Photo','Album/Sidecar'],datasets:[
+  {label:LANG==='ar'?'فيسبوك':'Facebook',data:[206.3,100.1,44.3],backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false},
+  {label:LANG==='ar'?'إنستغرام':'Instagram',data:[65.9,11.1,8.6],backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false},
 ]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
-new Chart(document.getElementById('dowChart'),{type:'bar',data:{labels:days,datasets:[
-  {label:'Facebook',data:daysFull.map(d=>M.content.fb_dow[d]),backgroundColor:'#1877f2cc',borderRadius:3,borderSkipped:false},
-  {label:'Instagram',data:daysFull.map(d=>M.content.ig_dow[d]),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
-  {label:'LinkedIn',data:daysFull.map(d=>M.content.li_dow[d]),backgroundColor:'#0a66c2cc',borderRadius:3,borderSkipped:false},
+mkChart('dowChart'),{type:'bar',data:{labels:days,datasets:[
+  {label:LANG==='ar'?'فيسبوك':'Facebook',data:daysFull.map(d=>M.content.fb_dow[d]),backgroundColor:'#1877f2cc',borderRadius:3,borderSkipped:false},
+  {label:LANG==='ar'?'إنستغرام':'Instagram',data:daysFull.map(d=>M.content.ig_dow[d]),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
+  {label:LANG==='ar'?'لينكد إن':'LinkedIn',data:daysFull.map(d=>M.content.li_dow[d]),backgroundColor:'#0a66c2cc',borderRadius:3,borderSkipped:false},
 ]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
 const hrs=Array.from({length:24},(_,i)=>String(i));
-new Chart(document.getElementById('hourChart'),{type:'line',data:{labels:hrs,datasets:[
-  {label:'Facebook',data:M.content.fb_hour,borderColor:'#1877f2',backgroundColor:'#1877f215',fill:true,tension:0.4,pointRadius:1,borderWidth:2},
-  {label:'Instagram',data:M.content.ig_hour,borderColor:'#e1306c',backgroundColor:'#e1306c15',fill:true,tension:0.4,pointRadius:1,borderWidth:2},
-  {label:'LinkedIn',data:M.content.li_hour,borderColor:'#0a66c2',backgroundColor:'#0a66c215',fill:true,tension:0.4,pointRadius:1,borderWidth:2},
+mkChart('hourChart'),{type:'line',data:{labels:hrs,datasets:[
+  {label:LANG==='ar'?'فيسبوك':'Facebook',data:M.content.fb_hour,borderColor:'#1877f2',backgroundColor:'#1877f215',fill:true,tension:0.4,pointRadius:1,borderWidth:2},
+  {label:LANG==='ar'?'إنستغرام':'Instagram',data:M.content.ig_hour,borderColor:'#e1306c',backgroundColor:'#e1306c15',fill:true,tension:0.4,pointRadius:1,borderWidth:2},
+  {label:LANG==='ar'?'لينكد إن':'LinkedIn',data:M.content.li_hour,borderColor:'#0a66c2',backgroundColor:'#0a66c215',fill:true,tension:0.4,pointRadius:1,borderWidth:2},
   {label:'X',data:M.content.tw_hour,borderColor:'#374151',backgroundColor:'#37415115',fill:true,tension:0.4,pointRadius:1,borderWidth:2},
-]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:'Hour (Palestine time)',color:lc,font:{size:9}}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
+]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:LANG==='ar'?'الساعة (بتوقيت فلسطين)':'Hour (Palestine time)',color:lc,font:{size:9}}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
 // ── SENTIMENT ─────────────────────────────────────────────────────────
-new Chart(document.getElementById('sentOverviewChart'),{type:'bar',data:{labels:['Positive','Negative','Neutral'],datasets:[
-  {label:'Facebook',data:[8.4,3.0,88.6],backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false},
-  {label:'Instagram',data:[40.4,1.8,57.8],backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false},
+mkChart('sentOverviewChart'),{type:'bar',data:{labels:['Positive','Negative','Neutral'],datasets:[
+  {label:LANG==='ar'?'فيسبوك':'Facebook',data:[8.4,3.0,88.6],backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false},
+  {label:LANG==='ar'?'إنستغرام':'Instagram',data:[40.4,1.8,57.8],backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false},
 ]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid},max:100}}}});
 
 const sm=M.sentiment.monthly;
-new Chart(document.getElementById('sentTrendChart'),{type:'bar',data:{labels:sm.map(r=>r.month),datasets:[
-  {label:'Positive',data:sm.map(r=>r.positive||0),backgroundColor:'#1d9e75cc',borderRadius:2,borderSkipped:false,stack:'s'},
-  {label:'Negative',data:sm.map(r=>r.negative||0),backgroundColor:'#c0394bcc',borderRadius:2,borderSkipped:false,stack:'s'},
-  {label:'Neutral',data:sm.map(r=>r.neutral||0),backgroundColor:'#d1d5db88',borderRadius:2,borderSkipped:false,stack:'s'},
+mkChart('sentTrendChart'),{type:'bar',data:{labels:sm.map(r=>r.month),datasets:[
+  {label:LANG==='ar'?'إيجابي':'Positive',data:sm.map(r=>r.positive||0),backgroundColor:'#1d9e75cc',borderRadius:2,borderSkipped:false,stack:'s'},
+  {label:LANG==='ar'?'سلبي':'Negative',data:sm.map(r=>r.negative||0),backgroundColor:'#c0394bcc',borderRadius:2,borderSkipped:false,stack:'s'},
+  {label:LANG==='ar'?'محايد':'Neutral',data:sm.map(r=>r.neutral||0),backgroundColor:'#d1d5db88',borderRadius:2,borderSkipped:false,stack:'s'},
 ]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{stacked:true,ticks:{color:lc,font:{size:8},maxRotation:45,autoSkip:true,maxTicksLimit:18},grid:{display:false}},y:{stacked:true,ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
 // Negative posts table
@@ -3052,19 +3090,19 @@ document.getElementById('neg-posts-table').innerHTML=M.sentiment.negative_posts.
 }).join('');
 
 // Sentiment by type & account
-new Chart(document.getElementById('sentTypeChart'),{type:'bar',data:{labels:['Album','Shared Link','Image','Shared Post','Video','Text'],datasets:[{data:[0.267,-0.014,0.055,0.047,0.010,-0.014],backgroundColor:['#1d9e75cc','#1d9e7588','#3b8bd4cc','#9ca3afcc','#d97706cc','#c0394b88'],borderRadius:4,borderSkipped:false}]},options:{...co,indexAxis:'y',scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:'avg sentiment score',color:lc,font:{size:9}}},y:{ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
+mkChart('sentTypeChart'),{type:'bar',data:{labels:['Album','Shared Link','Image','Shared Post','Video','Text'],datasets:[{data:[0.267,-0.014,0.055,0.047,0.010,-0.014],backgroundColor:['#1d9e75cc','#1d9e7588','#3b8bd4cc','#9ca3afcc','#d97706cc','#c0394b88'],borderRadius:4,borderSkipped:false}]},options:{...co,indexAxis:'y',scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:LANG==='ar'?'درجة المشاعر المتوسطة':'avg sentiment score',color:lc,font:{size:9}}},y:{ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
 
-new Chart(document.getElementById('sentAcctChart'),{type:'bar',data:{labels:['Banking Awareness','CYBW','Monshati','PMA Core'],datasets:[{data:[0.147,0.142,0.129,0.078],backgroundColor:['#1d9e75cc','#d97706cc','#c0394bcc','#0f2a4acc'],borderRadius:4,borderSkipped:false}]},options:{...co,indexAxis:'y',scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid}},y:{ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
+mkChart('sentAcctChart'),{type:'bar',data:{labels:['Banking Awareness','CYBW','Monshati','PMA Core'],datasets:[{data:[0.147,0.142,0.129,0.078],backgroundColor:['#1d9e75cc','#d97706cc','#c0394bcc','#0f2a4acc'],borderRadius:4,borderSkipped:false}]},options:{...co,indexAxis:'y',scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid}},y:{ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
 
 // ── CROSS-PLATFORM ────────────────────────────────────────────────────
 const cpFB=months.map((_,i)=>M.monthly.fb_pma[i]+M.monthly.fb_banking[i]+M.monthly.fb_cybw[i]+M.monthly.fb_monshati[i]);
 const cpIG=months.map((_,i)=>M.monthly.ig_pma[i]+M.monthly.ig_banking[i]+M.monthly.ig_cybw[i]+M.monthly.ig_monshati[i]);
 const cpLI=M.monthly.li_pma;
 const cpTW=months.map((_,i)=>M.monthly.tw_pma[i]+M.monthly.tw_monshati[i]);
-new Chart(document.getElementById('crossVolChart'),{type:'bar',data:{labels:months,datasets:[
-  {label:'Facebook',data:cpFB,backgroundColor:'#1877f2bb',stack:'p',borderSkipped:false},
-  {label:'Instagram',data:cpIG,backgroundColor:'#e1306cbb',stack:'p',borderSkipped:false},
-  {label:'LinkedIn',data:cpLI,backgroundColor:'#0a66c2bb',stack:'p',borderSkipped:false},
+mkChart('crossVolChart'),{type:'bar',data:{labels:months,datasets:[
+  {label:LANG==='ar'?'فيسبوك':'Facebook',data:cpFB,backgroundColor:'#1877f2bb',stack:'p',borderSkipped:false},
+  {label:LANG==='ar'?'إنستغرام':'Instagram',data:cpIG,backgroundColor:'#e1306cbb',stack:'p',borderSkipped:false},
+  {label:LANG==='ar'?'لينكد إن':'LinkedIn',data:cpLI,backgroundColor:'#0a66c2bb',stack:'p',borderSkipped:false},
   {label:'X',data:cpTW,backgroundColor:'#374151bb',stack:'p',borderSkipped:false},
 ]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{stacked:true,ticks:{color:lc,font:{size:8},maxRotation:45,autoSkip:true,maxTicksLimit:16},grid:{display:false}},y:{stacked:true,ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
@@ -3075,18 +3113,18 @@ const AUD = {"fb":{"age_gender":{"18-24":{"men":4.2,"women":2.3},"25-34":{"men":
 // toggleSidebar defined in i18n block above
 
 // ── CROSS-PLATFORM ENGAGEMENT CHART ─────────────────────────────────
-new Chart(document.getElementById('crossEngChart'),{type:'line',data:{labels:M.fb_eng_monthly.months,datasets:[
-  {label:'Facebook',data:M.fb_eng_monthly.total,borderColor:'#1877f2',backgroundColor:'#1877f215',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-  {label:'Instagram',data:M.ig_eng_monthly.total,borderColor:'#e1306c',backgroundColor:'#e1306c15',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-  {label:'LinkedIn',data:M.li_eng_monthly.total,borderColor:'#0a66c2',backgroundColor:'#0a66c215',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
-]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:mkAx(null,'total engagement')}});
+mkChart('crossEngChart'),{type:'line',data:{labels:M.fb_eng_monthly.months,datasets:[
+  {label:LANG==='ar'?'فيسبوك':'Facebook',data:M.fb_eng_monthly.total,borderColor:'#1877f2',backgroundColor:'#1877f215',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+  {label:LANG==='ar'?'إنستغرام':'Instagram',data:M.ig_eng_monthly.total,borderColor:'#e1306c',backgroundColor:'#e1306c15',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+  {label:LANG==='ar'?'لينكد إن':'LinkedIn',data:M.li_eng_monthly.total,borderColor:'#0a66c2',backgroundColor:'#0a66c215',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
+]},options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:mkAx(null,LANG==='ar'?'إجمالي التفاعل':'total engagement')}});
 
 // ── IG vs FB SENTIMENT COMPARISON CHART ─────────────────────────────
-new Chart(document.getElementById('igVsFbSentChart'),{type:'bar',data:{
+mkChart('igVsFbSentChart'),{type:'bar',data:{
   labels:['PMA Core','Banking Awareness','CYBW','Monshati'],
   datasets:[
-    {label:'FB Sentiment Score',data:[0.078,0.147,0.142,0.129],backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false},
-    {label:'IG Pos. Comment Rate',data:[0.35,0.45,0.42,0.28],backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false},
+    {label:LANG==='ar'?'درجة مشاعر فيسبوك':'FB Sentiment Score',data:[0.078,0.147,0.142,0.129],backgroundColor:'#1877f2cc',borderRadius:4,borderSkipped:false},
+    {label:LANG==='ar'?'معدل تعليقات إنستغرام الإيجابية':'IG Pos. Comment Rate',data:[0.35,0.45,0.42,0.28],backgroundColor:'#e1306ccc',borderRadius:4,borderSkipped:false},
   ]
 },options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}}});
 
@@ -3105,14 +3143,14 @@ document.getElementById('ig-sent-posts').innerHTML = igSentPosts.length ? igSent
 
 // ── META ADS CHARTS ──────────────────────────────────────────────────
 const adsYears = Object.keys(AUD.ads.spend_by_year).sort();
-new Chart(document.getElementById('adsSpendChart'),{type:'bar',data:{
+mkChart('adsSpendChart'),{type:'bar',data:{
   labels:adsYears,
   datasets:[{data:adsYears.map(y=>AUD.ads.spend_by_year[y]||0),backgroundColor:'#10b981cc',borderRadius:5,borderSkipped:false}]
 },options:{...co,scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9},callback:v=>'$'+v},grid:{color:grid}}}}});
 
 const objLabels=Object.keys(AUD.ads.objective_breakdown);
 const objVals=Object.values(AUD.ads.objective_breakdown);
-new Chart(document.getElementById('adsObjChart'),{type:'doughnut',data:{
+mkChart('adsObjChart'),{type:'doughnut',data:{
   labels:objLabels,
   datasets:[{data:objVals,backgroundColor:['#10b981cc','#0a66c2cc','#f97316cc','#c0394bcc','#7c3aedcc','#374151cc'],borderWidth:2,borderColor:'white'}]
 },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'right',labels:{color:lc,font:{size:10},usePointStyle:true,pointStyleWidth:8,padding:10}}}}});
@@ -3139,19 +3177,19 @@ ${creativeParts.length ? '<div style="display:flex;flex-wrap:wrap;gap:0.3rem">'+
 
 // ── AUDIENCE CHARTS ──────────────────────────────────────────────────
 const ageBands=['18-24','25-34','35-44','45-54','55-64','65+'];
-new Chart(document.getElementById('fbAgeChart'),{type:'bar',data:{
+mkChart('fbAgeChart'),{type:'bar',data:{
   labels:ageBands,
   datasets:[
-    {label:'Men',data:ageBands.map(b=>AUD.fb.age_gender[b]?.men||0),backgroundColor:'#1877f2cc',borderRadius:3,borderSkipped:false},
-    {label:'Women',data:ageBands.map(b=>AUD.fb.age_gender[b]?.women||0),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
+    {label:LANG==='ar'?'رجال':'Men',data:ageBands.map(b=>AUD.fb.age_gender[b]?.men||0),backgroundColor:'#1877f2cc',borderRadius:3,borderSkipped:false},
+    {label:LANG==='ar'?'نساء':'Women',data:ageBands.map(b=>AUD.fb.age_gender[b]?.women||0),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
   ]
 },options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid}}}}});
 
-new Chart(document.getElementById('igAgeChart'),{type:'bar',data:{
+mkChart('igAgeChart'),{type:'bar',data:{
   labels:ageBands,
   datasets:[
-    {label:'Men',data:ageBands.map(b=>AUD.ig.age_gender[b]?.men||0),backgroundColor:'#7c3aedcc',borderRadius:3,borderSkipped:false},
-    {label:'Women',data:ageBands.map(b=>AUD.ig.age_gender[b]?.women||0),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
+    {label:LANG==='ar'?'رجال':'Men',data:ageBands.map(b=>AUD.ig.age_gender[b]?.men||0),backgroundColor:'#7c3aedcc',borderRadius:3,borderSkipped:false},
+    {label:LANG==='ar'?'نساء':'Women',data:ageBands.map(b=>AUD.ig.age_gender[b]?.women||0),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
   ]
 },options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:10}},grid:{display:false}},y:{ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid}}}}});
 
@@ -3160,11 +3198,11 @@ const fbCityVals=AUD.fb.cities.map(x=>x[1]);
 const igCities=AUD.ig.cities.map(x=>x[0]);
 const igCityVals=AUD.ig.cities.map(x=>x[1]);
 const allCities=[...new Set([...fbCities,...igCities])].slice(0,10);
-new Chart(document.getElementById('cityChart'),{type:'bar',data:{
+mkChart('cityChart'),{type:'bar',data:{
   labels:allCities,
   datasets:[
-    {label:'Facebook',data:allCities.map(x=>{const i=fbCities.indexOf(x);return i>=0?fbCityVals[i]:0;}),backgroundColor:'#1877f2cc',borderRadius:3,borderSkipped:false},
-    {label:'Instagram',data:allCities.map(x=>{const i=igCities.indexOf(x);return i>=0?igCityVals[i]:0;}),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
+    {label:LANG==='ar'?'فيسبوك':'Facebook',data:allCities.map(x=>{const i=fbCities.indexOf(x);return i>=0?fbCityVals[i]:0;}),backgroundColor:'#1877f2cc',borderRadius:3,borderSkipped:false},
+    {label:LANG==='ar'?'إنستغرام':'Instagram',data:allCities.map(x=>{const i=igCities.indexOf(x);return i>=0?igCityVals[i]:0;}),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
   ]
 },options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:9},maxRotation:30},grid:{display:false}},y:{ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid}}}}});
 
@@ -3173,25 +3211,25 @@ const fbCountryVals=AUD.fb.countries.map(x=>x[1]);
 const igCountries=AUD.ig.countries.map(x=>x[0]);
 const igCountryVals=AUD.ig.countries.map(x=>x[1]);
 const allCountries=[...new Set([...fbCountries,...igCountries])].slice(0,10);
-new Chart(document.getElementById('countryChart'),{type:'bar',data:{
+mkChart('countryChart'),{type:'bar',data:{
   labels:allCountries,
   datasets:[
-    {label:'Facebook',data:allCountries.map(x=>{const i=fbCountries.indexOf(x);return i>=0?fbCountryVals[i]:0;}),backgroundColor:'#1877f2cc',borderRadius:3,borderSkipped:false},
-    {label:'Instagram',data:allCountries.map(x=>{const i=igCountries.indexOf(x);return i>=0?igCountryVals[i]:0;}),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
+    {label:LANG==='ar'?'فيسبوك':'Facebook',data:allCountries.map(x=>{const i=fbCountries.indexOf(x);return i>=0?fbCountryVals[i]:0;}),backgroundColor:'#1877f2cc',borderRadius:3,borderSkipped:false},
+    {label:LANG==='ar'?'إنستغرام':'Instagram',data:allCountries.map(x=>{const i=igCountries.indexOf(x);return i>=0?igCountryVals[i]:0;}),backgroundColor:'#e1306ccc',borderRadius:3,borderSkipped:false},
   ]
 },options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{x:{ticks:{color:lc,font:{size:9},maxRotation:30},grid:{display:false}},y:{ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid}}}}});
 
-new Chart(document.getElementById('igFollowChart'),{type:'bar',data:{
+mkChart('igFollowChart'),{type:'bar',data:{
   labels:AUD.ig.follower_gains.dates,
   datasets:[{data:AUD.ig.follower_gains.values,backgroundColor:'#e1306ccc',borderRadius:2,borderSkipped:false}]
-},options:{...co,scales:{x:{ticks:{color:lc,font:{size:8},maxRotation:45,autoSkip:true,maxTicksLimit:16},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:'new followers/day',color:lc,font:{size:9}}}}}});
+},options:{...co,scales:{x:{ticks:{color:lc,font:{size:8},maxRotation:45,autoSkip:true,maxTicksLimit:16},grid:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:LANG==='ar'?'متابعون جدد/يوم':'new followers/day',color:lc,font:{size:9}}}}}});
 
 
 // ── MOBILE APP CHARTS ────────────────────────────────────────────────
 
 // Install base
-new Chart(document.getElementById('appInstallChart'),{type:'bar',data:{
-  labels:['Lifetime Downloads','Currently Installed','Active Installs','MAU'],
+mkChart('appInstallChart'),{type:'bar',data:{
+  labels:LANG==='ar'?['تنزيلات مدى الحياة','مثبتة حالياً','تثبيتات نشطة','MAU']:['Lifetime Downloads','Currently Installed','Active Installs','MAU'],
   datasets:[{
     data:[50000,25400,19000,10100],
     backgroundColor:['#10b981aa','#10b981cc','#0a66c2cc','#3b8bd4cc'],
@@ -3203,8 +3241,8 @@ new Chart(document.getElementById('appInstallChart'),{type:'bar',data:{
 }}});
 
 // Acquisition funnel
-new Chart(document.getElementById('appFunnelChart'),{type:'bar',data:{
-  labels:['New devices (28d)','First opens (28d)','MAU','7-day retention'],
+mkChart('appFunnelChart'),{type:'bar',data:{
+  labels:LANG==='ar'?['أجهزة جديدة (28 يوم)','أول فتح (28 يوم)','MAU','احتفاظ 7 أيام']:['New devices (28d)','First opens (28d)','MAU','7-day retention'],
   datasets:[{
     data:[2170,963,10100,41],
     backgroundColor:['#1877f2cc','#d97706cc','#0a66c2cc','#c0394bcc'],
@@ -3216,7 +3254,7 @@ new Chart(document.getElementById('appFunnelChart'),{type:'bar',data:{
 }}});
 
 // Rating distribution
-new Chart(document.getElementById('appRatingChart'),{type:'bar',data:{
+mkChart('appRatingChart'),{type:'bar',data:{
   labels:['5 ★','4 ★','3 ★','2 ★','1 ★'],
   datasets:[{
     data:[68,27,20,30,190],
@@ -3224,34 +3262,36 @@ new Chart(document.getElementById('appRatingChart'),{type:'bar',data:{
     borderRadius:4,borderSkipped:false
   }]
 },options:{...co,indexAxis:'y',scales:{
-  x:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:'review count',color:lc,font:{size:9}}},
+  x:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:{display:true,text:LANG==='ar'?'عدد المراجعات':'review count',color:lc,font:{size:9}}},
   y:{ticks:{color:lc,font:{size:11}},grid:{display:false}}
 }}});
 
 // Review themes
-new Chart(document.getElementById('appReviewChart'),{type:'bar',data:{
-  labels:['Login / auth issues','App crashes on open','QR / barcode scanner','Slow performance','Arabic / RTL bugs','Missing features','Useful for banking','Trust in institution'],
+mkChart('appReviewChart'),{type:'bar',data:{
+  labels:LANG==='ar'?['مشاكل تسجيل الدخول','أعطال عند الفتح','ماسح QR/الباركود','بطء الأداء','مشاكل العربية/RTL','ميزات مفقودة','مفيد للمصارف','الثقة في المؤسسة']:['Login / auth issues','App crashes on open','QR / barcode scanner','Slow performance','Arabic / RTL bugs','Missing features','Useful for banking','Trust in institution'],
   datasets:[{
     data:[5,4,4,3,3,2,2,2],
     backgroundColor:['#c0394bcc','#c0394bcc','#c0394bcc','#d97706cc','#d97706cc','#d97706cc','#1d9e75cc','#1d9e75cc'],
     borderRadius:4,borderSkipped:false
   }]
 },options:{...co,indexAxis:'y',scales:{
-  x:{ticks:{color:lc,font:{size:9},callback:v=>['Low','Low','Med','Med','High','High','Very High'][v-1]||v},grid:{color:grid},title:{display:true,text:'frequency (relative)',color:lc,font:{size:9}}},
+  x:{ticks:{color:lc,font:{size:9},callback:v=>['Low','Low','Med','Med','High','High','Very High'][v-1]||v},grid:{color:grid},title:{display:true,text:LANG==='ar'?'التكرار (نسبي)':'frequency (relative)',color:lc,font:{size:9}}},
   y:{ticks:{color:lc,font:{size:9}},grid:{display:false}}
 }}});
 
 // Android Vitals comparison chart (actual vs threshold)
-new Chart(document.getElementById('appVitalsChart'),{type:'bar',data:{
-  labels:['Crash rate','ANR rate','Slow cold start','Slow frames'],
+mkChart('appVitalsChart'),{type:'bar',data:{
+  labels:LANG==='ar'?['معدل الأعطال','معدل ANR','بداية باردة بطيئة','إطارات بطيئة']:['Crash rate','ANR rate','Slow cold start','Slow frames'],
   datasets:[
-    {label:'Actual',data:[0.04,0.04,1.03,3.09],backgroundColor:'#10b981cc',borderRadius:4,borderSkipped:false},
-    {label:'Bad threshold',data:[1.09,0.47,4.7,30],backgroundColor:'#c0394b44',borderRadius:4,borderSkipped:false},
+    {label:LANG==='ar'?'الفعلي':'Actual',data:[0.04,0.04,1.03,3.09],backgroundColor:'#10b981cc',borderRadius:4,borderSkipped:false},
+    {label:LANG==='ar'?'الحد السيئ':'Bad threshold',data:[1.09,0.47,4.7,30],backgroundColor:'#c0394b44',borderRadius:4,borderSkipped:false},
   ]
 },options:{...co,plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:11},usePointStyle:true,pointStyleWidth:8}}},scales:{
   x:{ticks:{color:lc,font:{size:9}},grid:{display:false}},
-  y:{ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid},title:{display:true,text:'% of sessions',color:lc,font:{size:9}}}
+  y:{ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid},title:{display:true,text:LANG==='ar'?'% من الجلسات':'% of sessions',color:lc,font:{size:9}}}
 }}});
+}
+
 
 
 // ── ENRICHED CONTENT DATA (paid/organic) ────────────────────────────
@@ -3396,8 +3436,7 @@ function filterIgAcct(acct, btn) {
 // ── Initial render
 renderFbPosts();
 renderIgPosts();
-
-
+renderAllCharts();
 </script>
 </body>
 </html>
