@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PMA Digital Portfolio Dashboard — Social Studio Analytics</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
 :root {
@@ -284,6 +285,160 @@ a.view-link:hover { text-decoration: underline; }
   .ph-inner { padding: 4rem 1.25rem 1.5rem; }
 }
 
+
+/* ── RTL / ARABIC LANGUAGE SUPPORT ── */
+html[lang="ar"] body {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  direction: rtl;
+}
+html[lang="ar"] .sidebar {
+  left: auto; right: 0;
+  box-shadow: -2px 0 20px rgba(0,0,0,0.2);
+}
+html[lang="ar"] .main {
+  margin-left: 0;
+  margin-right: 220px;
+}
+html[lang="ar"] .nav-item {
+  border-left: none;
+  border-right: 3px solid transparent;
+  flex-direction: row-reverse;
+}
+html[lang="ar"] .nav-item.active {
+  border-left-color: transparent;
+  border-right-color: #7ec8f4;
+}
+html[lang="ar"] .mobile-toggle {
+  left: auto; right: 1rem;
+}
+html[lang="ar"] .sidebar.open {
+  transform: translateX(0);
+}
+html[lang="ar"] .main-inner {
+  direction: rtl;
+}
+html[lang="ar"] .ph-inner {
+  direction: rtl;
+}
+html[lang="ar"] .ph-title,
+html[lang="ar"] .ph-sub,
+html[lang="ar"] .section-title,
+html[lang="ar"] .section-intro {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+html[lang="ar"] .section-title {
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+}
+html[lang="ar"] .kpi-cell .kl,
+html[lang="ar"] .kpi-cell .kd,
+html[lang="ar"] .nav-section,
+html[lang="ar"] .section-label,
+html[lang="ar"] .ph-eyebrow,
+html[lang="ar"] .brand-sub,
+html[lang="ar"] .sidebar-footer {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  letter-spacing: 0;
+}
+html[lang="ar"] .kpi-cell .kv {
+  font-family: 'DM Serif Display', serif;
+}
+html[lang="ar"] .ins,
+html[lang="ar"] .cl p,
+html[lang="ar"] .card,
+html[lang="ar"] .tp-text,
+html[lang="ar"] .dt td,
+html[lang="ar"] .dt th {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+html[lang="ar"] .dt th {
+  text-align: right;
+}
+html[lang="ar"] .ins {
+  border-left: none;
+  border-right: 3px solid var(--sky);
+  text-align: right;
+}
+html[lang="ar"] .cl {
+  border-left: none;
+  border-right: 4px solid;
+}
+html[lang="ar"] .cl.info  { border-right-color: var(--sky); }
+html[lang="ar"] .cl.warn  { border-right-color: var(--amber); }
+html[lang="ar"] .cl.danger{ border-right-color: var(--rose); }
+html[lang="ar"] .cl.success{border-right-color: var(--mint); }
+html[lang="ar"] .account-grid,
+html[lang="ar"] .g2,
+html[lang="ar"] .g3,
+html[lang="ar"] .g2-1,
+html[lang="ar"] .g1-2 {
+  direction: rtl;
+}
+html[lang="ar"] .plat-tabs,
+html[lang="ar"] .legend {
+  direction: rtl;
+}
+html[lang="ar"] .tp {
+  direction: rtl;
+}
+html[lang="ar"] .tp-text {
+  text-align: right;
+}
+html[lang="ar"] .ph-accounts,
+html[lang="ar"] .ph-notes,
+html[lang="ar"] .ph-stats {
+  direction: rtl;
+}
+html[lang="ar"] .ph-acct .pa-url {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+html[lang="ar"] .viral-card {
+  direction: rtl;
+}
+html[lang="ar"] .acct-card {
+  text-align: right;
+}
+html[lang="ar"] .plat-score-row {
+  flex-direction: row-reverse;
+}
+html[lang="ar"] .ps-val,
+html[lang="ar"] .ps-lbl {
+  text-align: left;
+}
+html[lang="ar"] .sidebar-brand {
+  text-align: right;
+}
+html[lang="ar"] .brand-name {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+/* Language switcher */
+.lang-switcher {
+  display: flex; align-items: center; gap: 0.3rem;
+  margin: 0.75rem 1.25rem 0.5rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px; padding: 3px;
+}
+.lang-btn {
+  flex: 1; text-align: center; padding: 0.3rem 0.5rem;
+  font-size: 0.72rem; font-weight: 700; cursor: pointer;
+  border: none; border-radius: 6px; transition: all .15s;
+  color: rgba(255,255,255,0.45); background: transparent;
+  letter-spacing: 0.05em;
+}
+.lang-btn.active {
+  background: rgba(255,255,255,0.18);
+  color: white;
+}
+html[lang="ar"] .lang-switcher { direction: ltr; }
+html[lang="ar"] .main { direction: rtl; }
+html[lang="ar"] .kpi-strip { direction: rtl; }
+@media(max-width:1000px){
+  html[lang="ar"] .main { margin-right: 0; }
+  html[lang="ar"] .sidebar { transform: translateX(220px); }
+  html[lang="ar"] .sidebar.open { transform: translateX(0); }
+}
+
 </style>
 </head>
 <body>
@@ -296,8 +451,12 @@ a.view-link:hover { text-decoration: underline; }
     <div class="brand-name">Social Studio<br>Analytics</div>
     <div class="brand-sub">PMA P2025/34</div>
   </div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-ar" onclick="setLang('ar')">عربي</button>
+  </div>
   <nav class="sidebar-nav">
-    <div class="nav-section">Overview</div>
+    <div class="nav-section" data-i18n="nav_overview_group">Overview</div>
     <a class="nav-item active" data-section="overview" onclick="showSection('overview',this)">
       <span class="ni-dot" style="background:#7ec8f4"></span> Portfolio Overview
     </a>
@@ -305,7 +464,7 @@ a.view-link:hover { text-decoration: underline; }
       <span class="ni-dot" style="background:#a3e635"></span> Account Scorecards
     </a>
 
-    <div class="nav-section">Platforms</div>
+    <div class="nav-section" data-i18n="nav_platforms_group">Platforms</div>
     <a class="nav-item" data-section="facebook" onclick="showSection('facebook',this)">
       <span class="ni-dot" style="background:#1877f2"></span> Facebook
     </a>
@@ -326,7 +485,7 @@ a.view-link:hover { text-decoration: underline; }
       <span class="ni-dot" style="background:#10b981"></span> Mobile App
     </a>
 
-    <div class="nav-section">Analysis</div>
+    <div class="nav-section" data-i18n="nav_analysis_group">Analysis</div>
     <a class="nav-item" data-section="audience" onclick="showSection('audience',this)">
       <span class="ni-dot" style="background:#f97316"></span> Audience
     </a>
@@ -343,14 +502,14 @@ a.view-link:hover { text-decoration: underline; }
       <span class="ni-dot" style="background:#1d9e75"></span> Cross-Platform
     </a>
 
-    <div class="nav-section">Reference</div>
+    <div class="nav-section" data-i18n="nav_reference_group">Reference</div>
     <a class="nav-item" data-section="methodology" onclick="showSection('methodology',this)">
       <span class="ni-dot" style="background:#94a3b8"></span> Methodology
     </a>
   </nav>
   <div class="sidebar-footer">
-    <strong>April 2026</strong><br>
-    Confidential — SSA Internal
+    <strong data-i18n="footer_date">April 2026</strong><br>
+    <span data-i18n="footer_conf">Confidential — SSA Internal</span>
   </div>
 </aside>
 
@@ -369,8 +528,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: PORTFOLIO OVERVIEW -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-overview" class="section active">
-  <div class="section-label">Portfolio Overview</div>
-  <h2 class="section-title">All platforms at a glance</h2>
+  <div class="section-label" data-i18n="label_overview">Portfolio Overview</div>
+  <h2 class="section-title" data-i18n="title_overview">All platforms at a glance</h2>
   <p class="section-intro">Complete performance snapshot across Facebook, Instagram, LinkedIn, X/Twitter, YouTube, and the PMA Mobile App — all four brand pages combined, covering the full 2021–2026 analysis window.</p>
 
   <!-- KPI STRIP -->
@@ -442,7 +601,7 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: ACCOUNT SCORECARDS -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-accounts" class="section">
-  <div class="section-label">Account Scorecards</div>
+  <div class="section-label" data-i18n="label_accounts">Account Scorecards</div>
   <h2 class="section-title">All four brand pages — platform-by-platform</h2>
   <p class="section-intro">All four brand pages — performance compared across Facebook and Instagram. Select any card to highlight an account.</p>
 
@@ -481,8 +640,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: FACEBOOK -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-facebook" class="section">
-  <div class="section-label">Platform Analysis · Facebook</div>
-  <h2 class="section-title">Facebook analysis</h2>
+  <div class="section-label" data-i18n="label_facebook">Platform Analysis · Facebook</div>
+  <h2 class="section-title" data-i18n="title_facebook">Facebook analysis</h2>
   <p class="section-intro">1,341 posts across 4 pages (March 2023–March 2026). PMA Core dominates with 639 posts and 81,336 total engagement. Video posts average 206 engagement — more than double any other format — yet represent just 9.5% of posts.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
@@ -547,8 +706,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: INSTAGRAM -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-instagram" class="section">
-  <div class="section-label">Platform Analysis · Instagram</div>
-  <h2 class="section-title">Instagram analysis</h2>
+  <div class="section-label" data-i18n="label_instagram">Platform Analysis · Instagram</div>
+  <h2 class="section-title" data-i18n="title_instagram">Instagram analysis</h2>
   <p class="section-intro">1,775 posts across 4 pages (Jun 2021–Mar 2026). Banking Awareness outperforms PMA Core on avg engagement (26.6 vs 14.5). Video posts average 65.9 engagement — 6× image posts. The audience is measurably warmer: 40.4% of comments are positive vs Facebook's 8.4%.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
@@ -598,8 +757,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: LINKEDIN -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-linkedin" class="section">
-  <div class="section-label">LinkedIn — PMA Core</div>
-  <h2 class="section-title">LinkedIn analysis</h2>
+  <div class="section-label" data-i18n="label_linkedin">LinkedIn — PMA Core</div>
+  <h2 class="section-title" data-i18n="title_linkedin">LinkedIn analysis</h2>
   <p class="section-intro">2,676 posts from PMA Core (Mar 2017–Mar 2026). The standout trend in the entire dataset: a 5.6× engagement improvement driven by reducing posting frequency by half. The quality-over-quantity effect is confirmed and sustained into 2026.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
@@ -651,8 +810,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: TWITTER / X -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-twitter" class="section">
-  <div class="section-label">Platform Analysis · X / Twitter</div>
-  <h2 class="section-title">X / Twitter analysis</h2>
+  <div class="section-label" data-i18n="label_twitter">Platform Analysis · X / Twitter</div>
+  <h2 class="section-title" data-i18n="title_twitter">X / Twitter analysis</h2>
   <p class="section-intro">1,246 tweets from PMAuthority (806) and MonshatiPs (440), spanning Oct 2021–Mar 2026. The platform functions as a broadcast archive: average 47 views/tweet for PMA Core, near-zero retweet and reply activity. MonshatiPs has been dormant since mid-2023.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
@@ -697,8 +856,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: YOUTUBE -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-youtube" class="section">
-  <div class="section-label">Platform Analysis · YouTube</div>
-  <h2 class="section-title">YouTube channel analysis</h2>
+  <div class="section-label" data-i18n="label_youtube">Platform Analysis · YouTube</div>
+  <h2 class="section-title" data-i18n="title_youtube">YouTube channel analysis</h2>
   <p class="section-intro">Single PMA channel launched Nov 2012. 191 videos in dataset, 1,150 subscribers, 120,383 total channel views. The channel is chronically under-invested given the demonstrated power of video content on Facebook and Instagram.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
@@ -735,8 +894,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: AUDIENCE DEMOGRAPHICS -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-audience" class="section">
-  <div class="section-label">Analysis · Audience Demographics</div>
-  <h2 class="section-title">Audience demographics</h2>
+  <div class="section-label" data-i18n="label_audience">Analysis · Audience Demographics</div>
+  <h2 class="section-title" data-i18n="title_audience">Audience demographics</h2>
   <p class="section-intro">Age, gender, city, and country breakdown for PMA Core's Facebook and Instagram audiences. Data sourced from native Meta Business Suite audience insights exports. Figures represent percentage of total page audience.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
@@ -799,8 +958,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: META ADS -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-ads" class="section">
-  <div class="section-label">Analysis · Paid Media</div>
-  <h2 class="section-title">Meta Ads performance</h2>
+  <div class="section-label" data-i18n="label_ads">Analysis · Paid Media</div>
+  <h2 class="section-title" data-i18n="title_ads">Meta Ads performance</h2>
   <p class="section-intro">94 campaigns across Facebook and Instagram, March 2023 – April 2026. Total ad spend: $4,924 across 20M+ impressions and 8.3M reach. Data sourced from native Meta Ads Manager exports at campaign level and demographic breakdown level.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(5,1fr)" id="ads-kpi-strip">
@@ -852,8 +1011,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: CONTENT PERFORMANCE -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-content" class="section">
-  <div class="section-label">Analysis · Content Performance</div>
-  <h2 class="section-title">What works — format, timing &amp; theme</h2>
+  <div class="section-label" data-i18n="label_content">Analysis · Content Performance</div>
+  <h2 class="section-title" data-i18n="title_content">What works — format, timing &amp; theme</h2>
   <p class="section-intro">Cross-platform content analysis covering post format performance, optimal posting windows, day-of-week patterns, and the universal scheduling anomaly visible across all social channels. Note: Mobile App content strategy is covered separately in the Mobile App section.</p>
 
   <div class="g2" style="margin-bottom:1.25rem">
@@ -976,8 +1135,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: SENTIMENT ANALYSIS -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-sentiment" class="section">
-  <div class="section-label">Analysis · Comment Sentiment</div>
-  <h2 class="section-title">Comment sentiment — Facebook &amp; Instagram</h2>
+  <div class="section-label" data-i18n="label_sentiment">Analysis · Comment Sentiment</div>
+  <h2 class="section-title" data-i18n="title_sentiment">Comment sentiment — Facebook &amp; Instagram</h2>
   <p class="section-intro">7,690 Facebook comments and 795 Instagram comments classified using a rule-based Arabic sentiment classifier (80+ term lexicon + emoji signals + VADER for Latin text). 609 Facebook posts and 179 Instagram posts have matched comment data.</p>
 
   <div class="kpi-strip" style="grid-template-columns:repeat(5,1fr)">
@@ -1055,8 +1214,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: CROSS-PLATFORM -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-cross" class="section">
-  <div class="section-label">Synthesis · Cross-Platform</div>
-  <h2 class="section-title">Patterns that span all channels</h2>
+  <div class="section-label" data-i18n="label_cross">Synthesis · Cross-Platform</div>
+  <h2 class="section-title" data-i18n="title_cross">Patterns that span all channels</h2>
   <p class="section-intro">Findings that only emerge when all platforms are viewed together — from content that travels universally to structural scheduling problems affecting every channel simultaneously.</p>
 
   <!-- Top posts all platforms -->
@@ -1127,8 +1286,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: MOBILE APP -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-mobileapp" class="section">
-  <div class="section-label">Platform Analysis · Mobile App</div>
-  <h2 class="section-title">PMA Mobile App — Google Play assessment</h2>
+  <div class="section-label" data-i18n="label_mobileapp">Platform Analysis · Mobile App</div>
+  <h2 class="section-title" data-i18n="title_mobileapp">PMA Mobile App — Google Play assessment</h2>
   <p class="section-intro">Official PMA Android app (<strong>ps.mobileDT.pma</strong>) assessed via Google Play Console data captured April 14, 2026. The app is technically stable — crash and ANR rates are well below Google thresholds — but faces a serious reputational challenge with a 2.4★ public rating driven by login failures, barcode scanner crashes, and slow release cadence. Data covers last 28 days for vitals and acquisition; all-time for install base and ratings.</p>
 
   <!-- OVERALL GRADE BANNER -->
@@ -1372,8 +1531,8 @@ a.view-link:hover { text-decoration: underline; }
 <!-- SECTION: METHODOLOGY -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <div id="sec-methodology" class="section">
-  <div class="section-label">Methodology, Theory &amp; Assumptions</div>
-  <h2 class="section-title">How this assessment was built</h2>
+  <div class="section-label" data-i18n="label_methodology">Methodology, Theory &amp; Assumptions</div>
+  <h2 class="section-title" data-i18n="title_methodology">How this assessment was built</h2>
   <p class="section-intro">A full account of the data sources, analytical framework, tools, assumptions, known limitations, and the SSA methodology phases applied in producing this dashboard. This section is intended for technical reviewers and PMA stakeholders who need to evaluate the reliability and scope of the findings.</p>
 
   <!-- ── 1. PROJECT SCOPE ──────────────────────────────────────── -->
@@ -2128,6 +2287,8 @@ const HEADERS = {
   },
 };
 
+// Expose HEADERS globally for AR switcher
+setTimeout(()=>{window.HEADERS=HEADERS;},0);
 // ── HEADER RENDERER ───────────────────────────────────────────────────
 function updateHeader(id){
   const cfg = HEADERS[id] || HEADERS.overview;
@@ -2186,6 +2347,163 @@ function showSection(id, el){
 
 // Initialise header for default section
 updateHeader('overview');
+
+// ══════════════════════════════════════════════════════════════════════
+// LANGUAGE / i18n SYSTEM
+// ══════════════════════════════════════════════════════════════════════
+let LANG = 'en';
+const T = {"nav_overview_group":{"en":"Overview","ar":"نظرة عامة"},"nav_platforms_group":{"en":"Platforms","ar":"المنصات"},"nav_analysis_group":{"en":"Analysis","ar":"التحليل"},"nav_reference_group":{"en":"Reference","ar":"مرجع"},"nav_overview":{"en":"Portfolio Overview","ar":"نظرة عامة على المحفظة"},"nav_accounts":{"en":"Account Scorecards","ar":"بطاقات أداء الحسابات"},"nav_facebook":{"en":"Facebook","ar":"فيسبوك"},"nav_instagram":{"en":"Instagram","ar":"إنستغرام"},"nav_linkedin":{"en":"LinkedIn","ar":"لينكد إن"},"nav_twitter":{"en":"X / Twitter","ar":"إكس / تويتر"},"nav_youtube":{"en":"YouTube","ar":"يوتيوب"},"nav_mobileapp":{"en":"Mobile App","ar":"التطبيق الجوال"},"nav_audience":{"en":"Audience","ar":"الجمهور"},"nav_ads":{"en":"Meta Ads","ar":"إعلانات ميتا"},"nav_content":{"en":"Content Performance","ar":"أداء المحتوى"},"nav_sentiment":{"en":"Sentiment","ar":"تحليل المشاعر"},"nav_cross":{"en":"Cross-Platform","ar":"متعدد المنصات"},"nav_methodology":{"en":"Methodology","ar":"المنهجية"},"footer_date":{"en":"April 2026","ar":"أبريل 2026"},"footer_conf":{"en":"Confidential — SSA Internal","ar":"سري — داخلي لـ SSA"},"label_overview":{"en":"Portfolio Overview","ar":"نظرة عامة على المحفظة"},"label_accounts":{"en":"Account Scorecards","ar":"بطاقات أداء الحسابات"},"label_facebook":{"en":"Platform Analysis · Facebook","ar":"تحليل المنصة · فيسبوك"},"label_instagram":{"en":"Platform Analysis · Instagram","ar":"تحليل المنصة · إنستغرام"},"label_linkedin":{"en":"LinkedIn — PMA Core","ar":"لينكد إن — سلطة النقد"},"label_twitter":{"en":"Platform Analysis · X / Twitter","ar":"تحليل المنصة · إكس / تويتر"},"label_youtube":{"en":"Platform Analysis · YouTube","ar":"تحليل المنصة · يوتيوب"},"label_audience":{"en":"Analysis · Audience Demographics","ar":"التحليل · ديموغرافيا الجمهور"},"label_ads":{"en":"Analysis · Paid Media","ar":"التحليل · الإعلانات المدفوعة"},"label_content":{"en":"Analysis · Content Performance","ar":"التحليل · أداء المحتوى"},"label_sentiment":{"en":"Analysis · Comment Sentiment","ar":"التحليل · مشاعر التعليقات"},"label_cross":{"en":"Synthesis · Cross-Platform","ar":"التوليف · متعدد المنصات"},"label_mobileapp":{"en":"Platform Analysis · Mobile App","ar":"تحليل المنصة · التطبيق الجوال"},"label_methodology":{"en":"Methodology, Theory & Assumptions","ar":"المنهجية والنظرية والافتراضات"},"title_overview":{"en":"All platforms at a glance","ar":"جميع المنصات في لمحة"},"title_accounts":{"en":"Four Brand Pages — Side by Side","ar":"أربع صفحات — مقارنة جنباً إلى جنب"},"title_facebook":{"en":"Facebook analysis","ar":"تحليل فيسبوك"},"title_instagram":{"en":"Instagram analysis","ar":"تحليل إنستغرام"},"title_linkedin":{"en":"LinkedIn analysis","ar":"تحليل لينكد إن"},"title_twitter":{"en":"X / Twitter analysis","ar":"تحليل إكس / تويتر"},"title_youtube":{"en":"YouTube channel analysis","ar":"تحليل قناة يوتيوب"},"title_audience":{"en":"Audience demographics","ar":"ديموغرافيا الجمهور"},"title_ads":{"en":"Meta Ads performance","ar":"أداء إعلانات ميتا"},"title_content":{"en":"What works — format, timing & theme","ar":"ما الذي ينجح — الشكل والتوقيت والموضوع"},"title_sentiment":{"en":"Comment sentiment — Facebook & Instagram","ar":"مشاعر التعليقات — فيسبوك وإنستغرام"},"title_cross":{"en":"Patterns that span all channels","ar":"أنماط تمتد عبر جميع القنوات"},"title_mobileapp":{"en":"PMA Mobile App — Google Play assessment","ar":"تطبيق سلطة النقد — تقييم جوجل بلاي"},"title_methodology":{"en":"How this assessment was built","ar":"كيف بُنيت هذه التقييم"}};
+const HEADERS_AR = {"overview":{"eyebrow":"رقم المناقصة P2025/34 · أبريل 2026 · سري","title":"محفظة سلطة النقد الرقمية","titleEm":"لوحة التحكم التفاعلية","sub":"عرض شامل لجميع المنصات وأربع صفحات للعلامة التجارية. جميع الأرقام مبنية على التصدير الأصلي من المنصات وبيانات الاستخلاص العامة. نافذة التحليل: 2021–2026.","stats":[{"num":"6,789","lbl":"إجمالي المنشورات المحللة"},{"num":"6","lbl":"المنصات"},{"num":"4","lbl":"صفحات العلامة التجارية"},{"num":"8,485","lbl":"تعليقات مصنّفة (فيسبوك+إنستغرام + مراجعات التطبيق)"},{"num":"5.6×","lbl":"نمو تفاعل لينكد إن 2023→2025"},{"num":"2.4 ★","lbl":"تقييم التطبيق العام"}],"accounts":[{"name":"سلطة النقد","url":"facebook.com/pmauthority","color":"#7ec8f4"},{"name":"منصة الوعي المصرفي","url":"financialinclusion.ps","color":"#4ade80"},{"name":"CYBW","url":"cybw.ps","color":"#fbbf24"},{"name":"منشأتي","url":"monshati.ps","color":"#f87171"}],"notes":[{"icon":"📅","text":"نطاق البيانات: مارس 2023 – مارس 2026"},{"icon":"⚠️","text":"GA4 لموقع pma.ps مؤجل"},{"icon":"🔒","text":"سري — داخلي لـ SSA"}]},"accounts":{"eyebrow":"بطاقات أداء الحسابات · جميع المنصات","title":"أربع صفحات برعاية","titleEm":"مقارنة جنباً إلى جنب","sub":"مقارنة الأداء بين سلطة النقد ومنصة الوعي المصرفي وأسبوع CYBW ومنشأتي — على فيسبوك وإنستغرام.","stats":[{"num":"1,341","lbl":"منشورات فيسبوك"},{"num":"1,775","lbl":"منشورات إنستغرام"},{"num":"127","lbl":"متوسط تفاعل سلطة النقد على فيسبوك"},{"num":"26.6","lbl":"متوسط تفاعل منصة الوعي المصرفي على إنستغرام"}],"accounts":[{"name":"سلطة النقد","url":"fb.com/pmauthority · ig: @pmauthority","color":"#7ec8f4","status":"نشط"},{"name":"منصة الوعي المصرفي","url":"fb: bankingawarenessplatformpma","color":"#4ade80","status":"نشط"},{"name":"CYBW","url":"fb: childyouthbankingweekpma","color":"#fbbf24","status":"حملة"},{"name":"منشأتي","url":"fb: monshatips · ig: @monshati.ps","color":"#f87171","status":"خامل"}],"notes":[{"icon":"📅","text":"التغطية: مارس 2023 – مارس 2026"},{"icon":"⚠️","text":"منشأتي شبه خاملة منذ أكتوبر 2023"},{"icon":"📌","text":"CYBW نشط في فترات الحملة فقط"}]},"facebook":{"eyebrow":"تحليل المنصة · فيسبوك","title":"فيسبوك","titleEm":"4 صفحات · 1,341 منشور","sub":"بيانات على مستوى المنشور من صادرات Meta Business Suite الأصلية (الربع الأول 2024 – الربع الأول 2026) مع بيانات الاستخلاص العام (مارس 2023 – مارس 2026).","stats":[{"num":"1,341","lbl":"إجمالي المنشورات (جميع الصفحات)"},{"num":"112K","lbl":"إجمالي التفاعل"},{"num":"127","lbl":"متوسط تفاعل سلطة النقد/منشور"},{"num":"206","lbl":"متوسط تفاعل — منشورات الفيديو"}],"accounts":[{"name":"سلطة النقد","url":"facebook.com/pmauthority","color":"#7ec8f4"},{"name":"منصة الوعي المصرفي","url":"facebook.com/bankingawarenessplatformpma","color":"#4ade80"},{"name":"CYBW","url":"facebook.com/childyouthbankingweekpma","color":"#fbbf24"},{"name":"منشأتي","url":"facebook.com/monshatips","color":"#f87171"}],"notes":[{"icon":"📅","text":"الصادرات الأصلية: الربع الأول 2024 – الربع الأول 2026"},{"icon":"⚠️","text":"ملفا الربع الأول 2024 والربع الثالث 2024 فارغان — مُشار إليهما"},{"icon":"💡","text":"الفيديو أكثر تفاعلاً بمرتين من الصورة — لكن 9.5% فقط من المنشورات"}]},"instagram":{"eyebrow":"تحليل المنصة · إنستغرام","title":"إنستغرام","titleEm":"4 صفحات · 1,775 منشور","sub":"بيانات على مستوى المنشور من صادرات Meta الأصلية والاستخلاص العام. يونيو 2021 – مارس 2026.","stats":[{"num":"1,775","lbl":"إجمالي المنشورات (جميع الصفحات)"},{"num":"26.7K","lbl":"إجمالي التفاعل"},{"num":"26.6","lbl":"متوسط تفاعل منصة الوعي المصرفي"},{"num":"40.4%","lbl":"نسبة التعليقات الإيجابية"}],"accounts":[{"name":"سلطة النقد","url":"instagram.com/pmauthority","color":"#f9a8d4"},{"name":"منصة الوعي المصرفي","url":"instagram.com/bankingawarenessplatform","color":"#4ade80"},{"name":"CYBW","url":"instagram.com/cybw.ps","color":"#fbbf24"},{"name":"منشأتي","url":"instagram.com/monshati.ps","color":"#f87171"}],"notes":[{"icon":"📅","text":"الصادرات الأصلية: الربع الأول 2024 – الربع الأول 2026"},{"icon":"⚠️","text":"صادرات الربع الثالث 2024 مفقودة — مُشار إليها"},{"icon":"💡","text":"منشورات الفيديو أكثر تفاعلاً بـ 6 أضعاف من الصور"}]},"linkedin":{"eyebrow":"تحليل المنصة · لينكد إن","title":"لينكد إن","titleEm":"سلطة النقد · 2,676 منشور","sub":"صادرات Page Admin الأصلية من لينكد إن (أبريل 2025 فصاعداً) + استخلاص عام (مارس 2017 – مارس 2026).","stats":[{"num":"2,676","lbl":"منشورات سلطة النقد (استخلاص)"},{"num":"12,207","lbl":"المتابعون (ديسمبر 2025)"},{"num":"5.6×","lbl":"نمو التفاعل 2023→2025"},{"num":"25.3","lbl":"متوسط التفاعل في 2025"}],"accounts":[{"name":"سلطة النقد","url":"linkedin.com/company/pmauthority-pma","color":"#7ec8f4"},{"name":"منشأتي","url":"6 منشورات فقط","color":"#f87171"}],"notes":[{"icon":"📅","text":"الاستخلاص: مارس 2017 – مارس 2026"},{"icon":"⚠️","text":"الصادرات الأصلية: أبريل 2025 فصاعداً فقط"},{"icon":"💡","text":"تقليص وتيرة النشر إلى النصف أدى إلى نمو التفاعل 5.6 أضعاف"}]},"twitter":{"eyebrow":"تحليل المنصة · إكس / تويتر","title":"إكس / تويتر","titleEm":"أرشيف بث — تفاعل ضئيل","sub":"بيانات استخلاص عام لـ PMAuthority (806 تغريدة) وMonshatiPs (440 تغريدة)، أكتوبر 2021 – مارس 2026.","stats":[{"num":"1,246","lbl":"إجمالي التغريدات المستخلصة"},{"num":"47","lbl":"متوسط المشاهدات — سلطة النقد"},{"num":"0.07","lbl":"متوسط إعادة التغريد/تغريدة"},{"num":"0","lbl":"تغريدات MonshatiPs منذ منتصف 2023"}],"accounts":[{"name":"PMAuthority","url":"x.com/PMAuthority · 806 تغريدات","color":"#9ca3af"},{"name":"MonshatiPs","url":"x.com/MonshatiPs · 440 تغريدات · خامل","color":"#f87171"}],"notes":[{"icon":"📅","text":"الاستخلاص: أكتوبر 2021 – مارس 2026"},{"icon":"⚠️","text":"لا يوجد وصول لـ X Analytics الأصلي"},{"icon":"🔴","text":"المنصة تعمل كأرشيف بث — يوصى بمراجعة استراتيجية"}]},"youtube":{"eyebrow":"تحليل المنصة · يوتيوب","title":"يوتيوب","titleEm":"قناة سلطة النقد · منذ 2012","sub":"بيانات استخلاص عام — 191 فيديو، قناة واحدة لسلطة النقد، أُطلقت نوفمبر 2012. 1,150 مشترك، 120,383 مشاهدة إجمالية.","stats":[{"num":"191","lbl":"فيديو في مجموعة البيانات"},{"num":"1,150","lbl":"المشتركون"},{"num":"120K","lbl":"المشاهدات الإجمالية"},{"num":"2012","lbl":"سنة إطلاق القناة"}],"accounts":[{"name":"قناة سلطة النقد","url":"youtube.com/channel/UCbQBgvY3lWGZaqRaLIO4y8g","color":"#fca5a5"}],"notes":[{"icon":"📅","text":"مجموعة البيانات: نوفمبر 2012 – فبراير 2026"},{"icon":"⚠️","text":"لا يوجد وصول لـ YouTube Studio"},{"icon":"💡","text":"أبرز فيديو: 10,160 مشاهدة — تطبيق سلطة النقد (2023)"}]},"audience":{"eyebrow":"التحليل · ديموغرافيا الجمهور","title":"الجمهور","titleEm":"العمر · الجنس · الجغرافيا","sub":"بيانات جمهور Meta Business Suite الأصلية لحسابات سلطة النقد على فيسبوك وإنستغرام.","stats":[{"num":"67.8%","lbl":"جمهور فيسبوك — ذكور"},{"num":"44.9%","lbl":"جمهور إنستغرام — إناث"},{"num":"81.8%","lbl":"جمهور فيسبوك في فلسطين"},{"num":"25–34","lbl":"الفئة العمرية المهيمنة — كلا المنصتين"}],"accounts":[{"name":"فيسبوك — سلطة النقد","url":"facebook.com/pmauthority","color":"#7ec8f4"},{"name":"إنستغرام — سلطة النقد","url":"instagram.com/pmauthority","color":"#f9a8d4"}],"notes":[{"icon":"📅","text":"لقطة الجمهور — تصدير أبريل 2026"},{"icon":"💡","text":"فجوة الجنس: فيسبوك 68% ذكور مقابل إنستغرام 55%"}]},"ads":{"eyebrow":"التحليل · الإعلانات المدفوعة","title":"إعلانات ميتا","titleEm":"94 حملة · 4,924 دولار إنفاقاً","sub":"بيانات أداء الحملات من تصدير Meta Ads Manager الأصلي. مارس 2023 – أبريل 2026.","stats":[{"num":"94","lbl":"إجمالي الحملات"},{"num":"$4,924","lbl":"إجمالي الإنفاق (USD)"},{"num":"20.1M","lbl":"إجمالي مرات الظهور"},{"num":"$0.019","lbl":"أفضل تكلفة/نتيجة — iDplus 2026"}],"accounts":[{"name":"إعلانات سلطة النقد","url":"Meta Ads Manager · فيسبوك + إنستغرام","color":"#6ee7b7"}],"notes":[{"icon":"📅","text":"بيانات الحملات: مارس 2023 – أبريل 2026"},{"icon":"💡","text":"حملة iDplus: أعلى إنفاق ($999) وأقوى نتائج"}]},"content":{"eyebrow":"التحليل · أداء المحتوى","title":"أداء المحتوى","titleEm":"الشكل · التوقيت · الموضوع","sub":"تحليل أداء التنسيق وأنماط أيام الأسبوع وتوزيع ساعات النشر عبر المنصات الاجتماعية.","stats":[{"num":"206","lbl":"متوسط تفاعل فيديو فيسبوك"},{"num":"6×","lbl":"أفضلية فيديو إنستغرام على الصورة"},{"num":"9.5%","lbl":"نسبة الفيديو في منشورات فيسبوك"},{"num":"3.9","lbl":"متوسط تفاعل المنشورات المشتركة — يجب إيقافها"}],"accounts":[],"notes":[{"icon":"💡","text":"جميع المنصات الاجتماعية تذروة النشر في 5–8 صباحاً — أداة جدولة واحدة"},{"icon":"🔴","text":"8 من أصل 10 منشورات أعلى أداء تتعلق بحماية المستهلك"}]},"sentiment":{"eyebrow":"تحليل التعليقات · المشاعر","title":"مشاعر التعليقات","titleEm":"فيسبوك وإنستغرام · 8,485 تعليق","sub":"مصنّف باستخدام مُصنِّف عربي يستند إلى قواعد — 80+ مصطلح، كشف الرموز التعبيرية، وVADER للنصوص اللاتينية.","stats":[{"num":"7,690","lbl":"تعليقات فيسبوك المصنّفة"},{"num":"8.4%","lbl":"نسبة الإيجابية — فيسبوك"},{"num":"795","lbl":"تعليقات إنستغرام المصنّفة"},{"num":"40.4%","lbl":"نسبة الإيجابية — إنستغرام"}],"accounts":[{"name":"609 منشور فيسبوك مطابق","url":"45% من 1,341 منشور","color":"#a78bfa"},{"name":"179 منشور إنستغرام مطابق","url":"10% من 1,775 منشور","color":"#818cf8"}],"notes":[{"icon":"📅","text":"تعليقات فيسبوك: أبريل 2023 – أبريل 2026"},{"icon":"⚠️","text":"المصنّف يعتمد على القواعد — NLP المتقدم معلّق"}]},"cross":{"eyebrow":"التوليف متعدد المنصات","title":"متعدد المنصات","titleEm":"أنماط عبر جميع القنوات","sub":"رؤى تظهر فقط عند النظر إلى جميع المنصات معاً.","stats":[{"num":"3,137","lbl":"أعلى تفاعل منشور واحد (فيسبوك)"},{"num":"★","lbl":"منشور واحد في أعلى 5 على 3 منصات"},{"num":"5 صباحاً","lbl":"ذروة النشر العالمية — جميع المنصات"},{"num":"8/10","lbl":"أفضل المنشورات حول حماية المستهلك"}],"accounts":[{"name":"سلطة النقد","url":"نشط على 6 منصات","color":"#4ade80"},{"name":"منصة الوعي المصرفي","url":"فيسبوك + إنستغرام فقط","color":"#86efac"},{"name":"CYBW","url":"فيسبوك + إنستغرام (حملات فقط)","color":"#fbbf24"},{"name":"منشأتي","url":"فيسبوك + إنستغرام + إكس (جميعها شبه خاملة)","color":"#f87171"}],"notes":[{"icon":"📅","text":"النافذة المشتركة: يونيو 2021 – مارس 2026"},{"icon":"★","text":"فيديو أغسطس 2024: الوحيد في أعلى 5 عبر فيسبوك وإنستغرام ولينكد إن"}]},"mobileapp":{"eyebrow":"تحليل المنصة · تطبيق سلطة النقد — جوجل بلاي","title":"التطبيق الجوال","titleEm":"تطبيق سلطة النقد · تقييم جوجل بلاي","sub":"تقييم Google Play Console للتطبيق الرسمي لسلطة النقد (ps.mobileDT.pma) — المعدات المثبتة والاستحواذ والتقييمات ومراجعات المستخدمين والفيتالز والأعطال. البيانات حتى 14 أبريل 2026.","stats":[{"num":"25,400","lbl":"معدات مثبتة نشطة"},{"num":"2.4 ★","lbl":"التقييم العام (الهدف: 4.0+)"},{"num":"0.04%","lbl":"معدل الأعطال (27× أقل من الحد)"},{"num":"C+","lbl":"التقييم الإجمالي — وظيفي لكن ضعيف"}],"accounts":[{"name":"تطبيق سلطة النقد","url":"play.google.com/store/apps/details?id=ps.mobileDT.pma","color":"#6ee7b7"},{"name":"iDplus (تطبيق مصاحب)","url":"ps.pma.fdid.mobile · 10,600 مثبت · 2.6★","color":"#fbbf24"}],"notes":[{"icon":"📅","text":"تاريخ التقييم: 14 أبريل 2026 · آخر تحديث: 3 ديسمبر 2025"},{"icon":"🔴","text":"تقييم 2.4★ — 57% من المراجعات بنجمة واحدة"},{"icon":"✅","text":"الاستقرار التقني ممتاز — معدلات الأعطال 12–27× أقل من حدود جوجل"}]},"methodology":{"eyebrow":"مرجع · المنهجية والنظرية","title":"المنهجية","titleEm":"الإطار والافتراضات والنطاق","sub":"التوثيق التقني الكامل لمصادر البيانات والقرارات التحليلية ومكدس الأدوات وتصميم مُصنِّف المشاعر والثغرات المعروفة ومبادئ إعداد التقارير.","stats":[{"num":"13","lbl":"أنواع مصادر البيانات المُدخلة"},{"num":"8","lbl":"مراحل منهجية SSA (4 نشطة)"},{"num":"80+","lbl":"مصطلحات قاموس المشاعر العربي"},{"num":"v1","lbl":"إصدار لوحة التحكم — أبريل 2026"}],"accounts":[{"name":"الصادرات الأصلية","url":"فيسبوك · إنستغرام · لينكد إن · Meta Ads","color":"#4ade80"},{"name":"الاستخلاص العام","url":"فيسبوك · إنستغرام · لينكد إن · إكس · يوتيوب · التعليقات","color":"#94a3b8"},{"name":"مؤجل","url":"GA4 pma.ps · مرات ظهور لينكد إن · يوتيوب ستوديو","color":"#f87171"}],"notes":[{"icon":"⚠️","text":"مصنّف المشاعر يعتمد على القواعد — الترقية إلى Transformer معلّقة"},{"icon":"📌","text":"مُصاغ كنتائج حالية — ليس تحليلاً نهائياً شاملاً"}]}};
+
+function setLang(lang) {
+  LANG = lang;
+  document.documentElement.lang = lang;
+  document.title = lang === 'ar'
+    ? 'لوحة تحكم المحفظة الرقمية — سلطة النقد'
+    : 'PMA Digital Portfolio Dashboard — Social Studio Analytics';
+  
+  // Toggle lang buttons
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('btn-ar').classList.toggle('active', lang==='ar');
+
+  // Translate all [data-i18n] elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[key] && T[key][lang]) el.textContent = T[key][lang];
+  });
+
+  // Translate nav item text nodes
+  const navMap = {
+    'overview':'nav_overview','accounts':'nav_accounts','facebook':'nav_facebook',
+    'instagram':'nav_instagram','linkedin':'nav_linkedin','twitter':'nav_twitter',
+    'youtube':'nav_youtube','mobileapp':'nav_mobileapp','audience':'nav_audience',
+    'ads':'nav_ads','content':'nav_content','sentiment':'nav_sentiment',
+    'cross':'nav_cross','methodology':'nav_methodology'
+  };
+  document.querySelectorAll('.nav-item[data-section]').forEach(el => {
+    const sec = el.getAttribute('data-section');
+    if (navMap[sec] && T[navMap[sec]]) {
+      // Only replace text node, keep the dot span
+      const span = el.querySelector('.ni-dot');
+      el.textContent = T[navMap[sec]][lang] || el.textContent;
+      if (span) el.prepend(span);
+    }
+  });
+
+  // Brand name
+  const brandName = document.querySelector('.brand-name');
+  if (brandName) brandName.innerHTML = lang === 'ar'
+    ? 'سوشيال ستوديو<br>أناليتكس'
+    : 'Social Studio<br>Analytics';
+
+  // Sidebar footer date
+  document.querySelectorAll('[data-i18n="footer_date"]').forEach(el => {
+    el.textContent = T.footer_date[lang];
+  });
+  document.querySelectorAll('[data-i18n="footer_conf"]').forEach(el => {
+    el.textContent = T.footer_conf[lang];
+  });
+
+  // Re-render the current section header (bilingual headers)
+  const activeSection = document.querySelector('.nav-item.active');
+  if (activeSection) {
+    const sec = activeSection.getAttribute('data-section');
+    if (sec) updateHeader(sec);
+  }
+
+  // Re-render charts with translated labels
+  retranslateCharts(lang);
+
+  // Re-render dynamic content tables
+  if (typeof renderFbPosts === 'function') renderFbPosts();
+  if (typeof renderIgPosts === 'function') renderIgPosts();
+  if (typeof renderContentPosts === 'function') {
+    renderContentPosts('fb');
+    renderContentPosts('ig');
+  }
+
+  // Store preference
+  try { localStorage.setItem('pma_lang', lang); } catch(e) {}
+}
+
+// ── Translate chart labels on lang switch
+function retranslateCharts(lang) {
+  if (!window._chartInstances) return;
+  window._chartInstances.forEach(chart => {
+    if (!chart || !chart.data) return;
+    try { chart.update('none'); } catch(e) {}
+  });
+}
+
+// ── AR-aware updateHeader: picks AR config when lang=ar
+const _updateHeader_orig = updateHeader;
+function updateHeader(id) {
+  if (LANG === 'ar' && HEADERS_AR[id]) {
+    const cfg = HEADERS_AR[id];
+    const hdr = document.getElementById('page-header');
+    // Reuse the same gradient logic but override text
+    hdr.style.background = window.HEADERS[id]?.gradient || 'linear-gradient(135deg,#0f2a4a,#1a3a6b)';
+    const acctHTML = cfg.accounts && cfg.accounts.length ? `
+      <div style="margin-top:1.1rem;direction:rtl">
+        <div style="font-family:'Cairo',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.35);letter-spacing:0.05em;margin-bottom:0.45rem">الحسابات المحللة</div>
+        <div class="ph-accounts">${cfg.accounts.map(a=>`
+          <div class="ph-acct">
+            <span class="pa-dot" style="background:${a.color}"></span>
+            <span class="pa-name">${a.name}</span>
+            <span class="pa-url">${a.url}</span>
+            ${a.status?`<span style="font-size:0.58rem;background:rgba(255,255,255,0.12);padding:1px 5px;border-radius:3px;margin-right:2px;color:rgba(255,255,255,0.5)">${a.status}</span>`:''}
+          </div>`).join('')}
+        </div>
+      </div>` : '';
+    const notesHTML = cfg.notes && cfg.notes.length ? `
+      <div style="margin-top:0.85rem;direction:rtl"><div class="ph-notes">${cfg.notes.map(n=>`
+        <div class="ph-note"><span class="pn-icon">${n.icon}</span>${n.text}</div>`).join('')}</div></div>` : '';
+    const statsHTML = cfg.stats && cfg.stats.length ? `
+      <div class="ph-stats" style="margin-top:1.4rem;direction:rtl">
+        ${cfg.stats.map((s,i)=>`
+          ${i>0?'<div class="ph-div"></div>':''}
+          <div class="ph-stat"><div class="num">${s.num}</div><div class="lbl">${s.lbl}</div></div>
+        `).join('')}
+        <div class="ph-div"></div>
+        <div class="ph-badge"><span class="dot"></span>سوشيال ستوديو أناليتكس</div>
+      </div>` : '';
+    document.getElementById('ph-inner').innerHTML = `
+      <div class="ph-eyebrow" style="font-family:'Cairo',sans-serif">${cfg.eyebrow}</div>
+      <h1 class="ph-title" style="font-family:'Cairo',sans-serif;font-weight:700">${cfg.title}<br><em>${cfg.titleEm}</em></h1>
+      <p class="ph-sub" style="font-family:'Cairo',sans-serif;direction:rtl;text-align:right">${cfg.sub}</p>
+      ${statsHTML}${acctHTML}${notesHTML}
+    `;
+  } else {
+    _updateHeader_orig(id);
+  }
+}
+
+// Store chart instances for re-translation
+window._chartInstances = [];
+const _origChart = Chart;
+
+// Override showSection to also call updateHeader with AR support
+const _showSection_orig = showSection;
+function showSection(id, el) {
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  if (el) el.classList.add('active');
+  updateHeader(id);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// Expose HEADERS to window for AR updateHeader
+window.HEADERS = typeof HEADERS !== 'undefined' ? HEADERS : {};
+
+// Init: restore saved language
+(function() {
+  try {
+    const saved = localStorage.getItem('pma_lang');
+    if (saved === 'ar') setTimeout(() => setLang('ar'), 100);
+  } catch(e) {}
+})();
+
 
 // ── CHART DEFAULTS ───────────────────────────────────────────────────
 const lc='#6b7280', grid='rgba(0,0,0,0.06)';
