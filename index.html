@@ -2926,6 +2926,74 @@ function filterIgAcct(acct, btn) {
 const _chartMap = {};
 const _origChartCtor = Chart;
 
+
+// FB Top posts
+function sentBadge(score){if(score===null||isNaN(score)||score===undefined)return'';if(score>0.15)return'<span class="tag high">↑ Positive</span>';if(score<-0.05)return'<span class="tag low">↓ Mixed</span>';return'<span style="font-size:0.65rem;background:#f3f4f6;color:#374151;padding:2px 5px;border-radius:3px;font-weight:600">→ Neutral</span>';}
+const nameMap=M.sentiment.fb?{pmauthority:'PMA Core',bankingawarenessplatformpma:'Banking Awareness',childyouthbankingweekpma:'CYBW',monshatips:'Monshati',bankingawarenessplatform:'Banking Awareness','monshati.ps':'Monshati','cybw.ps':'CYBW'}:{};
+
+document.getElementById('fb-top-posts').innerHTML=M.top_posts.fb.map((p,i)=>`
+<div class="tp">
+  <div class="tp-rank">#${i+1}</div>
+  <div class="tp-eng">${p.total_engagement.toLocaleString()}</div>
+  <div>
+    <div class="tp-meta">${nameMap[p.account]||p.account} &nbsp;·&nbsp; ${p.type} &nbsp;·&nbsp; ${p.date.substring(0,10)} &nbsp; ${p.scraped_comments>0?sentBadge(p.sentiment_score):''} ${p.url?'<a class="view-link" href="'+p.url+'" target="_blank">View post ↗</a>':''}</div>
+    <div class="tp-text">${(p.text||'').substring(0,130)}${(p.text||'').length>130?'…':''}</div>
+    <div class="tp-sub">❤️ ${p.reactions} &nbsp;💬 ${p.comments} &nbsp;🔁 ${p.shares}${p.scraped_comments>0?' &nbsp;·&nbsp; 💬'+p.scraped_comments+' scraped (+'+(p.pos_comments||0)+' pos / '+(p.neg_comments||0)+' neg)':''}</div>
+  </div>
+</div>`).join('');
+
+// ── INSTAGRAM ────────────────────────────────────────────────────────
+const igMonthsFull=M.monthly.months;
+const igVolData={pma:M.monthly.ig_pma,banking:M.monthly.ig_banking,cybw:M.monthly.ig_cybw,monshati:M.monthly.ig_monshati};}
+
+
+
+// ── State
+const fbState = {view:'all', acct:'all'};
+const igState = {view:'all', acct:'all'};
+
+// ── Badge renderers
+function paidBadge(label, confirmed) {
+  if (label === 'organic')
+    return '<span style="background:#dcfce7;color:#166534;font-size:0.65rem;padding:1px 7px;border-radius:3px;font-weight:700;flex-shrink:0">ORGANIC</span>';
+  if (label === 'paid' || label === 'paid (est.)')
+    return '<span style="background:#fee2e2;color:#991b1b;font-size:0.65rem;padding:1px 7px;border-radius:3px;font-weight:700;flex-shrink:0">'+(label==='paid'?'PAID':'PAID (est.)')+'</span>';
+  return '';
+}
+
+function ratioBadge(ratio) {
+  if (ratio === null || ratio === undefined) return '';
+  const r = parseFloat(ratio);
+  let bg, color, label;
+  if (r > 50)       { bg='#7f1d1d'; color='white';   label='Ratio '+r+' — very high paid signal'; }
+  else if (r > 20)  { bg='#fee2e2'; color='#991b1b';  label='Ratio '+r+' — paid signal'; }
+  else if (r > 10)  { bg='#fef9c3'; color='#854d0e';  label='Ratio '+r+' — moderate'; }
+  else              { bg='#f0fdf4'; color='#166534';   label='Ratio '+r+' — organic'; }
+  return '<span title="Reactions ÷ Comments ratio: higher = more likely paid" style="background:'+bg+';color:'+color+';font-size:0.63rem;padding:1px 6px;border-radius:3px;font-weight:700;font-family:\'DM Mono\',monospace;cursor:help;flex-shrink:0">'+label+'</span>';
+}
+
+function sentBadgeSmall(pos, neg, total, score) {
+  if (!total) return '';
+  if (score > 0.15) return '<span style="background:#dcfce7;color:#166534;font-size:0.63rem;padding:1px 5px;border-radius:3px;font-weight:600">↑ pos</span>';
+  if (score < -0.05) return '<span style="background:#fee2e2;color:#991b1b;font-size:0.63rem;padding:1px 5px;border-radius:3px;font-weight:600">↓ neg</span>';
+  return '';
+}
+
+function typePillSmall(type, color) {
+  return '<span style="background:'+color+'22;color:'+color+';font-size:0.63rem;padding:1px 5px;border-radius:3px;font-weight:700;flex-shrink:0">'+type+'</span>';
+}
+
+function acctColor(acct) {
+  return {'PMA Core':'#0f2a4a','Banking Awareness':'#1d9e75','CYBW':'#d97706','Monshati':'#c0394b'}[acct]||'#6b7280';
+}
+
+function boostBar(boost_pct) {
+  if (boost_pct === null || boost_pct === undefined) return '';
+  return '<div style="display:flex;align-items:center;gap:0.3rem;margin-top:0.2rem"><div style="height:4px;width:50px;background:#e5e7eb;border-radius:2px;overflow:hidden"><div style="height:100%;width:'+boost_pct+'%;background:#fee2e2;border-radius:2px"></div></div><span style="font-size:0.62rem;color:var(--muted)">'+boost_pct+'% paid reach</span></div>';
+}
+
+// ── FB renderer
+
 function renderAllCharts() {
   // Destroy all existing chart instances before re-rendering
   Object.values(_chartMap).forEach(c => { try { c.destroy(); } catch(e) {} });
@@ -3053,24 +3121,6 @@ mkChart('fbReactChart', {type:'bar',data:{labels:fbRPages,datasets:[
   {label:LANG==='ar'?'غاضب':'Angry',data:fbRPages.map(p=>M.content.fb_reactions[p].angry),backgroundColor:'#ef4444cc',stack:'r'},
 ]},options:{...co,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{stacked:true,max:101,ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid}},y:{stacked:true,ticks:{color:lc,font:{size:10}},grid:{display:false}}}}});
 
-// FB Top posts
-function sentBadge(score){if(score===null||isNaN(score)||score===undefined)return'';if(score>0.15)return'<span class="tag high">↑ Positive</span>';if(score<-0.05)return'<span class="tag low">↓ Mixed</span>';return'<span style="font-size:0.65rem;background:#f3f4f6;color:#374151;padding:2px 5px;border-radius:3px;font-weight:600">→ Neutral</span>';}
-const nameMap=M.sentiment.fb?{pmauthority:'PMA Core',bankingawarenessplatformpma:'Banking Awareness',childyouthbankingweekpma:'CYBW',monshatips:'Monshati',bankingawarenessplatform:'Banking Awareness','monshati.ps':'Monshati','cybw.ps':'CYBW'}:{};
-
-document.getElementById('fb-top-posts').innerHTML=M.top_posts.fb.map((p,i)=>`
-<div class="tp">
-  <div class="tp-rank">#${i+1}</div>
-  <div class="tp-eng">${p.total_engagement.toLocaleString()}</div>
-  <div>
-    <div class="tp-meta">${nameMap[p.account]||p.account} &nbsp;·&nbsp; ${p.type} &nbsp;·&nbsp; ${p.date.substring(0,10)} &nbsp; ${p.scraped_comments>0?sentBadge(p.sentiment_score):''} ${p.url?'<a class="view-link" href="'+p.url+'" target="_blank">View post ↗</a>':''}</div>
-    <div class="tp-text">${(p.text||'').substring(0,130)}${(p.text||'').length>130?'…':''}</div>
-    <div class="tp-sub">❤️ ${p.reactions} &nbsp;💬 ${p.comments} &nbsp;🔁 ${p.shares}${p.scraped_comments>0?' &nbsp;·&nbsp; 💬'+p.scraped_comments+' scraped (+'+(p.pos_comments||0)+' pos / '+(p.neg_comments||0)+' neg)':''}</div>
-  </div>
-</div>`).join('');
-
-// ── INSTAGRAM ────────────────────────────────────────────────────────
-const igMonthsFull=M.monthly.months;
-const igVolData={pma:M.monthly.ig_pma,banking:M.monthly.ig_banking,cybw:M.monthly.ig_cybw,monshati:M.monthly.ig_monshati};
 mkChart('igVolChart', {type:'line',data:{labels:igMonthsFull,datasets:[
   {label:LANG==='ar'?'سلطة النقد':'PMA Core',data:igVolData.pma,borderColor:pageColors[0],backgroundColor:pageColors[0]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
   {label:LANG==='ar'?'منصة الوعي المصرفي':'Banking Awareness',data:igVolData.banking,borderColor:pageColors[1],backgroundColor:pageColors[1]+'18',fill:true,tension:0.35,pointRadius:1,borderWidth:2},
@@ -3384,55 +3434,7 @@ mkChart('appVitalsChart', {type:'bar',data:{
   x:{ticks:{color:lc,font:{size:9}},grid:{display:false}},
   y:{ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid},title:{display:true,text:LANG==='ar'?'% من الجلسات':'% of sessions',color:lc,font:{size:9}}}
 }}});
-}
 
-
-
-// ── State
-const fbState = {view:'all', acct:'all'};
-const igState = {view:'all', acct:'all'};
-
-// ── Badge renderers
-function paidBadge(label, confirmed) {
-  if (label === 'organic')
-    return '<span style="background:#dcfce7;color:#166534;font-size:0.65rem;padding:1px 7px;border-radius:3px;font-weight:700;flex-shrink:0">ORGANIC</span>';
-  if (label === 'paid' || label === 'paid (est.)')
-    return '<span style="background:#fee2e2;color:#991b1b;font-size:0.65rem;padding:1px 7px;border-radius:3px;font-weight:700;flex-shrink:0">'+(label==='paid'?'PAID':'PAID (est.)')+'</span>';
-  return '';
-}
-
-function ratioBadge(ratio) {
-  if (ratio === null || ratio === undefined) return '';
-  const r = parseFloat(ratio);
-  let bg, color, label;
-  if (r > 50)       { bg='#7f1d1d'; color='white';   label='Ratio '+r+' — very high paid signal'; }
-  else if (r > 20)  { bg='#fee2e2'; color='#991b1b';  label='Ratio '+r+' — paid signal'; }
-  else if (r > 10)  { bg='#fef9c3'; color='#854d0e';  label='Ratio '+r+' — moderate'; }
-  else              { bg='#f0fdf4'; color='#166534';   label='Ratio '+r+' — organic'; }
-  return '<span title="Reactions ÷ Comments ratio: higher = more likely paid" style="background:'+bg+';color:'+color+';font-size:0.63rem;padding:1px 6px;border-radius:3px;font-weight:700;font-family:\'DM Mono\',monospace;cursor:help;flex-shrink:0">'+label+'</span>';
-}
-
-function sentBadgeSmall(pos, neg, total, score) {
-  if (!total) return '';
-  if (score > 0.15) return '<span style="background:#dcfce7;color:#166534;font-size:0.63rem;padding:1px 5px;border-radius:3px;font-weight:600">↑ pos</span>';
-  if (score < -0.05) return '<span style="background:#fee2e2;color:#991b1b;font-size:0.63rem;padding:1px 5px;border-radius:3px;font-weight:600">↓ neg</span>';
-  return '';
-}
-
-function typePillSmall(type, color) {
-  return '<span style="background:'+color+'22;color:'+color+';font-size:0.63rem;padding:1px 5px;border-radius:3px;font-weight:700;flex-shrink:0">'+type+'</span>';
-}
-
-function acctColor(acct) {
-  return {'PMA Core':'#0f2a4a','Banking Awareness':'#1d9e75','CYBW':'#d97706','Monshati':'#c0394b'}[acct]||'#6b7280';
-}
-
-function boostBar(boost_pct) {
-  if (boost_pct === null || boost_pct === undefined) return '';
-  return '<div style="display:flex;align-items:center;gap:0.3rem;margin-top:0.2rem"><div style="height:4px;width:50px;background:#e5e7eb;border-radius:2px;overflow:hidden"><div style="height:100%;width:'+boost_pct+'%;background:#fee2e2;border-radius:2px"></div></div><span style="font-size:0.62rem;color:var(--muted)">'+boost_pct+'% paid reach</span></div>';
-}
-
-// ── FB renderer
 }
 
 // ── Initial render
