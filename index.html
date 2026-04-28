@@ -2228,9 +2228,18 @@ updateHeader('overview');
 const lc='#6b7280', grid='rgba(0,0,0,0.06)';
 const co={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:lc,font:{size:9}},grid:{color:grid}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}}};
 const pageColors=['#0f2a4a','#1d9e75','#d97706','#c0394b'];
-
+const days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
 const daysFull=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const fbTypeLabels=['Video','Shared Link','Image','Text','Album','Shared Post'];
+const igTypeLabels=['Video','Image','Sidecar'];
+const pages4=['PMA Core','Banking Awareness','CYBW','Monshati'];
+const fbRPages=['PMA Core','Banking Awareness','CYBW','Monshati'];
+const igMonthsFull=M.monthly.months;
+const igVolData={pma:M.monthly.ig_pma,banking:M.monthly.ig_banking,cybw:M.monthly.ig_cybw,monshati:M.monthly.ig_monshati};
+const liMonths=M.li_eng_monthly.months;
 const months=M.monthly.months;
+
+
 
 function mkAx(xl,yl){return{x:{ticks:{color:lc,font:{size:9},maxRotation:45,autoSkip:true,maxTicksLimit:14},grid:{display:false},title:xl?{display:true,text:xl,color:lc,font:{size:9}}:{display:false}},y:{ticks:{color:lc,font:{size:9}},grid:{color:grid},title:yl?{display:true,text:yl,color:lc,font:{size:9}}:{display:false}}};}
 
@@ -2362,6 +2371,7 @@ function filterIgAcct(acct, btn) {
   document.querySelectorAll('.ig-acct-tab').forEach(b=>{b.style.background='white';b.style.color='var(--muted)';b.style.borderColor='var(--border)';});
   btn.style.background='#e1306c';btn.style.color='white';btn.style.borderColor='#e1306c';
   renderIgPosts();
+}
 
 // ── BILINGUAL CHART RENDERER ────────────────────────────────────────
 // Called on init AND on every lang switch to rebuild all charts
@@ -2385,9 +2395,7 @@ document.getElementById('fb-top-posts').innerHTML=M.top_posts.fb.map((p,i)=>`
   </div>
 </div>`).join('');
 
-// ── INSTAGRAM ────────────────────────────────────────────────────────
-const igMonthsFull=M.monthly.months;
-const igVolData={pma:M.monthly.ig_pma,banking:M.monthly.ig_banking,cybw:M.monthly.ig_cybw,monshati:M.monthly.ig_monshati};}
+// ── INSTAGRAM ────────────────────────────────────────────────────────}
 
 
 
@@ -2482,7 +2490,6 @@ document.getElementById('ig-top-posts').innerHTML=M.top_posts.ig.slice(0,7).map(
 </div>`).join('');
 
 // ── LINKEDIN ──────────────────────────────────────────────────────────
-const liMonths=M.li_eng_monthly.months;
 new Chart(document.getElementById('liVolChart'),{type:'bar',data:{labels:liMonths,datasets:[{data:M.li_eng_monthly.total.map((v,i)=>v>0?v:null),backgroundColor:liMonths.map(m=>m.startsWith('2023')?'#0a66c244':m.startsWith('2024')?'#0a66c288':'#0a66c2cc'),borderRadius:3,borderSkipped:false}]},options:{...co,scales:mkAx(null,'total engagement'),plugins:{legend:{display:false},tooltip:{callbacks:{afterBody:ctx=>['Avg/post: '+M.li_eng_monthly.avg[ctx[0].dataIndex]]}}}}});
 
 const liYrs=['2023','2024','2025','2026'];
@@ -2772,6 +2779,98 @@ new Chart(document.getElementById('appVitalsChart'),{type:'bar',data:{
   x:{ticks:{color:lc,font:{size:9}},grid:{display:false}},
   y:{ticks:{color:lc,font:{size:9},callback:v=>v+'%'},grid:{color:grid},title:{display:true,text:'% of sessions',color:lc,font:{size:9}}}
 }}});
+
+
+// ── Overview charts (rebuilt) ─────────────────────────────────────────
+
+// 1. Platform engagement — horizontal bar
+new Chart(document.getElementById('platEngChart'),{
+  type:'bar',
+  data:{
+    labels:platData.map(p=>p.name),
+    datasets:[{
+      data:platData.map(p=>p.total),
+      backgroundColor:platData.map(p=>p.bg+'cc'),
+      borderRadius:4,borderSkipped:false
+    }]
+  },
+  options:{...co,
+    indexAxis:'y',
+    scales:{
+      x:{ticks:{color:lc,font:{size:9},callback:v=>v>=1000?(v/1000).toFixed(0)+'k':v},grid:{color:grid}},
+      y:{ticks:{color:lc,font:{size:9}},grid:{display:false}}
+    },
+    plugins:{...co.plugins,tooltip:{callbacks:{label:ctx=>`${ctx.parsed.x.toLocaleString()} ${platData[ctx.dataIndex].lbl}`}}}
+  }
+});
+
+// 2. Portfolio monthly posting volume — stacked area
+(function(){
+  const mo = M.monthly;
+  new Chart(document.getElementById('portfolioVolChart'),{
+    type:'line',
+    data:{
+      labels:mo.months,
+      datasets:[
+        {label:'Facebook', data:mo.months.map((_,i)=>(mo.fb_pma[i]||0)+(mo.fb_banking[i]||0)+(mo.fb_cybw[i]||0)+(mo.fb_monshati[i]||0)), backgroundColor:'#1877f233', borderColor:'#1877f2', fill:true, tension:0.35, pointRadius:0, borderWidth:2},
+        {label:'Instagram',data:mo.months.map((_,i)=>(mo.ig_pma[i]||0)+(mo.ig_banking[i]||0)+(mo.ig_cybw[i]||0)+(mo.ig_monshati[i]||0)), backgroundColor:'#e1306c22', borderColor:'#e1306c', fill:true, tension:0.35, pointRadius:0, borderWidth:2},
+        {label:'LinkedIn', data:mo.months.map((_,i)=>mo.li_pma[i]||0),                                                                       backgroundColor:'#0a66c222', borderColor:'#0a66c2', fill:true, tension:0.35, pointRadius:0, borderWidth:2},
+        {label:'X',        data:mo.months.map((_,i)=>(mo.tw_pma[i]||0)+(mo.tw_monshati[i]||0)),                                              backgroundColor:'#37415111', borderColor:'#374151', fill:true, tension:0.35, pointRadius:0, borderWidth:1.5},
+      ]
+    },
+    options:{...co,
+      plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:9},boxWidth:10,usePointStyle:true}}},
+      scales:{
+        x:{ticks:{color:lc,font:{size:9},maxRotation:45,maxTicksLimit:12},grid:{color:grid}},
+        y:mkAx(null,'posts/month')
+      }
+    }
+  });
+})();
+
+// 3. Account engagement — grouped bar (FB avg vs IG avg per account)
+(function(){
+  const accts = ['PMA Core','Banking Awareness','CYBW','Monshati'];
+  new Chart(document.getElementById('acctEngChart'),{
+    type:'bar',
+    data:{
+      labels:accts,
+      datasets:[
+        {label:'Facebook avg eng', data:accts.map(a=>M.accounts[a].fb.avg_eng), backgroundColor:'#1877f2bb', borderRadius:3, borderSkipped:false},
+        {label:'Instagram avg eng',data:accts.map(a=>M.accounts[a].ig.avg_eng), backgroundColor:'#e1306cbb', borderRadius:3, borderSkipped:false},
+      ]
+    },
+    options:{...co,
+      plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:9},boxWidth:10}}},
+      scales:{
+        x:{ticks:{color:lc,font:{size:9}},grid:{display:false}},
+        y:{ticks:{color:lc,font:{size:9}},grid:{color:grid}}
+      }
+    }
+  });
+})();
+
+// 4. Account posting volume — stacked bar (FB + IG posts per account)
+(function(){
+  const accts = ['PMA Core','Banking Awareness','CYBW','Monshati'];
+  new Chart(document.getElementById('acctVolChart'),{
+    type:'bar',
+    data:{
+      labels:accts,
+      datasets:[
+        {label:'Facebook posts', data:accts.map(a=>M.accounts[a].fb.posts), backgroundColor:'#1877f2bb', borderRadius:0, borderSkipped:false},
+        {label:'Instagram posts',data:accts.map(a=>M.accounts[a].ig.posts), backgroundColor:'#e1306cbb', borderRadius:3, borderSkipped:'bottom'},
+      ]
+    },
+    options:{...co,
+      plugins:{legend:{display:true,position:'top',labels:{color:lc,font:{size:9},boxWidth:10}}},
+      scales:{
+        x:{ticks:{color:lc,font:{size:9}},grid:{display:false},stacked:true},
+        y:{ticks:{color:lc,font:{size:9}},grid:{color:grid},stacked:true}
+      }
+    }
+  });
+})();
 
 // ── Initial render
 renderFbPosts();
